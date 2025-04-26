@@ -1,4 +1,5 @@
 
+import React from "react"
 import {
   Carousel,
   CarouselContent,
@@ -54,7 +55,7 @@ export const BiomarkersCarousel = () => {
   ];
 
   const plugin = Autoplay({
-    delay: 0,
+    delay: 3000, // Slow down to 3 seconds per slide
     stopOnInteraction: false,
     stopOnMouseEnter: false,
   });
