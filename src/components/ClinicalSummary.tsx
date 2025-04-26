@@ -1,9 +1,8 @@
-
 import React from "react";
 
 export const ClinicalSummary = () => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-32 bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-5xl md:text-6xl font-bold mb-6 text-dark-purple tracking-tight">

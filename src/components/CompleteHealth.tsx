@@ -1,4 +1,3 @@
-
 import React from "react";
 
 export const CompleteHealth = () => {
@@ -10,7 +9,7 @@ export const CompleteHealth = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted">
+    <section className="py-32 bg-muted">
       <div className="container-custom">
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-dark-purple tracking-tight">
           A visão mais completa da sua saúde

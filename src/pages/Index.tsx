@@ -9,6 +9,7 @@ import { ResultsOverTime } from '../components/ResultsOverTime';
 import { CompleteHealth } from '../components/CompleteHealth';
 import { ClinicalSummary } from '../components/ClinicalSummary';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
+import { ReTest } from '../components/ReTest';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <ServiceSteps />
         <SimpleSteps />
         <ResultsOverTime />
+        <ReTest />
         <CompleteHealth />
         <ClinicalSummary />
       </main>
