@@ -1,4 +1,3 @@
-
 import { Clock, FileSearch, Check } from 'lucide-react';
 
 export const ServiceSteps = () => {
@@ -21,7 +20,7 @@ export const ServiceSteps = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="como-funciona">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Como Funciona</h2>
