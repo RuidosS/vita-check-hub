@@ -8,6 +8,7 @@ import { SimpleSteps } from '../components/SimpleSteps';
 import { ResultsOverTime } from '../components/ResultsOverTime';
 import { CompleteHealth } from '../components/CompleteHealth';
 import { ClinicalSummary } from '../components/ClinicalSummary';
+import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
+        <BiomarkersCarousel />
         <ServiceSteps />
         <SimpleSteps />
         <ResultsOverTime />
