@@ -1,4 +1,6 @@
 
+import React from "react";
+
 export const CompleteHealth = () => {
   const features = [
     "Mais de 60 análises laboratoriais.",
@@ -8,15 +10,19 @@ export const CompleteHealth = () => {
   ];
 
   return (
-    <section className="py-16 bg-muted">
+    <section className="py-24 bg-muted">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+        <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-dark-purple tracking-tight">
           A visão mais completa da sua saúde
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <p className="text-lg font-medium">{feature}</p>
+            <div 
+              key={index} 
+              className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
+                         transform hover:-translate-y-2 border border-purple-100"
+            >
+              <p className="text-xl font-semibold text-dark-purple">{feature}</p>
             </div>
           ))}
         </div>
