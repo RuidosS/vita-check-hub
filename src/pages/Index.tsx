@@ -3,9 +3,11 @@ import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { HeroSection } from '../components/HeroSection';
-import { HowItWorks } from '../components/HowItWorks';
-import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
-import { HealthEvolution } from '../components/HealthEvolution';
+import { ServiceSteps } from '../components/ServiceSteps';
+import { SimpleSteps } from '../components/SimpleSteps';
+import { ResultsOverTime } from '../components/ResultsOverTime';
+import { CompleteHealth } from '../components/CompleteHealth';
+import { ClinicalSummary } from '../components/ClinicalSummary';
 
 const Index = () => {
   return (
@@ -13,9 +15,11 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <HowItWorks />
-        <BiomarkersCarousel />
-        <HealthEvolution />
+        <ServiceSteps />
+        <SimpleSteps />
+        <ResultsOverTime />
+        <CompleteHealth />
+        <ClinicalSummary />
       </main>
       <Footer />
     </div>
