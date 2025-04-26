@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -10,6 +11,7 @@ import { ClinicalSummary } from '../components/ClinicalSummary';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 import { ReTest } from '../components/ReTest';
 import { BiomarkersList } from '../components/BiomarkersList';
+import { WaitlistForm } from '../components/WaitlistForm';
 
 const Index = () => {
   return (
@@ -25,6 +27,7 @@ const Index = () => {
         <ReTest />
         <CompleteHealth />
         <ClinicalSummary />
+        <WaitlistForm />
       </main>
       <Footer />
     </div>

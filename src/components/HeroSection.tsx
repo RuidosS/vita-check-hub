@@ -3,6 +3,11 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 export const HeroSection = () => {
+  const scrollToWaitlist = () => {
+    const element = document.getElementById('waitlist');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
       <div className="container-custom text-center">
@@ -13,7 +18,10 @@ export const HeroSection = () => {
           Testes laboratoriais avançados. Resultados claros. 
           Planos de ação personalizados para a tua saúde.
         </p>
-        <button className="btn-primary inline-flex items-center gap-2">
+        <button 
+          onClick={scrollToWaitlist}
+          className="btn-primary inline-flex items-center gap-2"
+        >
           Junta-te à Lista de Espera
           <ArrowRight className="h-5 w-5" />
         </button>

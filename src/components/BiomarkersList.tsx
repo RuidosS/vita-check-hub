@@ -30,8 +30,11 @@ export const BiomarkersList = () => {
     <section className="py-24 bg-white">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Resultados simples de interpretar como nunca antes visto. Segue um plano de ação personalize baseado em dados para melhorares o teu corpo.
+          Resultados simples de interpretar como nunca antes visto.
         </h2>
+        <p className="text-lg text-gray-600 text-center mb-16 max-w-3xl mx-auto">
+          Segue um plano de ação personalize baseado em dados para melhorares o teu corpo.
+        </p>
         <div className="mt-16 max-w-4xl mx-auto">
           <Card className="p-6">
             <ScrollArea className="h-[600px] pr-4">
