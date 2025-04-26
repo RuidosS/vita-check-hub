@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const HeroSection = () => {
   return (
-    <section className="pt-32 pb-16 bg-gradient-to-b from-muted to-white">
+    <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
       <div className="container-custom text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Assume o controlo da tua saúde
