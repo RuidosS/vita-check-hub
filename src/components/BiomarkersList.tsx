@@ -30,14 +30,14 @@ export const BiomarkersList = () => {
     <section className="py-24 bg-white">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Resultados simples de interpretar como nunca antes
+          Resultados simples de interpretar como nunca antes visto. Segue um plano de ação personalize baseado em dados para melhorares o teu corpo.
         </h2>
         <div className="mt-16 max-w-4xl mx-auto">
           <Card className="p-6">
             <ScrollArea className="h-[600px] pr-4">
               <div className="space-y-4">
                 {biomarkers.map((biomarker, index) => (
-                  <BiomarkerCard key={index} biomarker={biomarker} />
+                  <BiomarkerCard key={index} biomarker={biomarker} showAlwaysVisible={index === 0} />
                 ))}
               </div>
             </ScrollArea>
