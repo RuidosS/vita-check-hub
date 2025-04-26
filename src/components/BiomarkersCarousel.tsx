@@ -1,4 +1,3 @@
-
 import React from "react"
 import {
   Carousel,
@@ -55,10 +54,10 @@ export const BiomarkersCarousel = () => {
   ];
 
   const plugin = Autoplay({
-    delay: 0, // No delay between movements
+    delay: 5000,
     stopOnInteraction: false,
     stopOnMouseEnter: false,
-    playOnInit: true, // Start playing immediately
+    playOnInit: true,
   });
 
   return (
@@ -70,9 +69,8 @@ export const BiomarkersCarousel = () => {
               align: "start",
               loop: true,
               dragFree: true,
-              skipSnaps: true, // Allows free-flowing movement
-              inViewThreshold: 0, // Smooth transition between slides
-              speed: 50, // Very slow movement speed (in pixels per second)
+              skipSnaps: true,
+              inViewThreshold: 0,
             }}
             plugins={[plugin]}
           >
@@ -121,4 +119,3 @@ export const BiomarkersCarousel = () => {
     </section>
   );
 };
-
