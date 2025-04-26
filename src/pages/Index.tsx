@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -10,6 +9,7 @@ import { CompleteHealth } from '../components/CompleteHealth';
 import { ClinicalSummary } from '../components/ClinicalSummary';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 import { ReTest } from '../components/ReTest';
+import { BiomarkersList } from '../components/BiomarkersList';
 
 const Index = () => {
   return (
@@ -18,6 +18,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <BiomarkersCarousel />
+        <BiomarkersList />
         <ServiceSteps />
         <SimpleSteps />
         <ResultsOverTime />
