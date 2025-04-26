@@ -1,5 +1,5 @@
 
-import { Check, Clock, FileSearch } from 'lucide-react';
+import { Clock, FileSearch, Check } from 'lucide-react';
 
 export const ServiceSteps = () => {
   const steps = [
@@ -23,6 +23,12 @@ export const ServiceSteps = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container-custom">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Como Funciona</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Mais de 60 análises laboratoriais para monitorizar, proteger e otimizar a sua saúde ano após ano.
+          </p>
+        </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => {
             const Icon = step.icon;
