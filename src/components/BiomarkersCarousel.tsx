@@ -7,6 +7,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
+import { useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export const BiomarkersCarousel = () => {
   const biomarkers = [
@@ -50,11 +53,21 @@ export const BiomarkersCarousel = () => {
   return (
     <section className="py-16">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Biomarcadores em Destaque
-        </h2>
         <div className="relative">
-          <Carousel opts={{ align: "start" }}>
+          <Carousel 
+            opts={{ 
+              align: "start",
+              loop: true,
+              skipSnaps: false,
+              plugins: [
+                Autoplay({
+                  delay: 3000,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: false
+                })
+              ]
+            }}
+          >
             <CarouselContent className="-ml-4">
               {biomarkers.map((biomarker, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
