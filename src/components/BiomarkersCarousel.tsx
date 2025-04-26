@@ -55,9 +55,10 @@ export const BiomarkersCarousel = () => {
   ];
 
   const plugin = Autoplay({
-    delay: 3000, // Slow down to 3 seconds per slide
+    delay: 0, // No delay between movements
     stopOnInteraction: false,
     stopOnMouseEnter: false,
+    playOnInit: true, // Start playing immediately
   });
 
   return (
@@ -69,6 +70,9 @@ export const BiomarkersCarousel = () => {
               align: "start",
               loop: true,
               dragFree: true,
+              skipSnaps: true, // Allows free-flowing movement
+              inViewThreshold: 0, // Smooth transition between slides
+              speed: 50, // Very slow movement speed (in pixels per second)
             }}
             plugins={[plugin]}
           >
@@ -117,3 +121,4 @@ export const BiomarkersCarousel = () => {
     </section>
   );
 };
+
