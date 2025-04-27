@@ -1,5 +1,17 @@
+
 import React from 'react';
 import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
+import { CircleDot, Activity, TestTube, Droplet, Flame, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ReferenceLine,
+  ResponsiveContainer
+} from "recharts";
 import { Biomarker } from './BiomarkersList';
 
 interface BiomarkerCardProps {
@@ -15,8 +27,8 @@ export const BiomarkerCard: React.FC<BiomarkerCardProps> = ({
   const isInRange = biomarker.status === "In Range";
   
   const data = [
-    { date: 'Dec 24', value: biomarker.value * 0.8 },
-    { date: 'Apr 25', value: biomarker.value }
+    { date: 'Dec 24', value: typeof biomarker.value === 'string' ? 0 : biomarker.value * 0.8 },
+    { date: 'Apr 25', value: typeof biomarker.value === 'string' ? 0 : biomarker.value }
   ];
 
   // Get icon based on biomarker name
