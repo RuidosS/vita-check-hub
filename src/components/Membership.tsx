@@ -28,7 +28,7 @@ export const Membership = () => {
           </div>
           <button 
             onClick={scrollToWaitlist}
-            className="btn-primary inline-flex items-center gap-2"
+            className="btn-primary inline-flex items-center gap-2 text-white"
           >
             Junta-te à Lista de Espera
             <ArrowRight className="h-5 w-5" />

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -94,13 +95,15 @@ const Testes = () => {
                   </div>
                   <div className="flex items-center justify-between gap-4">
                     <span className="text-gray-600">{test.sampleType}</span>
-                    <Button variant="default">Comprar</Button>
+                    <Button variant="default" className="text-white">
+                      Saber mais
+                    </Button>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-12 text-center">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="text-white">
                 Explorar Todos os Testes de Saúde
               </Button>
             </div>

@@ -18,6 +18,7 @@ import { toast } from "sonner";
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("Email inválido"),
+  phone: z.string().min(9, "Número de telemóvel inválido"),
 });
 
 export const WaitlistForm = () => {
@@ -26,6 +27,7 @@ export const WaitlistForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
     },
   });
 
@@ -75,7 +77,21 @@ export const WaitlistForm = () => {
               )}
             />
 
-            <Button type="submit" className="w-full">
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Telemóvel</FormLabel>
+                  <FormControl>
+                    <Input placeholder="O teu número de telemóvel" type="tel" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <Button type="submit" className="w-full text-white">
               Juntar à Lista de Espera
             </Button>
           </form>
