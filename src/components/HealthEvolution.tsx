@@ -13,7 +13,7 @@ export const HealthEvolution = () => {
           <div className="w-[70%] mx-auto">
             <div className="bg-white rounded-xl shadow-lg p-4">
               <img
-                src="/lovable-uploads/2ffda944-05ab-400f-a9ab-45a0b2317de0.png"
+                src="/lovable-uploads/3609cd9a-4d54-40e8-b6ac-0609e8320589.png"
                 alt="Evolução dos biomarcadores ao longo do tempo"
                 className="w-full h-auto"
               />
