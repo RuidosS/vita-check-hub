@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BiomarkerCard } from "./BiomarkerCard";
 
@@ -8,7 +7,6 @@ export interface Biomarker {
   unit: string;
   status: "In Range" | "Out of Range";
   progress: number;
-  // Adding the missing properties needed by BiomarkerCard
   range: string;
   description: string;
 }
@@ -122,7 +120,7 @@ export const BiomarkersList = () => {
             <BiomarkerCard 
               key={index} 
               biomarker={biomarker} 
-              showAlwaysVisible={index === 0} 
+              showAlwaysVisible={Boolean(index === 0)} 
             />
           ))}
         </div>
