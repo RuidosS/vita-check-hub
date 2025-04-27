@@ -9,10 +9,17 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
-      <div className="container-custom">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-muted to-white">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/51a1ba83-7925-41d6-b401-595be24a2bbd.png"
+          alt="Background"
+          className="w-full h-full object-cover opacity-50"
+        />
+      </div>
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="text-left space-y-6">
+          <div className="text-left space-y-6 bg-white/80 p-8 rounded-lg backdrop-blur-sm">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Assume o controlo da tua saúde.
             </h1>
@@ -34,7 +41,7 @@ export const HeroSection = () => {
             <img 
               src="/woman-profile.jpg" 
               alt="Saúde e bem-estar" 
-              className="rounded-lg shadow-lg max-w-full md:max-w-md h-auto" 
+              className="rounded-lg shadow-lg max-w-full md:max-w-md h-auto relative z-10" 
             />
           </div>
         </div>
@@ -42,4 +49,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
