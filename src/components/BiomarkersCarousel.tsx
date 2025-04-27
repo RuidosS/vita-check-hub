@@ -1,3 +1,4 @@
+
 import React from "react"
 import {
   Carousel,
@@ -15,31 +16,15 @@ export const BiomarkersCarousel = () => {
       value: "43",
       unit: "",
       name: "BIOLOGICAL AGE",
-      description: "5 years younger than your calendar age",
+      description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
-    },
-    {
-      value: "98",
-      unit: "mg/dL",
-      name: "ApoB",
-      description: "Transport lipids in the bloodstream. Risk marker for heart disease.",
-      dates: ["Sep 25", "Feb 26", "Sep 27"],
-      image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop"
-    },
-    {
-      value: "42",
-      unit: "ng/mL",
-      name: "VITAMIN D",
-      description: "Essential for immune system and bone health.",
-      dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
     },
     {
       value: "650",
       unit: "ng/dL",
       name: "TESTOSTERONE",
-      description: "Hormone critical for muscle, energy and vitality.",
+      description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
     },
@@ -47,9 +32,25 @@ export const BiomarkersCarousel = () => {
       value: "115",
       unit: "µg/dL",
       name: "FERRITIN",
-      description: "Iron storage protein. Key for energy production.",
+      description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
       image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop"
+    },
+    {
+      value: "98",
+      unit: "mg/dL",
+      name: "ApoB",
+      description: "Transporte de lípidos na corrente sanguínea.",
+      dates: ["Sep 25", "Feb 26", "Sep 27"],
+      image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop"
+    },
+    {
+      value: "42",
+      unit: "ng/mL",
+      name: "VITAMIN D",
+      description: "Essencial para o sistema imunitário.",
+      dates: ["Mar 23", "Sep 23", "Mar 24"],
+      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
     }
   ];
 

@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export const ResultsOverTime = () => {
@@ -6,14 +7,14 @@ export const ResultsOverTime = () => {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
-            Resultados ao longo do tempo
+            Resultados que contam a tua história de saúde.
           </h2>
           <div className="space-y-4">
-            <p className="text-2xl text-muted-foreground font-medium">
-              Conheça o seu estado de saúde atual e acompanhe as mudanças.
+            <p className="text-xl text-muted-foreground">
+              Acompanhamos a evolução dos teus biomarcadores ao longo do tempo.
             </p>
             <p className="text-xl text-muted-foreground">
-              Todos os seus dados laboratoriais ficam seguros e acessíveis, para que possa ver a evolução da sua saúde ao longo dos anos.
+              Vê como as tuas ações melhoram a tua saúde, mês após mês.
             </p>
           </div>
         </div>

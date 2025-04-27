@@ -1,20 +1,21 @@
+
 import { Clock, FileSearch, Check } from 'lucide-react';
 
 export const ServiceSteps = () => {
   const steps = [
     {
-      title: "Marque a sua colheita de análises",
-      description: "Agende facilmente as suas análises laboratoriais numa dos laboratórios parceiros.",
+      title: "Agenda a tua colheita de análises",
+      description: "Agenda facilmente as tuas análises num dos nossos laboratórios parceiros.",
       icon: Clock
     },
     {
-      title: "Receba os seus resultados",
-      description: "Aceda a um resumo clínico personalizado, insights baseados em investigação médica e receba contacto imediato em caso de resultados críticos.",
+      title: "Recebe o teu resumo clínico",
+      description: "Recebe insights claros e recomendações práticas baseadas nos teus resultados.",
       icon: FileSearch
     },
     {
-      title: "Aja e acompanhe a sua evolução",
-      description: "Acompanhe os seus resultados ao longo do tempo e tome decisões informadas para manter a sua saúde no seu melhor.",
+      title: "Acompanha a evolução",
+      description: "Acompanha a evolução da tua saúde ao longo dos anos.",
       icon: Check
     }
   ];
@@ -24,9 +25,6 @@ export const ServiceSteps = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Como Funciona</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Mais de 60 análises laboratoriais para monitorizar, proteger e otimizar a sua saúde ano após ano.
-          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => {

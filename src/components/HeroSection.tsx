@@ -16,7 +16,7 @@ export const HeroSection = () => {
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Testes laboratoriais avançados. Resultados claros. 
-          Planos de ação personalizados para a tua saúde.
+          Planos de ação personalizados para otimizar a tua saúde e performance.
         </p>
         <button 
           onClick={scrollToWaitlist}
