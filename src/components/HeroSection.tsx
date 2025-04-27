@@ -16,9 +16,12 @@ export const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Assume o controlo da tua saúde.
             </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl">
-              Testagens laboratoriais a cada 6 meses. +100 biomarcadores analisados. Resultados claros. Planos acionáveis.
-            </p>
+            <div className="space-y-4">
+              <p className="text-xl text-muted-foreground">Testagens laboratoriais a cada 6 meses.</p>
+              <p className="text-xl text-muted-foreground">+100 biomarcadores analisados.</p>
+              <p className="text-xl text-muted-foreground">Resultados claros, validados por médicos.</p>
+              <p className="text-xl text-muted-foreground">Planos de ação práticos e acionáveis.</p>
+            </div>
             <button 
               onClick={scrollToWaitlist}
               className="btn-primary inline-flex items-center gap-2"
@@ -39,3 +42,4 @@ export const HeroSection = () => {
     </section>
   );
 };
+

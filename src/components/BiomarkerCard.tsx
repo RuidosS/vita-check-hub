@@ -27,7 +27,7 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomar
   const isInRange = biomarker.status === "In Range";
   
   const data = [
-    { date: 'Dec 24', value: biomarker.value * 0.8 },
+    { date: 'Dec 24', value: typeof biomarker.value === 'number' ? biomarker.value * 0.8 : 0 },
     { date: 'Apr 25', value: biomarker.value }
   ];
 
