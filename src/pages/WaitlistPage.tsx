@@ -9,7 +9,7 @@ const WaitlistPage = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-20">
-        <section className="py-8 bg-gradient-to-b from-muted to-white">
+        <section className="py-4 bg-gradient-to-b from-muted to-white">
           <div className="container-custom max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Junta-te à Lista de Espera
