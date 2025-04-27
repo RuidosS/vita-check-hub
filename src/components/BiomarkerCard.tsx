@@ -1,8 +1,7 @@
-
-import React from 'react';
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
-import { CircleDot, Activity, TestTube, Droplet, Flame, ChevronDown, ChevronUp } from "lucide-react";
+import React from "react";
+import { Progress } from "./ui/progress";
+import { Badge } from "./ui/badge";
+import { TestTube, ChevronDown, ChevronUp, Droplet, Flame, Activity, CircleDot } from "lucide-react";
 import {
   LineChart,
   Line,
@@ -12,23 +11,25 @@ import {
   ReferenceLine,
   ResponsiveContainer
 } from "recharts";
-import { Biomarker } from './BiomarkersList';
+import type { Biomarker } from "./BiomarkersList";
 
-interface BiomarkerCardProps {
-  biomarker: Biomarker;
-  showAlwaysVisible?: boolean;
+interface Biomarker {
+  name: string;
+  status: "In Range" | "Out of Range";
+  value: number;
+  unit?: string;
+  range: string;
+  description: string;
+  progress: number;
 }
 
-export const BiomarkerCard: React.FC<BiomarkerCardProps> = ({ 
-  biomarker, 
-  showAlwaysVisible = false 
-}) => {
+export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: Biomarker; showAlwaysVisible?: boolean }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isInRange = biomarker.status === "In Range";
   
   const data = [
-    { date: 'Dec 24', value: typeof biomarker.value === 'string' ? 0 : biomarker.value * 0.8 },
-    { date: 'Apr 25', value: typeof biomarker.value === 'string' ? 0 : biomarker.value }
+    { date: 'Dec 24', value: biomarker.value * 0.8 },
+    { date: 'Apr 25', value: biomarker.value }
   ];
 
   // Get icon based on biomarker name
@@ -42,7 +43,7 @@ export const BiomarkerCard: React.FC<BiomarkerCardProps> = ({
 
   // Get ideal range text
   const getIdealRange = (name: string) => {
-    const ranges: Record<string, string> = {
+    const ranges = {
       "Apolipoproteína B (ApoB)": "55–90 mg/dL",
       "Colesterol HDL": "40–60 mg/dL",
       "Proteína C-Reativa de Alta Sensibilidade (hs-PCR)": "<1.0 mg/L",
@@ -55,7 +56,7 @@ export const BiomarkerCard: React.FC<BiomarkerCardProps> = ({
       "Triglicerídeos": "<150 mg/dL"
     };
     
-    return ranges[name] || "Não disponível";
+    return ranges[name as keyof typeof ranges] || "Não disponível";
   };
 
   return (

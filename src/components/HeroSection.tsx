@@ -9,34 +9,22 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center">
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/lovable-uploads/d34bfaab-c87b-4802-b80d-b93c578f4e88.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
-      <div className="absolute inset-0 bg-black/50 z-10" />
-      
-      <div className="container-custom relative z-20">
-        <div className="max-w-xl ml-0 lg:ml-16 text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-            Assume o controlo da tua saúde
-          </h1>
-          <p className="text-xl text-white/90 mb-8">
-            Testes laboratoriais avançados. Resultados claros. 
-            Planos de ação personalizados para otimizar a tua saúde e performance.
-          </p>
-          <button 
-            onClick={scrollToWaitlist}
-            className="btn-primary inline-flex items-center gap-2"
-          >
-            Junta-te à Lista de Espera
-            <ArrowRight className="h-5 w-5" />
-          </button>
-        </div>
+    <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
+      <div className="container-custom text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Assume o controlo da tua saúde
+        </h1>
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Testes laboratoriais avançados. Resultados claros. 
+          Planos de ação personalizados para otimizar a tua saúde e performance.
+        </p>
+        <button 
+          onClick={scrollToWaitlist}
+          className="btn-primary inline-flex items-center gap-2"
+        >
+          Junta-te à Lista de Espera
+          <ArrowRight className="h-5 w-5" />
+        </button>
       </div>
     </section>
   );
