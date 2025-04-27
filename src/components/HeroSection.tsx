@@ -20,7 +20,7 @@ export const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Assume o controlo da tua saúde.
             </h1>
-            <div className="space-y-4">
+            <div className="space-y-3">
               <p className="text-xl text-white">Testagens laboratoriais a cada 6 meses.</p>
               <p className="text-xl text-white">+100 biomarcadores analisados.</p>
               <p className="text-xl text-white">Resultados claros, validados por médicos.</p>
