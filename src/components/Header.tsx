@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -7,14 +6,6 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-
-  const scrollToHowItWorks = (e: React.MouseEvent) => {
-    if (location.pathname === '/') {
-      e.preventDefault();
-      const element = document.querySelector('#como-funciona');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const scrollToWaitlist = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -51,8 +42,7 @@ export const Header = () => {
 
           <nav className="hidden md:flex items-center gap-8">
             <Link 
-              to={location.pathname === '/' ? '#como-funciona' : '/'} 
-              onClick={scrollToHowItWorks}
+              to="/como-funciona"
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               Como Funciona
@@ -83,27 +73,41 @@ export const Header = () => {
           <nav className="md:hidden py-4 px-2 bg-white border-t border-gray-100">
             <div className="flex flex-col gap-4">
               <Link 
-                to={location.pathname === '/' ? '#como-funciona' : '/'} 
-                onClick={scrollToHowItWorks}
+                to="/como-funciona"
                 className="text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Como Funciona
               </Link>
-              <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/faq" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 FAQ
               </Link>
               <Link 
-                to="/testes" 
-                onClick={handleTestesClick}
+                to="/testes"
+                onClick={(e) => {
+                  setIsMenuOpen(false);
+                  handleTestesClick(e);
+                }}
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
                 Testes em Casa
               </Link>
-              <Link to="/login" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/login" 
+                className="text-sm font-medium hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Login
               </Link>
               <button 
-                onClick={scrollToWaitlist}
+                onClick={(e) => {
+                  setIsMenuOpen(false);
+                  scrollToWaitlist(e);
+                }}
                 className="btn-primary w-full text-center"
               >
                 Junta-te à Lista de Espera
