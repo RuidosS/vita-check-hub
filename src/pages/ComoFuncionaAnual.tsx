@@ -17,7 +17,7 @@ const ComoFuncionaAnual = () => {
               Cuida da tua saúde. De forma simples, contínua e inteligente.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto">
-              Com a nossa Membership anual, fazes análises clínicas presenciais, recebes insights personalizados e traças um plano de ação para te sentires no teu melhor.
+              Com a nossa Adesão anual, fazes análises clínicas presenciais, recebes insights personalizados e traças um plano de ação para te sentires no teu melhor.
               <br /><br />
               A saúde é um investimento — começa hoje.
             </p>
@@ -69,7 +69,7 @@ const ComoFuncionaAnual = () => {
           <div className="container-custom">
             <div className="max-w-2xl mx-auto bg-muted p-8 rounded-2xl">
               <p className="text-center font-medium">
-                Esta página refere-se apenas à Membership Anual com análises clínicas presenciais.
+                Esta página refere-se apenas à Adesão Anual com análises clínicas presenciais.
                 <br />
                 Se procuras os kits de teste em casa, vais encontrar essa informação numa página separada.
               </p>
@@ -89,3 +89,4 @@ const ComoFuncionaAnual = () => {
 };
 
 export default ComoFuncionaAnual;
+

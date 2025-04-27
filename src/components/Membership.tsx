@@ -16,7 +16,7 @@ export const Membership = () => {
             Cuida da tua saúde como quem cuida do seu maior ativo.
           </h2>
           <div className="mb-8 space-y-6">
-            <p className="text-xl">Junta-te à HealthLab Membership:</p>
+            <p className="text-xl">Junta-te à HealthLab Adesão:</p>
             <ul className="space-y-2 text-lg">
               <li>- Testes laboratoriais avançados</li>
               <li>- Planos personalizados</li>
@@ -38,3 +38,4 @@ export const Membership = () => {
     </section>
   );
 };
+
