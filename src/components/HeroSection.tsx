@@ -11,7 +11,7 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="pt-48 pb-32 bg-contain bg-center bg-no-repeat min-h-[70vh]"
+      className="py-32 bg-no-repeat bg-center bg-auto"
       style={{ backgroundImage: "url('/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png')" }}
     >
       <div className="container-custom">
