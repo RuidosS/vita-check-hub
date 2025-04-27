@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
 import { Badge } from '../components/ui/badge';
-import { Home, Activity } from 'lucide-react';
+import { Activity } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Testes = () => {
@@ -59,7 +58,6 @@ const Testes = () => {
               <div className="flex items-center justify-center gap-3 text-4xl font-bold">
                 <Activity className="h-10 w-10 text-primary" />
                 <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
-                <Home className="h-10 w-10 text-primary" />
               </div>
               
               <p className="text-xl font-semibold text-gray-700">
