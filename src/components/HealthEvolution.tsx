@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "./ui/badge";
@@ -75,6 +74,27 @@ export const HealthEvolution = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="bg-white rounded-2xl p-4 shadow-sm">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-medium">Homocisteína</h3>
+                    <div className="flex items-center gap-2">
+                      <Badge className="bg-red-100 hover:bg-red-200 text-red-600">16.2 µmol/L</Badge>
+                      <span className="text-xs text-muted-foreground">Ideal: &lt;12 µmol/L</span>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-gray-400" />
+                </div>
+                <div className="relative mt-4">
+                  <div className="h-2 w-full bg-red-100 rounded-full">
+                    <div className="h-2 w-[85%] bg-red-500 rounded-full"></div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Níveis elevados podem indicar risco cardiovascular aumentado.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,4 +102,3 @@ export const HealthEvolution = () => {
     </section>
   );
 };
-
