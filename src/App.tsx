@@ -11,6 +11,7 @@ import Faq from "./pages/Faq";
 import Testes from "./pages/Testes";
 import IdadeBiologica from "./pages/IdadeBiologica";
 import WaitlistPage from "./pages/WaitlistPage";
+import Adesao from "./pages/Adesao";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/testes" element={<Testes />} />
           <Route path="/teste/idade-biologica" element={<IdadeBiologica />} />
           <Route path="/lista-de-espera" element={<WaitlistPage />} />
+          <Route path="/adesao" element={<Adesao />} />
           <Route path="/login" element={<Index />} />
           <Route path="/termos" element={<Index />} />
           <Route path="/privacidade" element={<Index />} />

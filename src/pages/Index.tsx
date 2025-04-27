@@ -11,7 +11,6 @@ import { ResultsOverTime } from '../components/ResultsOverTime';
 import { HealthEvolution } from '../components/HealthEvolution';
 import { ServiceSteps } from '../components/ServiceSteps';
 import { WhyDifferent } from '../components/WhyDifferent';
-import { Membership } from '../components/Membership';
 import { WaitlistForm } from '../components/WaitlistForm';
 
 const Index = () => {
@@ -28,7 +27,6 @@ const Index = () => {
         <ServiceSteps />
         <BiomarkersCategories />
         <WhyDifferent />
-        <Membership /> {/* This reference remains the same */}
         <WaitlistForm />
       </main>
       <Footer />
