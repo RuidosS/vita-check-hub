@@ -1,8 +1,6 @@
 
 import React from "react";
 import { BiomarkerCard } from "./BiomarkerCard";
-import { ScrollArea } from "./ui/scroll-area";
-import { Card } from "./ui/card";
 
 export interface Biomarker {
   name: string;
@@ -10,6 +8,9 @@ export interface Biomarker {
   unit: string;
   status: "In Range" | "Out of Range";
   progress: number;
+  // Adding the missing properties needed by BiomarkerCard
+  range: string;
+  description: string;
 }
 
 const biomarkers: Biomarker[] = [
@@ -18,70 +19,90 @@ const biomarkers: Biomarker[] = [
     value: 69,
     unit: "mg/dL",
     status: "In Range",
-    progress: 65
+    progress: 65,
+    range: "55–90 mg/dL",
+    description: "A ApoB mede o número de partículas de lipoproteínas na corrente sanguínea. Níveis saudáveis estão associados a menor risco cardiovascular."
   },
   { 
     name: "Colesterol HDL",
     value: 54, 
     unit: "mg/dL",
     status: "In Range",
-    progress: 70 
+    progress: 70,
+    range: "40–60 mg/dL",
+    description: "Conhecido como 'bom colesterol', níveis mais altos ajudam a proteger contra doenças cardíacas."
   },
   { 
     name: "Proteína C-Reativa de Alta Sensibilidade (hs-PCR)",
     value: 0.6,
     unit: "mg/L",
     status: "In Range", 
-    progress: 45
+    progress: 45,
+    range: "<1.0 mg/L",
+    description: "Biomarcador de inflamação sistêmica; níveis baixos indicam baixo risco cardiovascular."
   },
   { 
     name: "Padrão LDL",
     value: "A",
     unit: "",
     status: "In Range",
-    progress: 80 
+    progress: 80,
+    range: "Tipo A (grande e fofa)",
+    description: "Subtipos de LDL identificam o tamanho das partículas; o tipo A é menos prejudicial."
   },
   { 
     name: "Colesterol LDL",
     value: 86,
     unit: "mg/dL", 
     status: "In Range", 
-    progress: 55
+    progress: 55,
+    range: "70–100 mg/dL",
+    description: "LDL elevado pode aumentar o risco cardíaco; níveis ótimos mantêm as artérias limpas."
   },
   { 
     name: "Lipoproteína (a)",
     value: 10,
     unit: "nmol/L",
     status: "In Range",
-    progress: 50 
+    progress: 50,
+    range: "<30 nmol/L",
+    description: "Altos níveis de Lipoproteína (a) aumentam o risco de doença cardiovascular."
   },
   { 
     name: "Colesterol Não-HDL",
     value: 105,
     unit: "mg/dL",
     status: "In Range",
-    progress: 60 
+    progress: 60,
+    range: "<130 mg/dL",
+    description: "Mede todas as partículas de colesterol prejudiciais; importante para avaliação de risco cardíaco."
   },
   { 
     name: "Colesterol Total",
     value: 159, 
     unit: "mg/dL",
     status: "In Range",
-    progress: 75
+    progress: 75,
+    range: "<200 mg/dL",
+    description: "Valor geral de colesterol no sangue; níveis normais indicam equilíbrio lipídico."
   },
   { 
     name: "Rácio Colesterol Total / HDL",
     value: 2.9,
     unit: "",
     status: "In Range",
-    progress: 65
+    progress: 65,
+    range: "<5.0",
+    description: "Um rácio mais baixo indica menor risco cardiovascular."
   },
   { 
     name: "Triglicerídeos",
     value: 99,
     unit: "mg/dL",
     status: "In Range",
-    progress: 58 
+    progress: 58,
+    range: "<150 mg/dL",
+    description: "Triglicerídeos altos aumentam o risco de doenças cardíacas e metabólicas."
   }
 ];
 

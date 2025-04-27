@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Progress } from "./ui/progress";
 import { Badge } from "./ui/badge";
@@ -12,16 +13,6 @@ import {
   ResponsiveContainer
 } from "recharts";
 import type { Biomarker } from "./BiomarkersList";
-
-interface Biomarker {
-  name: string;
-  status: "In Range" | "Out of Range";
-  value: number;
-  unit?: string;
-  range: string;
-  description: string;
-  progress: number;
-}
 
 export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: Biomarker; showAlwaysVisible?: boolean }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -43,7 +34,7 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomar
 
   // Get ideal range text
   const getIdealRange = (name: string) => {
-    const ranges = {
+    const ranges: Record<string, string> = {
       "Apolipoproteína B (ApoB)": "55–90 mg/dL",
       "Colesterol HDL": "40–60 mg/dL",
       "Proteína C-Reativa de Alta Sensibilidade (hs-PCR)": "<1.0 mg/L",
@@ -56,7 +47,7 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomar
       "Triglicerídeos": "<150 mg/dL"
     };
     
-    return ranges[name as keyof typeof ranges] || "Não disponível";
+    return ranges[name] || "Não disponível";
   };
 
   return (
