@@ -1,12 +1,13 @@
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export const HeroSection = () => {
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist');
-    element?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const navigate = useNavigate();
+
+  const goToWaitlist = () => {
+    navigate('/lista-de-espera');
   };
 
   return (
@@ -27,11 +28,11 @@ export const HeroSection = () => {
               <p className="text-xl text-white">Planos de ação práticos e acionáveis.</p>
             </div>
             <button 
-  onClick={scrollToWaitlist}
-  className="bg-white text-black font-semibold py-3 px-6 rounded-lg inline-flex items-center gap-2 shadow-md hover:bg-gray-100 transition"
->
-  Junta-te à Lista de Espera
-</button>
+              onClick={goToWaitlist}
+              className="bg-white text-black font-semibold py-3 px-6 rounded-lg inline-flex items-center gap-2 shadow-md hover:bg-gray-100 transition"
+            >
+              Junta-te à Lista de Espera
+            </button>
           </div>
         </div>
       </div>

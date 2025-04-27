@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Check, ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 export const WhyDifferent = () => {
   const features = [
@@ -11,9 +12,10 @@ export const WhyDifferent = () => {
     "Planos de ação personalizados."
   ];
 
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist');
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+
+  const goToWaitlist = () => {
+    navigate('/lista-de-espera');
   };
 
   return (
@@ -42,7 +44,7 @@ export const WhyDifferent = () => {
               Sabe exatamente como está o teu corpo. Atua com inteligência. Vive mais, vive melhor.
             </p>
             <button 
-              onClick={scrollToWaitlist}
+              onClick={goToWaitlist}
               className="btn-primary inline-flex items-center gap-2"
             >
               Junta-te à Lista de Espera

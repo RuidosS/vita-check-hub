@@ -1,11 +1,13 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export const AboutUs = () => {
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist');
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+  
+  const goToWaitlist = () => {
+    navigate('/lista-de-espera');
   };
   
   return (
@@ -18,7 +20,7 @@ export const AboutUs = () => {
           Realiza 2 testagens laboratoriais presenciais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
         </p>
         <button 
-          onClick={scrollToWaitlist} 
+          onClick={goToWaitlist} 
           className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
         >
           Junta-te à Lista de Espera

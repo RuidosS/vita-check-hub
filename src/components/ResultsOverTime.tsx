@@ -1,11 +1,13 @@
 
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 export const ResultsOverTime = () => {
-  const scrollToWaitlist = () => {
-    const element = document.getElementById('waitlist');
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+
+  const goToWaitlist = () => {
+    navigate('/lista-de-espera');
   };
 
   return (
@@ -21,7 +23,7 @@ export const ResultsOverTime = () => {
             </p>
           </div>
           <button 
-            onClick={scrollToWaitlist}
+            onClick={goToWaitlist}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Junta-te à Lista de Espera
