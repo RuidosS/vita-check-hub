@@ -20,8 +20,9 @@ export const WhyDifferent = () => {
     <section className="py-24 bg-gray-50">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            Saúde de verdade. Sem complicações.
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center leading-tight">
+            Saúde de verdade<br />
+            Sem complicações.
           </h2>
           <div className="space-y-4 mb-10">
             {features.map((feature, index) => (
