@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Progress } from "./ui/progress";
 import { Badge } from "./ui/badge";
@@ -14,18 +13,23 @@ import {
 } from "recharts";
 import type { Biomarker } from "./BiomarkersList";
 
-interface BiomarkerCardProps {
-  biomarker: Biomarker;
-  showAlwaysVisible?: boolean;
+interface Biomarker {
+  name: string;
+  status: "In Range" | "Out of Range";
+  value: number;
+  unit?: string;
+  range: string;
+  description: string;
+  progress: number;
 }
 
-export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: BiomarkerCardProps) => {
+export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: Biomarker; showAlwaysVisible?: boolean }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isInRange = biomarker.status === "In Range";
   
   const data = [
-    { date: 'Dec 24', value: biomarker.value < 100 ? 65 : 150 },
-    { date: 'Apr 25', value: typeof biomarker.value === 'number' ? biomarker.value : 0 }
+    { date: 'Dec 24', value: biomarker.value * 0.8 },
+    { date: 'Apr 25', value: biomarker.value }
   ];
 
   // Get icon based on biomarker name

@@ -5,6 +5,7 @@ import { Footer } from '../components/Footer';
 import { HeroSection } from '../components/HeroSection';
 import { AboutUs } from '../components/AboutUs';
 import { BiomarkersIntro } from '../components/BiomarkersIntro';
+import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 import { BiomarkersList } from '../components/BiomarkersList';
 import { BiomarkersCategories } from '../components/BiomarkersCategories';
 import { ResultsOverTime } from '../components/ResultsOverTime';
@@ -22,6 +23,7 @@ const Index = () => {
         <HeroSection />
         <AboutUs />
         <BiomarkersIntro />
+        <BiomarkersCarousel />
         <BiomarkersList />
         <ResultsOverTime />
         <HealthEvolution />
