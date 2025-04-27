@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -99,7 +98,7 @@ const Testes = () => {
                     <Button 
                       variant="default" 
                       className="text-white"
-                      onClick={() => test.path ? navigate(test.path) : null}
+                      onClick={() => navigate("/teste/idade-biologica")}
                     >
                       Saber mais
                     </Button>
