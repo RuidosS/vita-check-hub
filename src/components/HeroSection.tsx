@@ -13,7 +13,7 @@ export const HeroSection = () => {
     <section 
       className="relative min-h-screen flex items-center bg-cover bg-center"
       style={{
-        backgroundImage: `url('/lovable-uploads/2b95f72c-00b4-4984-bae1-2aa412eebd7a.png')`,
+        backgroundImage: `url('/lovable-uploads/db9df004-edf9-438c-a8e8-65baab47fae5.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
