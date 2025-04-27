@@ -13,15 +13,15 @@ export const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/a449d0da-62a3-4c59-a91d-aaa70cf7df81.png')",
+          backgroundImage: "url('/lovable-uploads/d34bfaab-c87b-4802-b80d-b93c578f4e88.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
-      <div className="absolute inset-0 bg-black/60 z-10" />
+      <div className="absolute inset-0 bg-black/50 z-10" />
       
       <div className="container-custom relative z-20">
-        <div className="max-w-2xl">
+        <div className="max-w-xl ml-0 lg:ml-16 text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
             Assume o controlo da tua saúde
           </h1>

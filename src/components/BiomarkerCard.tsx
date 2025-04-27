@@ -1,20 +1,16 @@
+import React from 'react';
+import { Progress } from "@/components/ui/progress";
+import { Biomarker } from './BiomarkersList';
 
-import React from "react";
-import { Progress } from "./ui/progress";
-import { Badge } from "./ui/badge";
-import { TestTube, ChevronDown, ChevronUp, Droplet, Flame, Activity, CircleDot } from "lucide-react";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ReferenceLine,
-  ResponsiveContainer
-} from "recharts";
-import type { Biomarker } from "./BiomarkersList";
+interface BiomarkerCardProps {
+  biomarker: Biomarker;
+  showAlwaysVisible?: boolean;
+}
 
-export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: Biomarker; showAlwaysVisible?: boolean }) => {
+export const BiomarkerCard: React.FC<BiomarkerCardProps> = ({ 
+  biomarker, 
+  showAlwaysVisible = false 
+}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isInRange = biomarker.status === "In Range";
   
