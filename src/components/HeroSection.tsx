@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   const scrollToWaitlist = () => {
@@ -10,39 +9,23 @@ export const HeroSection = () => {
   };
 
   return (
-    <section 
-      className="relative min-h-screen flex items-center bg-cover bg-center"
-      style={{
-        backgroundImage: `url('/lovable-uploads/db9df004-edf9-438c-a8e8-65baab47fae5.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
-      <div className="container-custom grid grid-cols-1 md:grid-cols-2 items-center relative z-10">
-        <div className="hidden md:block"></div>
-        <div className="text-right text-white space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight 
-                         font-inter text-white drop-shadow-lg">
-            Assume o controlo<br /> da tua saúde
-          </h1>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-xl ml-auto 
-                        font-inter tracking-wide leading-relaxed drop-shadow">
-            Testes laboratoriais avançados. Resultados claros. 
-            Planos personalizados para otimizar a tua saúde e performance.
-          </p>
-          <Button 
-            onClick={scrollToWaitlist}
-            className="bg-primary hover:bg-primary/90 text-white font-medium 
-                       px-8 py-3 rounded-xl text-base tracking-wide 
-                       transition-all duration-300 ease-in-out 
-                       hover:scale-105 shadow-lg ml-auto"
-          >
-            Junta-te à Lista de Espera
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
+    <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
+      <div className="container-custom text-center">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Assume o controlo da tua saúde
+        </h1>
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Testes laboratoriais avançados. Resultados claros. 
+          Planos de ação personalizados para otimizar a tua saúde e performance.
+        </p>
+        <button 
+          onClick={scrollToWaitlist}
+          className="btn-primary inline-flex items-center gap-2"
+        >
+          Junta-te à Lista de Espera
+          <ArrowRight className="h-5 w-5" />
+        </button>
       </div>
-      <div className="absolute inset-0 bg-primary/30 backdrop-blur-sm"></div>
     </section>
   );
 };
