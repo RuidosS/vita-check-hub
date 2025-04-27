@@ -7,10 +7,7 @@ export const Membership = () => {
   const navigate = useNavigate();
 
   const goToWaitlist = () => {
-    const element = document.getElementById('waitlist');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/lista-de-espera');
   };
 
   return (

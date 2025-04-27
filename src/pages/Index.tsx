@@ -11,7 +11,6 @@ import { ResultsOverTime } from '../components/ResultsOverTime';
 import { HealthEvolution } from '../components/HealthEvolution';
 import { ServiceSteps } from '../components/ServiceSteps';
 import { WhyDifferent } from '../components/WhyDifferent';
-import { WaitlistForm } from '../components/WaitlistForm';
 
 const Index = () => {
   return (
@@ -27,7 +26,6 @@ const Index = () => {
         <ServiceSteps />
         <BiomarkersCategories />
         <WhyDifferent />
-        <WaitlistForm />
       </main>
       <Footer />
     </div>
