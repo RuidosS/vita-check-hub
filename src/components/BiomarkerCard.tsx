@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Progress } from "./ui/progress";
 import { Badge } from "./ui/badge";
@@ -63,7 +64,7 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: Biomarke
         <div className="flex items-start justify-between mb-2">
           <div className="space-y-1">
             <PopoverWrapper>
-              <TriggerWrapper asChild>
+              <TriggerWrapper>
                 <div className={`flex items-center gap-2 ${!showAlwaysVisible ? "cursor-pointer hover:opacity-80" : ""}`}>
                   <TestTube className="w-4 h-4 text-muted-foreground" />
                   <h3 className="font-semibold text-lg">{biomarker.name}</h3>
@@ -117,3 +118,4 @@ const getBiomarkerDescription = (name: string): string => {
   
   return descriptions[name] || "Biomarker information not available.";
 };
+
