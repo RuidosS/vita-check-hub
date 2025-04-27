@@ -52,10 +52,4 @@
     @apply text-lg text-muted-foreground mb-8 max-w-2xl mx-auto;
   }
 }
-body {
-  background-image: url('/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
+
