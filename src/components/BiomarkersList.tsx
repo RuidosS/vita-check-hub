@@ -1,8 +1,15 @@
 
 import React from "react";
 import { BiomarkerCard } from "./BiomarkerCard";
-import { ScrollArea } from "./ui/scroll-area";
 import { Card } from "./ui/card";
+import { 
+  Droplet, 
+  Heart, 
+  Flame, 
+  Activity, 
+  Sun, 
+  CircleDot 
+} from "lucide-react";
 
 export interface Biomarker {
   name: string;
@@ -90,12 +97,23 @@ export const BiomarkersList = () => {
     <section id="biomarcadores" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          Resultados simples de interpretar
+          O que analisamos em cada testagem
         </h2>
         <p className="text-lg text-gray-700 text-center mb-16 max-w-3xl mx-auto">
-          Segue um plano de ação personalizado baseado em dados para melhorares o teu corpo.
+          Mais de 100 biomarcadores organizados em 8 categorias principais para uma visão completa da tua saúde.
         </p>
         
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <CategoryCard icon={Heart} title="Cardiovascular" count={10} />
+          <CategoryCard icon={CircleDot} title="Hormonal" count={14} />
+          <CategoryCard icon={Flame} title="Inflamação" count={8} />
+          <CategoryCard icon={Activity} title="Metabolismo" count={12} />
+          <CategoryCard icon={Sun} title="Vitaminas e Minerais" count={15} />
+          <CategoryCard icon={Activity} title="Fígado" count={8} />
+          <CategoryCard icon={Droplet} title="Rins" count={7} />
+          <CategoryCard icon={Droplet} title="Marcadores de sangue" count={12} />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {biomarkers.map((biomarker, index) => (
             <BiomarkerCard 
@@ -107,5 +125,30 @@ export const BiomarkersList = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+// Componente para os cards de categorias
+const CategoryCard = ({ 
+  icon: Icon, 
+  title, 
+  count 
+}: { 
+  icon: React.ElementType; 
+  title: string; 
+  count: number;
+}) => {
+  return (
+    <Card className="p-4 hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-3">
+        <div className="bg-primary/10 p-2 rounded-full">
+          <Icon className="h-5 w-5 text-primary" />
+        </div>
+        <div>
+          <h3 className="font-medium">{title}</h3>
+          <p className="text-sm text-muted-foreground">{count} marcadores</p>
+        </div>
+      </div>
+    </Card>
   );
 };

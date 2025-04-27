@@ -44,7 +44,7 @@ export const WaitlistForm = () => {
           Junta-te à Lista de Espera
         </h2>
         <p className="text-gray-600 text-center mb-8">
-          Sê dos primeiros a experimentar a nossa plataforma.
+          Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional.
         </p>
         
         <Form {...form}>

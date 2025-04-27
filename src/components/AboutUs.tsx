@@ -1,26 +1,29 @@
 
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export const AboutUs = () => {
+  const scrollToWaitlist = () => {
+    const element = document.getElementById('waitlist');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+  
   return (
     <section className="py-24 bg-white">
-      <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            A nova forma de cuidar da tua saúde.
-          </h2>
-          <div className="space-y-6 text-lg text-muted-foreground">
-            <p>
-              Cruzamos análises laboratoriais avançadas com ciência de saúde funcional, longevidade, biologia e bioquímica clínica.
-            </p>
-            <p>
-              Recebes um plano de ação prático, focado em nutrição, suplementação, sono e estilo de vida — baseado nos teus dados, não em achismos.
-            </p>
-            <p className="font-medium">
-              Simples. Claro. Pessoal. Sem medicalês.
-            </p>
-          </div>
-        </div>
+      <div className="container-custom max-w-4xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          A Membership anual para quem quer viver melhor e mais tempo.
+        </h2>
+        <p className="text-xl text-muted-foreground mb-8">
+          Realiza 2 testagens laboratoriais presenciais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
+        </p>
+        <button 
+          onClick={scrollToWaitlist} 
+          className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+        >
+          Junta-te à Lista de Espera
+          <ArrowRight className="h-4 w-4" />
+        </button>
       </div>
     </section>
   );

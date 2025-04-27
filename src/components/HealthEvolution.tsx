@@ -3,26 +3,59 @@ import React from "react";
 
 export const HealthEvolution = () => {
   return (
-    <section className="bg-white py-24">
+    <section className="py-24 bg-gray-50">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
-            Evolução da sua saúde ao longo do tempo
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">
+            Vê como as tuas escolhas transformam a tua saúde.
           </h2>
-          
-          <div className="w-[70%] mx-auto">
-            <div className="bg-white rounded-xl shadow-lg p-4">
-              <img
-                src="/lovable-uploads/3609cd9a-4d54-40e8-b6ac-0609e8320589.png"
-                alt="Evolução dos biomarcadores ao longo do tempo"
-                className="w-full h-auto"
-              />
+          <p className="text-xl text-muted-foreground">
+            Pequenas mudanças hoje. Grandes resultados amanhã. Acompanha a evolução mês após mês.
+          </p>
+        </div>
+
+        <div className="flex justify-center">
+          {/* Mockup de dispositivo móvel com gráfico de evolução */}
+          <div className="bg-white rounded-3xl shadow-xl p-3 border-8 border-gray-800 w-full max-w-xs">
+            <div className="bg-gray-100 rounded-2xl p-4 h-[500px] flex flex-col">
+              <div className="bg-primary/10 rounded-xl p-3 mb-4">
+                <h3 className="text-sm font-medium mb-1">Evolução - ApoB</h3>
+                <div className="h-40 bg-white rounded-lg p-2">
+                  {/* Representação gráfica simplificada */}
+                  <div className="h-full flex items-end">
+                    <div className="w-1/4 h-[60%] bg-primary/30 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[70%] bg-primary/50 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[55%] bg-primary/70 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[45%] bg-primary rounded-t-md mx-0.5"></div>
+                  </div>
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>Jan</span>
+                    <span>Mar</span>
+                    <span>Jun</span>
+                    <span>Set</span>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-primary/10 rounded-xl p-3">
+                <h3 className="text-sm font-medium mb-1">Evolução - HDL</h3>
+                <div className="h-40 bg-white rounded-lg p-2">
+                  {/* Representação gráfica simplificada */}
+                  <div className="h-full flex items-end">
+                    <div className="w-1/4 h-[40%] bg-primary/30 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[50%] bg-primary/50 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[60%] bg-primary/70 rounded-t-md mx-0.5"></div>
+                    <div className="w-1/4 h-[70%] bg-primary rounded-t-md mx-0.5"></div>
+                  </div>
+                  <div className="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>Jan</span>
+                    <span>Mar</span>
+                    <span>Jun</span>
+                    <span>Set</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <p className="text-lg text-muted-foreground italic max-w-2xl mx-auto">
-            Acompanhe o progresso dos seus principais biomarcadores com check-ups regulares e veja a sua evolução em dados claros.
-          </p>
         </div>
       </div>
     </section>
