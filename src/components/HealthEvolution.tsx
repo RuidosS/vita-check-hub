@@ -1,5 +1,7 @@
 
 import React from "react";
+import { ArrowRight } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 export const HealthEvolution = () => {
   return (
@@ -15,39 +17,61 @@ export const HealthEvolution = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="bg-white rounded-3xl shadow-xl p-3 border-8 border-gray-800 w-full max-w-xs">
-            <div className="bg-gray-100 rounded-2xl p-4 h-[500px] flex flex-col">
-              <div className="bg-green-50 rounded-xl p-3 mb-4">
-                <h3 className="text-sm font-medium mb-1">Evolução - ApoB</h3>
-                <div className="h-40 bg-white rounded-lg p-2">
-                  <div className="h-full flex items-end">
-                    <div className="w-1/4 h-[60%] bg-green-300 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[70%] bg-green-400 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[55%] bg-green-500 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[45%] bg-green-600 rounded-t-md mx-0.5"></div>
+          <div className="bg-white rounded-[40px] shadow-xl p-6 border-[12px] border-gray-900 w-full max-w-sm">
+            <div className="bg-gray-50 rounded-3xl p-4 h-[600px] flex flex-col gap-4 overflow-y-auto">
+              <div className="bg-white rounded-2xl p-4 shadow-sm">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-medium">Rácio Colesterol Total / HDL</h3>
+                    <div className="flex items-center gap-2">
+                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">2.9</Badge>
+                      <span className="text-xs text-muted-foreground">Ideal: &lt;5.0</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>Jan</span>
-                    <span>Mar</span>
-                    <span>Jun</span>
-                    <span>Set</span>
+                  <ArrowRight className="h-4 w-4 text-gray-400" />
+                </div>
+                <div className="relative mt-4">
+                  <div className="h-2 w-full bg-green-100 rounded-full">
+                    <div className="h-2 w-[60%] bg-green-500 rounded-full"></div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    Um rácio mais baixo indica menor risco cardiovascular.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-4 shadow-sm">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-medium">Triglicerídeos</h3>
+                    <div className="flex items-center gap-2">
+                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">99 mg/dL</Badge>
+                      <span className="text-xs text-muted-foreground">Ideal: &lt;150 mg/dL</span>
+                    </div>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-gray-400" />
+                </div>
+                <div className="relative mt-4">
+                  <div className="h-2 w-full bg-green-100 rounded-full">
+                    <div className="h-2 w-[70%] bg-green-500 rounded-full"></div>
                   </div>
                 </div>
               </div>
-              <div className="bg-green-50 rounded-xl p-3">
-                <h3 className="text-sm font-medium mb-1">Evolução - HDL</h3>
-                <div className="h-40 bg-white rounded-lg p-2">
-                  <div className="h-full flex items-end">
-                    <div className="w-1/4 h-[40%] bg-green-300 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[50%] bg-green-400 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[60%] bg-green-500 rounded-t-md mx-0.5"></div>
-                    <div className="w-1/4 h-[70%] bg-green-600 rounded-t-md mx-0.5"></div>
+
+              <div className="bg-white rounded-2xl p-4 shadow-sm">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="space-y-1">
+                    <h3 className="text-sm font-medium">HDL</h3>
+                    <div className="flex items-center gap-2">
+                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">65 mg/dL</Badge>
+                      <span className="text-xs text-muted-foreground">Ideal: &gt;40 mg/dL</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>Jan</span>
-                    <span>Mar</span>
-                    <span>Jun</span>
-                    <span>Set</span>
+                  <ArrowRight className="h-4 w-4 text-gray-400" />
+                </div>
+                <div className="relative mt-4">
+                  <div className="h-2 w-full bg-green-100 rounded-full">
+                    <div className="h-2 w-[80%] bg-green-500 rounded-full"></div>
                   </div>
                 </div>
               </div>
@@ -58,3 +82,4 @@ export const HealthEvolution = () => {
     </section>
   );
 };
+
