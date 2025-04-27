@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import ComoFunciona from "./pages/ComoFunciona";
 import Faq from "./pages/Faq";
 import Testes from "./pages/Testes";
+import IdadeBiologica from "./pages/IdadeBiologica";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/como-funciona" element={<ComoFunciona />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/testes" element={<Testes />} />
+          <Route path="/teste/idade-biologica" element={<IdadeBiologica />} />
           <Route path="/login" element={<Index />} />
           <Route path="/termos" element={<Index />} />
           <Route path="/privacidade" element={<Index />} />

@@ -14,7 +14,8 @@ const Testes = () => {
       name: "Idade Biológica",
       subtitle: "Análise de sangue em laboratório",
       description: "Analisa o impacto que o estilo de vida, nutrição, doenças e genética têm no seu corpo e órgãos vitais como o fígado e rins.",
-      sampleType: "Análise de Sangue em Lab"
+      sampleType: "Análise de Sangue em Lab",
+      path: "/teste/idade-biologica"
     },
     {
       name: "Saúde Intestinal",
@@ -95,7 +96,11 @@ const Testes = () => {
                   </div>
                   <div className="flex items-center justify-between gap-4">
                     <span className="text-gray-600">{test.sampleType}</span>
-                    <Button variant="default" className="text-white">
+                    <Button 
+                      variant="default" 
+                      className="text-white"
+                      onClick={() => test.path ? navigate(test.path) : null}
+                    >
                       Saber mais
                     </Button>
                   </div>
