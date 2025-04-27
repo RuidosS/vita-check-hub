@@ -28,7 +28,7 @@ const Index = () => {
         <ServiceSteps />
         <BiomarkersCategories />
         <WhyDifferent />
-        <Membership />
+        <Membership /> {/* This reference remains the same */}
         <WaitlistForm />
       </main>
       <Footer />
