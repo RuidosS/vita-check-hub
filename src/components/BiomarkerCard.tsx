@@ -94,17 +94,17 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: Biomarke
 // Helper function to get biomarker descriptions
 const getBiomarkerDescription = (name: string): string => {
   const descriptions: Record<string, string> = {
-    "Apolipoprotein B (ApoB)": "Helps transport lipids in the bloodstream and is a powerful risk marker for cardiovascular disease.",
-    "HDL-Cholesterol": "Known as 'good' cholesterol, it helps remove other forms of cholesterol from your bloodstream.",
-    "High-Sensitivity C-Reactive Protein (hs-CRP)": "A marker of inflammation in the body, useful for assessing cardiovascular risk.",
-    "LDL Pattern": "Indicates the size and density of LDL particles, important for cardiovascular risk assessment.",
-    "LDL-Cholesterol": "Often called 'bad' cholesterol, high levels can lead to buildup in your arteries.",
-    "Lipoprotein (a)": "A genetic variant of LDL cholesterol that can increase risk of heart disease.",
-    "Non-HDL Cholesterol": "All types of cholesterol except HDL, useful for predicting cardiovascular risk.",
-    "Total Cholesterol": "The overall amount of cholesterol in your blood.",
-    "Total Cholesterol / HDL Ratio": "A ratio used to assess cardiovascular risk.",
-    "Triglycerides": "A type of fat found in blood that stores excess energy from your diet."
+    "Apolipoprotein B (ApoB)": "Ajuda no transporte de lípidos na corrente sanguínea e é um importante marcador de risco cardiovascular.",
+    "HDL-Cholesterol": "Conhecido como 'colesterol bom', ajuda a remover outras formas de colesterol da corrente sanguínea.",
+    "High-Sensitivity C-Reactive Protein (hs-CRP)": "Um marcador de inflamação no corpo, útil para avaliar o risco cardiovascular.",
+    "LDL Pattern": "Indica o tamanho e densidade das partículas de LDL, importante para avaliação do risco cardiovascular.",
+    "LDL-Cholesterol": "Frequentemente chamado de 'colesterol mau', níveis elevados podem levar à acumulação nas artérias.",
+    "Lipoprotein (a)": "Uma variante genética do colesterol LDL que pode aumentar o risco de doença cardíaca.",
+    "Non-HDL Cholesterol": "Todos os tipos de colesterol exceto HDL, útil para prever risco cardiovascular.",
+    "Total Cholesterol": "A quantidade total de colesterol no sangue.",
+    "Total Cholesterol / HDL Ratio": "Um rácio usado para avaliar o risco cardiovascular.",
+    "Triglycerides": "Um tipo de gordura encontrada no sangue que armazena energia extra da sua dieta."
   };
   
-  return descriptions[name] || "Biomarker information not available.";
+  return descriptions[name] || "Informação do biomarcador não disponível.";
 };

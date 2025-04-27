@@ -13,16 +13,16 @@ export interface Biomarker {
 }
 
 const biomarkers: Biomarker[] = [
-  { name: "Apolipoprotein B (ApoB)", value: 69, unit: "mg/dL", status: "In Range", progress: 65 },
-  { name: "HDL-Cholesterol", value: 54, unit: "mg/dL", status: "In Range", progress: 70 },
-  { name: "High-Sensitivity C-Reactive Protein (hs-CRP)", value: 0.6, unit: "mg/L", status: "In Range", progress: 45 },
-  { name: "LDL Pattern", value: "A", unit: "", status: "In Range", progress: 80 },
-  { name: "LDL-Cholesterol", value: 86, unit: "mg/dL", status: "In Range", progress: 55 },
-  { name: "Lipoprotein (a)", value: 10, unit: "nmol/L", status: "In Range", progress: 50 },
-  { name: "Non-HDL Cholesterol", value: 105, unit: "mg/dL", status: "In Range", progress: 60 },
-  { name: "Total Cholesterol", value: 159, unit: "mg/dL", status: "In Range", progress: 75 },
-  { name: "Total Cholesterol / HDL Ratio", value: 2.9, unit: "", status: "In Range", progress: 65 },
-  { name: "Triglycerides", value: 99, unit: "mg/dL", status: "In Range", progress: 58 }
+  { name: "Apolipoproteína B (ApoB)", value: 69, unit: "mg/dL", status: "In Range", progress: 65 },
+  { name: "Colesterol HDL", value: 54, unit: "mg/dL", status: "In Range", progress: 70 },
+  { name: "Proteína C-Reativa de Alta Sensibilidade (hs-PCR)", value: 0.6, unit: "mg/L", status: "In Range", progress: 45 },
+  { name: "Padrão LDL", value: "A", unit: "", status: "In Range", progress: 80 },
+  { name: "Colesterol LDL", value: 86, unit: "mg/dL", status: "In Range", progress: 55 },
+  { name: "Lipoproteína (a)", value: 10, unit: "nmol/L", status: "In Range", progress: 50 },
+  { name: "Colesterol Não-HDL", value: 105, unit: "mg/dL", status: "In Range", progress: 60 },
+  { name: "Colesterol Total", value: 159, unit: "mg/dL", status: "In Range", progress: 75 },
+  { name: "Rácio Colesterol Total / HDL", value: 2.9, unit: "", status: "In Range", progress: 65 },
+  { name: "Triglicerídeos", value: 99, unit: "mg/dL", status: "In Range", progress: 58 }
 ];
 
 export const BiomarkersList = () => {

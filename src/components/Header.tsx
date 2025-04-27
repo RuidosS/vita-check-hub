@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToHowItWorks = (e: React.MouseEvent) => {
     if (location.pathname === '/') {
@@ -13,6 +14,24 @@ export const Header = () => {
       const element = document.querySelector('#como-funciona');
       element?.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const scrollToWaitlist = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/#waitlist');
+    } else {
+      const element = document.querySelector('#waitlist');
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleTestesClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/testes');
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   };
 
   return (
@@ -41,13 +60,20 @@ export const Header = () => {
             <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">
               FAQ
             </Link>
-            <Link to="/testes" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link 
+              to="/testes" 
+              onClick={handleTestesClick}
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Testes em Casa
             </Link>
             <Link to="/login" className="text-sm font-medium hover:text-primary transition-colors">
               Login
             </Link>
-            <button className="btn-primary">
+            <button 
+              onClick={scrollToWaitlist}
+              className="btn-primary"
+            >
               Junta-te à Lista de Espera
             </button>
           </nav>
@@ -66,13 +92,20 @@ export const Header = () => {
               <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">
                 FAQ
               </Link>
-              <Link to="/testes" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link 
+                to="/testes" 
+                onClick={handleTestesClick}
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
                 Testes em Casa
               </Link>
               <Link to="/login" className="text-sm font-medium hover:text-primary transition-colors">
                 Login
               </Link>
-              <button className="btn-primary w-full text-center">
+              <button 
+                onClick={scrollToWaitlist}
+                className="btn-primary w-full text-center"
+              >
                 Junta-te à Lista de Espera
               </button>
             </div>
