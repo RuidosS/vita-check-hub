@@ -12,7 +12,7 @@ export const Footer = () => {
               HealthLab
             </Link>
             <p className="mt-4 text-sm text-gray-600">
-              Monitorize, proteja e otimize a sua saúde com testes laboratoriais avançados.
+              Monitoriza, proteje e optimiza a tua saúde com testes laboratoriais.
             </p>
           </div>
           

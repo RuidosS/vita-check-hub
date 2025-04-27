@@ -9,7 +9,7 @@ export const ClinicalSummary = () => {
             Resumo Clínico Personalizado
           </h2>
           <p className="text-2xl text-muted-foreground font-medium leading-relaxed">
-            A nossa equipa médica analisa minuciosamente os seus resultados, destaca áreas críticas e entrega-lhe um plano de ação baseado nos seus biomarcadores.
+            A nossa equipa médica analisa minuciosamente os teus resultados, destaca áreas críticas e entregam-te um plano de ação baseado nos teus biomarcadores.
           </p>
         </div>
       </div>
