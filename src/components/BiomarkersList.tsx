@@ -1,4 +1,3 @@
-
 import React from "react";
 import { BiomarkerCard } from "./BiomarkerCard";
 import { Card } from "./ui/card";
@@ -17,6 +16,8 @@ export interface Biomarker {
   unit: string;
   status: "In Range" | "Out of Range";
   progress: number;
+  range: string;
+  description: string;
 }
 
 const biomarkers: Biomarker[] = [
@@ -25,70 +26,90 @@ const biomarkers: Biomarker[] = [
     value: 69,
     unit: "mg/dL",
     status: "In Range",
-    progress: 65
+    progress: 65,
+    range: "Normal",
+    description: "ApoB é uma proteína que contribui para a formação de lipoproteínas plasmáticas, como a LDL (colesterol não-hdl)."
   },
   { 
     name: "Colesterol HDL",
     value: 54, 
     unit: "mg/dL",
     status: "In Range",
-    progress: 70 
+    progress: 70,
+    range: "Normal",
+    description: "HDL é uma proteína que transporta o colesterol do cérebro para o resto do corpo."
   },
   { 
     name: "Proteína C-Reativa de Alta Sensibilidade (hs-PCR)",
     value: 0.6,
     unit: "mg/L",
     status: "In Range", 
-    progress: 45
+    progress: 45,
+    range: "Normal",
+    description: "hs-PCR é uma proteína que aumenta quando há inflamação no corpo."
   },
   { 
     name: "Padrão LDL",
     value: "A",
     unit: "",
     status: "In Range",
-    progress: 80 
+    progress: 80,
+    range: "Normal",
+    description: "A é um padrão de LDL que indica que o valor está dentro do intervalo normal."
   },
   { 
     name: "Colesterol LDL",
     value: 86,
     unit: "mg/dL", 
     status: "In Range", 
-    progress: 55
+    progress: 55,
+    range: "Normal",
+    description: "LDL é uma proteína que transporta o colesterol do corpo para os tecidos."
   },
   { 
     name: "Lipoproteína (a)",
     value: 10,
     unit: "nmol/L",
     status: "In Range",
-    progress: 50 
+    progress: 50,
+    range: "Normal",
+    description: "Lipoproteína (a) é uma proteína que transporta o colesterol do corpo para os tecidos."
   },
   { 
     name: "Colesterol Não-HDL",
     value: 105,
     unit: "mg/dL",
     status: "In Range",
-    progress: 60 
+    progress: 60,
+    range: "Normal",
+    description: "Colesterol não-hdl é uma proteína que transporta o colesterol do corpo para os tecidos."
   },
   { 
     name: "Colesterol Total",
     value: 159, 
     unit: "mg/dL",
     status: "In Range",
-    progress: 75
+    progress: 75,
+    range: "Normal",
+    description: "Colesterol total é a soma de todos os tipos de colesterol no sangue."
   },
   { 
     name: "Rácio Colesterol Total / HDL",
     value: 2.9,
     unit: "",
     status: "In Range",
-    progress: 65
+    progress: 65,
+    range: "Normal",
+    description: "Rácio colesterol total / HDL é uma medida que indica a quantidade de colesterol não-hdl no sangue."
   },
   { 
     name: "Triglicerídeos",
     value: 99,
     unit: "mg/dL",
     status: "In Range",
-    progress: 58 
+    progress: 58,
+    range: "Normal",
+    description: "Triglicerídeos são uma substância que pode aumentar o risco de doenças cardíacas."
   }
 ];
 
@@ -128,7 +149,6 @@ export const BiomarkersList = () => {
   );
 };
 
-// Componente para os cards de categorias
 const CategoryCard = ({ 
   icon: Icon, 
   title, 

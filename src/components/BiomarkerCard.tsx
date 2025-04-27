@@ -11,19 +11,18 @@ import {
   ReferenceLine,
   ResponsiveContainer
 } from "recharts";
-import type { Biomarker } from "./BiomarkersList";
 
-interface Biomarker {
+interface BiomarkerData {
   name: string;
   status: "In Range" | "Out of Range";
-  value: number;
+  value: number | string;
   unit?: string;
   range: string;
   description: string;
   progress: number;
 }
 
-export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: Biomarker; showAlwaysVisible?: boolean }) => {
+export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomarker: BiomarkerData; showAlwaysVisible?: boolean }) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const isInRange = biomarker.status === "In Range";
   
