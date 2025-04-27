@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
 export const HeroSection = () => {
   const scrollToWaitlist = () => {
     const element = document.getElementById('waitlist');
@@ -7,9 +8,15 @@ export const HeroSection = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="relative min-h-screen flex items-center bg-gradient-to-b from-muted to-white">
+
+  return (
+    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-muted to-white">
       <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/51a1ba83-7925-41d6-b401-595be24a2bbd.png" alt="Background" className="w-full h-full object-cover opacity-50" />
+        <img 
+          src="/lovable-uploads/photo-1649972904349-6e44c42644a7.png" 
+          alt="Background" 
+          className="w-full h-full object-cover opacity-50" 
+        />
       </div>
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -33,5 +40,6 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
