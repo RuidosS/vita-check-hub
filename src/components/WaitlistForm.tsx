@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -39,14 +38,7 @@ export const WaitlistForm = () => {
 
   return (
     <section className="py-24 bg-white" id="waitlist">
-      <div className="container-custom max-w-lg">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Junta-te à Lista de Espera
-        </h2>
-        <p className="text-gray-600 text-center mb-8">
-          Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional.
-        </p>
-        
+      <div className="container-custom max-w-lg">        
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
