@@ -21,10 +21,10 @@ export const HeroSection = () => {
               Assume o controlo da tua saúde.
             </h1>
             <div className="space-y-4">
-              <p className="text-xl text-muted-foreground">Testagens laboratoriais a cada 6 meses.</p>
-              <p className="text-xl text-muted-foreground">+100 biomarcadores analisados.</p>
-              <p className="text-xl text-muted-foreground">Resultados claros, validados por médicos.</p>
-              <p className="text-xl text-muted-foreground">Planos de ação práticos e acionáveis.</p>
+              <p className="text-xl text-white">Testagens laboratoriais a cada 6 meses.</p>
+              <p className="text-xl text-white">+100 biomarcadores analisados.</p>
+              <p className="text-xl text-white">Resultados claros, validados por médicos.</p>
+              <p className="text-xl text-white">Planos de ação práticos e acionáveis.</p>
             </div>
             <button onClick={scrollToWaitlist} className="btn-primary inline-flex items-center gap-2">
               Junta-te à Lista de Espera
