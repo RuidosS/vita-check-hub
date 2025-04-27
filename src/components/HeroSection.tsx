@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+
 export const HeroSection = () => {
   const scrollToWaitlist = () => {
     const element = document.getElementById('waitlist');
@@ -7,7 +8,12 @@ export const HeroSection = () => {
       behavior: 'smooth'
     });
   };
-  return <section className="pt-48 pb-32 bg-gradient-to-b from-muted to-white">
+
+  return (
+    <section
+      className="pt-48 pb-32 bg-cover bg-center bg-no-repeat min-h-screen"
+      style={{ backgroundImage: "url('/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png')" }}
+    >
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-left space-y-6">
@@ -25,10 +31,8 @@ export const HeroSection = () => {
               <ArrowRight className="h-5 w-5" />
             </button>
           </div>
-          <div className="flex justify-center md:justify-end">
-            <img alt="Saúde e bem-estar" className="rounded-lg shadow-lg max-w-full md:max-w-md h-auto" src="/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png" />
-          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
