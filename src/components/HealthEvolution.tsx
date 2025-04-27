@@ -1,44 +1,28 @@
 
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer
-} from 'recharts';
-import { Card } from '@/components/ui/card';
+import React from "react";
 
 export const HealthEvolution = () => {
-  const data = [
-    { name: 'Jan', value: 65 },
-    { name: 'Fev', value: 68 },
-    { name: 'Mar', value: 72 },
-    { name: 'Abr', value: 75 },
-    { name: 'Mai', value: 78 },
-    { name: 'Jun', value: 82 },
-  ];
-
   return (
-    <Card className="p-6">
-      <div className="h-[400px]">
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Line 
-              type="monotone" 
-              dataKey="value" 
-              stroke="#22C55E"
-              strokeWidth={2}
-              dot={{ fill: '#22C55E', strokeWidth: 2 }}
+    <section className="py-24 bg-white">
+      <div className="container-custom">
+        <div className="max-w-4xl mx-auto text-center space-y-16">
+          <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
+            Evolução da sua saúde ao longo do tempo
+          </h2>
+          
+          <div className="w-[70%] mx-auto">
+            <img
+              src="/lovable-uploads/ed14c02a-8e4a-486d-9133-8db05c1ca945.png"
+              alt="Gráfico de evolução da Vitamina D ao longo do tempo"
+              className="w-full h-auto shadow-lg rounded-2xl"
             />
-          </LineChart>
-        </ResponsiveContainer>
+          </div>
+
+          <p className="text-xl text-muted-foreground mt-8 max-w-2xl mx-auto">
+            Acompanhe o progresso dos seus principais biomarcadores com check-ups regulares e veja a sua evolução em dados claros.
+          </p>
+        </div>
       </div>
-    </Card>
+    </section>
   );
 };

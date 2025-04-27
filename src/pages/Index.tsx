@@ -11,6 +11,7 @@ import { ClinicalSummary } from '../components/ClinicalSummary';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 import { BiomarkersList } from '../components/BiomarkersList';
 import { WaitlistForm } from '../components/WaitlistForm';
+import { HealthEvolution } from '../components/HealthEvolution';
 
 const Index = () => {
   return (
@@ -23,6 +24,7 @@ const Index = () => {
         <ServiceSteps />
         <SimpleSteps />
         <ResultsOverTime />
+        <HealthEvolution />
         <CompleteHealth />
         <ClinicalSummary />
         <WaitlistForm />
