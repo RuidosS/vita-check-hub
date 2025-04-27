@@ -9,10 +9,17 @@ export const AboutUs = () => {
   };
   
   return (
-    <section className="py-24 bg-white">
-      <div className="container-custom max-w-4xl mx-auto text-center">
+    <section className="relative py-24 bg-white overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/lovable-uploads/51a1ba83-7925-41d6-b401-595be24a2bbd.png"
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="container-custom max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold mb-6">
-          A Membership anual para quem quer viver melhor e mais tempo.
+          A adesão anual para quem quer viver melhor e mais tempo.
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
           Realiza 2 testagens laboratoriais presenciais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
