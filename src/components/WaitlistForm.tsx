@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -30,10 +31,33 @@ export const WaitlistForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
-    toast.success("Inscrição realizada com sucesso!");
-    console.log(data);
-    form.reset();
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+    try {
+      const response = await fetch('https://a.klaviyo.com/api/v2/list/YOUR_LIST_ID/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Klaviyo-API-Key YOUR_PUBLIC_API_KEY'
+        },
+        body: JSON.stringify({
+          profiles: [{
+            email: data.email,
+            phone_number: data.phone,
+            $first_name: data.name
+          }]
+        })
+      });
+
+      if (response.ok) {
+        toast.success("Inscrição realizada com sucesso!");
+        form.reset();
+      } else {
+        throw new Error('Failed to subscribe');
+      }
+    } catch (error) {
+      toast.error("Erro ao realizar inscrição. Tente novamente.");
+      console.error('Subscription error:', error);
+    }
   };
 
   return (
