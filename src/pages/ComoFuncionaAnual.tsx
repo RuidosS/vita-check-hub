@@ -14,10 +14,10 @@ const ComoFuncionaAnual = () => {
         <section className="py-20 bg-white">
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl font-bold text-center max-w-4xl mx-auto mb-6">
-              Cuida da tua saúde. De forma simples, contínua e inteligente.
+              Como Funciona.
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mx-auto">
-              Com a nossa Adesão anual, fazes análises clínicas presenciais, recebes insights personalizados e traças um plano de ação para te sentires no teu melhor.
+              Análises clínicas, insights claros, plano de ação. Tudo com a nossa adesão anual.
               <br /><br />
               A saúde é um investimento — começa hoje.
             </p>
