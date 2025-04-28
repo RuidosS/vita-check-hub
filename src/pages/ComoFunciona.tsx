@@ -6,6 +6,7 @@ import { ServiceSteps } from '../components/ServiceSteps';
 import { SimpleSteps } from '../components/SimpleSteps';
 import { ResultsOverTime } from '../components/ResultsOverTime';
 import { CompleteHealth } from '../components/CompleteHealth';
+import { TestingSteps } from '../components/TestingSteps';
 
 const ComoFunciona = () => {
   return (
@@ -13,6 +14,7 @@ const ComoFunciona = () => {
       <Header />
       <main className="flex-grow pt-16">
         <ServiceSteps />
+        <TestingSteps />
         <SimpleSteps />
         <ResultsOverTime />
         <CompleteHealth />
@@ -23,4 +25,3 @@ const ComoFunciona = () => {
 };
 
 export default ComoFunciona;
-
