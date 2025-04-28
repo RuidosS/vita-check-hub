@@ -23,7 +23,7 @@ export const BiomarkersCarousel = () => {
     {
       value: "650",
       unit: "ng/dL",
-      name: "TESTOSTERONE",
+      name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
@@ -31,7 +31,7 @@ export const BiomarkersCarousel = () => {
     {
       value: "115",
       unit: "ng/mL",
-      name: "FERRITIN",
+      name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
       image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop"
@@ -47,7 +47,7 @@ export const BiomarkersCarousel = () => {
     {
       value: "42",
       unit: "ng/mL",
-      name: "VITAMIN D",
+      name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
       image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
