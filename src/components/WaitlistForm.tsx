@@ -41,62 +41,62 @@ export const WaitlistForm = () => {
     setError(null);
     
     try {
-      // Direct approach - using Klaviyo's list subscribe endpoint with form submit
+      // Use Klaviyo's API endpoint
       const klaviyoApiUrl = "https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe";
       
-      // Create a hidden form element to submit directly to Klaviyo
-      const klaviyoForm = document.createElement('form');
-      klaviyoForm.method = 'POST';
-      klaviyoForm.action = klaviyoApiUrl;
-      klaviyoForm.target = '_blank'; // Opens in new tab to not disrupt the current page
+      // Create a new XMLHttpRequest to avoid page navigation
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", klaviyoApiUrl, true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       
-      // Add the required fields for Klaviyo API
-      const addFormField = (name: string, value: string) => {
-        const field = document.createElement('input');
-        field.type = 'hidden';
-        field.name = name;
-        field.value = value;
-        klaviyoForm.appendChild(field);
-      };
+      // Format data for Klaviyo's API
+      const params = new URLSearchParams();
+      params.append("api_key", "WAxXuj");
+      params.append("email", data.email);
       
-      // Add all Klaviyo fields
-      addFormField('api_key', 'WAxXuj');
-      addFormField('email', data.email);
-      
-      // Add properties as a JSON string
+      // Format properties as JSON string
       const properties = {
-        '$first_name': data.name,
-        'phone_number': data.phone
+        "$first_name": data.name,
+        "phone_number": data.phone
       };
-      addFormField('properties', JSON.stringify(properties));
+      params.append("properties", JSON.stringify(properties));
       
-      // Append the form to body, submit it, and remove it
-      document.body.appendChild(klaviyoForm);
+      // Handle the response
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          console.log("Success:", xhr.responseText);
+          setIsSuccess(true);
+          form.reset();
+          toast.success("Inscrição realizada com sucesso!");
+        } else {
+          console.error("Error response:", xhr.status, xhr.responseText);
+          setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
+          toast.error("Erro ao realizar inscrição. Tente novamente.");
+        }
+        setIsLoading(false);
+      };
       
-      console.log("Submitting form to Klaviyo:", {
+      xhr.onerror = function() {
+        console.error("Network error occurred");
+        setError("Erro de conexão ao processar a sua inscrição. Por favor tente novamente.");
+        toast.error("Erro de conexão. Tente novamente.");
+        setIsLoading(false);
+      };
+      
+      // Log what we're sending for debugging
+      console.log("Submitting to Klaviyo:", {
+        url: klaviyoApiUrl,
         email: data.email,
         name: data.name,
         phone: data.phone
       });
       
-      // Submit the form and handle success locally
-      klaviyoForm.submit();
-      
-      // Set success state
-      setIsSuccess(true);
-      form.reset();
-      toast.success("Inscrição realizada com sucesso!");
-      
-      // Clean up - remove the form after submission
-      setTimeout(() => {
-        document.body.removeChild(klaviyoForm);
-      }, 100);
-      
+      // Send the request
+      xhr.send(params.toString());
     } catch (error) {
       console.error('Subscription error:', error);
       setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
       toast.error("Erro ao realizar inscrição. Tente novamente.");
-    } finally {
       setIsLoading(false);
     }
   };
