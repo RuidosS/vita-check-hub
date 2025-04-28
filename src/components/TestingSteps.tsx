@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardContent } from './ui/card';
-import { AspectRatio } from './ui/aspect-ratio';
 
 export const TestingSteps = () => {
   const steps = [
@@ -8,21 +7,21 @@ export const TestingSteps = () => {
       step: "Passo 1",
       title: "Agenda instantaneamente os teus testes laboratoriais",
       description: "Garante um horário num dos laboratórios parceiros",
-      image: "/lovable-uploads/86693b73-f68f-41bf-adcc-a0b600061df4.png", // Imagem Passo 1
+      image: "/lovable-uploads/86693b73-f68f-41bf-adcc-a0b600061df4.png",
       alt: "Agendar Teste"
     },
     {
       step: "Passo 2",
       title: "Visitas rápidas de laboratório, com uma média de 15 minutos",
       description: "Incluímos o custo de duas visitas por ano, com análise de mais de 100 biomarcadores",
-      image: "/lovable-uploads/baad4d9c-94b3-4597-84fe-298171442603.png", // Imagem Passo 2
+      image: "/lovable-uploads/baad4d9c-94b3-4597-84fe-298171442603.png",
       alt: "Visita Laboratório"
     },
     {
       step: "Passo 3",
       title: "Resultados poderosos",
       description: "Monitoriza sinais precoces de doença e descobre onde e como podes melhorar",
-      image: "/lovable-uploads/c4cb9b90-5f28-4fa7-9026-74dea217bb4e.png", // Imagem Passo 3
+      image: "/lovable-uploads/c4cb9b90-5f28-4fa7-9026-74dea217bb4e.png",
       alt: "Resultados Poderosos"
     }
   ];
@@ -36,17 +35,15 @@ export const TestingSteps = () => {
         <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-none bg-transparent">
-              <CardContent className="p-0">
-                <div className="w-full aspect-[16/9] rounded-2xl mb-6 overflow-hidden">
-                  <AspectRatio ratio={16 / 9}>
-                    <img 
-                      src={step.image}
-                      alt={step.alt}
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
-                  </AspectRatio>
+              <CardContent className="flex flex-col items-center p-0">
+                <div className="w-full h-96 mb-6 overflow-hidden rounded-2xl">
+                  <img 
+                    src={step.image}
+                    alt={step.alt}
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
-                <div className="space-y-4 text-center">
+                <div className="space-y-4 text-center px-4">
                   <span className="text-primary font-semibold">{step.step}</span>
                   <h3 className="font-bold text-lg">{step.title}</h3>
                   <p className="text-muted-foreground">{step.description}</p>
