@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import { Button } from '../components/ui/button';
 import { Calendar, FileText, TrendingUp } from 'lucide-react';
 
 const ComoFuncionaAnual = () => {
@@ -63,25 +61,6 @@ const ComoFuncionaAnual = () => {
             </div>
           </div>
         </section>
-
-        {/* Important Note */}
-        <section className="py-16 bg-white">
-          <div className="container-custom">
-            <div className="max-w-2xl mx-auto bg-muted p-8 rounded-2xl">
-              <p className="text-center font-medium">
-                Esta página refere-se apenas à Adesão Anual com análises clínicas presenciais.
-                <br />
-                Se procuras os kits de teste em casa, vais encontrar essa informação numa página separada.
-              </p>
-            </div>
-
-            <div className="mt-12 text-center">
-              <Button size="lg" className="btn-primary text-lg px-8 py-6">
-                Começar Agora
-              </Button>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
@@ -89,4 +68,3 @@ const ComoFuncionaAnual = () => {
 };
 
 export default ComoFuncionaAnual;
-
