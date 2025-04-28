@@ -15,7 +15,6 @@ import {
 import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
-import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
@@ -42,39 +41,48 @@ export const WaitlistForm = () => {
     setError(null);
     
     try {
-      // Using a direct form submit approach
-      const klaviyoForm = document.createElement('form');
-      klaviyoForm.method = 'POST';
-      klaviyoForm.action = 'https://manage.klaviyo.com/api/v2/list/VxzSKi/subscribe';
-      klaviyoForm.target = '_blank'; // Open in new tab to avoid navigation
-      klaviyoForm.style.display = 'none'; // Hide the form
+      // Using a proxy service for CORS bypass
+      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+      const klaviyoEndpoint = "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/";
       
-      // Add the fields
-      const addField = (name: string, value: string) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = name;
-        input.value = value;
-        klaviyoForm.appendChild(input);
+      const payload = {
+        data: {
+          type: "profile-subscription-bulk-create-job",
+          attributes: {
+            profiles: {
+              data: [
+                {
+                  type: "profile",
+                  attributes: {
+                    email: data.email,
+                    first_name: data.name,
+                    phone_number: data.phone
+                  }
+                }
+              ]
+            },
+            list_id: "VxzSKi"
+          }
+        }
       };
+
+      // Send via a fetch request to Google Apps Script proxy (no redirect)
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyMZLZrU2NXzIaEQQh1o3B0P3yApx2E77J2_hfb_sH90RkqUsOjsTHIqfR10caRsM_7/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: data.email,
+          name: data.name,
+          phone: data.phone,
+          listId: "VxzSKi",
+          apiKey: "WAxXuj"
+        })
+      });
       
-      addField('api_key', 'WAxXuj');
-      addField('email', data.email);
-      addField('properties', JSON.stringify({
-        '$first_name': data.name,
-        'phone_number': data.phone
-      }));
-      
-      // Add the form to the body
-      document.body.appendChild(klaviyoForm);
-      
-      // Submit the form
-      klaviyoForm.submit();
-      
-      // Remove the form from the body
-      setTimeout(() => {
-        document.body.removeChild(klaviyoForm);
-      }, 1000);
+      // Track form submission locally
+      console.log("Form submitted:", data);
       
       // Set success state
       setIsSuccess(true);
