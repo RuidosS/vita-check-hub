@@ -20,8 +20,8 @@ export const Footer = () => {
             <h3 className="font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/termos" className="text-sm text-gray-600 hover:text-primary transition-colors">
-                  Termos de Uso
+                <Link to="/termos-e-condicoes" className="text-sm text-gray-600 hover:text-primary transition-colors">
+                  Termos e Condições
                 </Link>
               </li>
               <li>

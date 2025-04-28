@@ -13,6 +13,7 @@ import IdadeBiologica from "./pages/IdadeBiologica";
 import WaitlistPage from "./pages/WaitlistPage";
 import Adesao from "./pages/Adesao";
 import NotFound from "./pages/NotFound";
+import TermosECondicoes from "./pages/TermosECondicoes";
 
 const queryClient = new QueryClient();
 
@@ -32,7 +33,8 @@ const App = () => (
           <Route path="/lista-de-espera" element={<WaitlistPage />} />
           <Route path="/adesao" element={<Adesao />} />
           <Route path="/login" element={<Index />} />
-          <Route path="/termos" element={<Index />} />
+          <Route path="/termos-e-condicoes" element={<TermosECondicoes />} />
+          <Route path="/termos" element={<TermosECondicoes />} />
           <Route path="/privacidade" element={<Index />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
