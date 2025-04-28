@@ -19,7 +19,9 @@ const WaitlistPage = () => {
             </p>
           </div>
         </section>
-        <WaitlistForm />
+        <div id="waitlist-form">
+          <WaitlistForm />
+        </div>
       </main>
       <Footer />
     </div>

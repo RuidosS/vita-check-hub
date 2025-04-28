@@ -15,7 +15,7 @@ export const WhyDifferent = () => {
   const navigate = useNavigate();
 
   const goToWaitlist = () => {
-    navigate('/lista-de-espera');
+    navigate('/lista-de-espera', { state: { scrollToForm: true } });
   };
 
   return (

@@ -7,7 +7,7 @@ export const CompleteHealth = () => {
   const navigate = useNavigate();
   
   const handleClick = () => {
-    navigate('/lista-de-espera');
+    navigate('/lista-de-espera', { state: { scrollToForm: true } });
   };
   
   return (

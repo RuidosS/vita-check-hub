@@ -10,7 +10,7 @@ export const Header = () => {
 
   const scrollToWaitlist = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/lista-de-espera');
+    navigate('/lista-de-espera', { state: { scrollToForm: true } });
   };
 
   const handleTestesClick = (e: React.MouseEvent) => {

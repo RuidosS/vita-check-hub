@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -14,6 +15,7 @@ import {
 import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
+import { useLocation } from "react-router-dom";
 
 // Schema for form validation
 const formSchema = z.object({
@@ -26,7 +28,8 @@ export const WaitlistForm = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-
+  const location = useLocation();
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,6 +38,18 @@ export const WaitlistForm = () => {
       phone: "",
     },
   });
+  
+  // Effect to scroll to the form when navigated from other pages
+  useEffect(() => {
+    if (location.state && location.state.scrollToForm) {
+      const formElement = document.getElementById('waitlist-form');
+      if (formElement) {
+        setTimeout(() => {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  }, [location.state]);
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsLoading(true);

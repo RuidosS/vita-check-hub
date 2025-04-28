@@ -6,7 +6,7 @@ export const HeroSection = () => {
   const navigate = useNavigate();
   
   const scrollToWaitlist = () => {
-    navigate('/lista-de-espera');
+    navigate('/lista-de-espera', { state: { scrollToForm: true } });
   };
 
   return (
