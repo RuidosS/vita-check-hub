@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "./ui/badge";
@@ -23,7 +24,7 @@ export const HealthEvolution = () => {
                   <div className="space-y-1">
                     <h3 className="text-sm font-medium">Rácio Colesterol Total / HDL</h3>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">2.9</Badge>
+                      <Badge className="bg-green-100 hover:bg-green-200 text-green-600">2.9</Badge>
                       <span className="text-xs text-muted-foreground">Ideal: &lt;5.0</span>
                     </div>
                   </div>
@@ -44,7 +45,7 @@ export const HealthEvolution = () => {
                   <div className="space-y-1">
                     <h3 className="text-sm font-medium">Triglicerídeos</h3>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">99 mg/dL</Badge>
+                      <Badge className="bg-green-100 hover:bg-green-200 text-green-600">99 mg/dL</Badge>
                       <span className="text-xs text-muted-foreground">Ideal: &lt;150 mg/dL</span>
                     </div>
                   </div>
@@ -62,7 +63,7 @@ export const HealthEvolution = () => {
                   <div className="space-y-1">
                     <h3 className="text-sm font-medium">HDL</h3>
                     <div className="flex items-center gap-2">
-                      <Badge className="bg-primary/20 hover:bg-primary/30 text-primary">65 mg/dL</Badge>
+                      <Badge className="bg-green-100 hover:bg-green-200 text-green-600">65 mg/dL</Badge>
                       <span className="text-xs text-muted-foreground">Ideal: &gt;40 mg/dL</span>
                     </div>
                   </div>

@@ -79,7 +79,7 @@ export const BiomarkerCard = ({ biomarker, showAlwaysVisible = false }: { biomar
             <div className="flex flex-wrap items-center gap-4">
               <Badge 
                 className={isInRange 
-                  ? "bg-[#7F56D9] hover:bg-[#7F56D9]/90 text-white" 
+                  ? "bg-green-100 hover:bg-green-200 text-green-600" 
                   : "bg-orange-500 hover:bg-orange-600 text-white"
                 }
               >
