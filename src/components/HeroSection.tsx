@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ export const HeroSection = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/5611c2c5-4212-4466-97c7-aeff1db34e9e.png')" }}
+      style={{ backgroundImage: "url('/lovable-uploads/7e09dcee-0359-48d2-808f-89a4609c1863.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
