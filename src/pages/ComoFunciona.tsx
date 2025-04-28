@@ -6,7 +6,6 @@ import { ServiceSteps } from '../components/ServiceSteps';
 import { SimpleSteps } from '../components/SimpleSteps';
 import { ResultsOverTime } from '../components/ResultsOverTime';
 import { CompleteHealth } from '../components/CompleteHealth';
-import { ClinicalSummary } from '../components/ClinicalSummary';
 
 const ComoFunciona = () => {
   return (
@@ -17,7 +16,6 @@ const ComoFunciona = () => {
         <SimpleSteps />
         <ResultsOverTime />
         <CompleteHealth />
-        <ClinicalSummary />
       </main>
       <Footer />
     </div>
@@ -25,3 +23,4 @@ const ComoFunciona = () => {
 };
 
 export default ComoFunciona;
+
