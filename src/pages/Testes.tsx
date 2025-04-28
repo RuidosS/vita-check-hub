@@ -99,7 +99,6 @@ const Testes = () => {
                     <Button 
                       variant="default" 
                       className="text-white"
-                      onClick={() => navigate("/teste/idade-biologica")}
                     >
                       Brevemente
                     </Button>
