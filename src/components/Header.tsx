@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -10,12 +9,7 @@ export const Header = () => {
 
   const scrollToWaitlist = (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname !== '/') {
-      navigate('/lista-de-espera');
-    } else {
-      const element = document.querySelector('#waitlist');
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }
+    navigate('/lista-de-espera');
   };
 
   const handleTestesClick = (e: React.MouseEvent) => {
