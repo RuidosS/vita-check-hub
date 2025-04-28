@@ -88,11 +88,11 @@ export const BiomarkersCarousel = () => {
                       <div className="relative z-20 p-6 h-full flex flex-col justify-between text-white">
                         <div>
                           <div className="flex items-baseline gap-1 mb-2">
-                            <span className="text-4xl font-bold">{biomarker.value}</span>
-                            <span className="text-sm opacity-80">{biomarker.unit}</span>
+                            <span className="text-4xl font-bold text-white">{biomarker.value}</span>
+                            <span className="text-sm opacity-80 text-white">{biomarker.unit}</span>
                           </div>
-                          <h3 className="font-semibold text-lg mb-1">{biomarker.name}</h3>
-                          <p className="text-sm opacity-90 mb-4">{biomarker.description}</p>
+                          <h3 className="font-semibold text-lg mb-1 text-white">{biomarker.name}</h3>
+                          <p className="text-sm opacity-90 mb-4 text-white">{biomarker.description}</p>
                         </div>
                         
                         <div className="relative h-12 w-full mt-auto">
@@ -101,7 +101,7 @@ export const BiomarkersCarousel = () => {
                             {biomarker.dates.map((date, i) => (
                               <div key={i} className="flex flex-col items-center">
                                 <div className="h-2 w-2 rounded-full bg-white mb-1"></div>
-                                <span className="text-xs text-white/80">{date}</span>
+                                <span className="text-xs text-white">{date}</span>
                               </div>
                             ))}
                           </div>
