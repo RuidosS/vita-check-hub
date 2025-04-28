@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -13,35 +12,38 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: "2rem",
       screens: {
-        '2xl': '1400px'
-      }
+        "2xl": "1400px",
+      },
     },
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "#FFFFFF",
+        foreground: "#1B1B1F",
         primary: {
-          DEFAULT: '#7F56D9',
-          hover: '#7C3AED',
+          DEFAULT: "#FF7043",
+          hover: "#F4683F",
         },
-        secondary: '#7C3AED',
+        secondary: "#00C48C",
         muted: {
-          DEFAULT: '#F9FAFB',
-          foreground: '#9CA3AF'
+          DEFAULT: "#FAFAFA",
+          foreground: "#9E9E9E"
         },
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        sans: ["Manrope", "sans-serif"],
+      },
+      lineHeight: {
+        'relaxed': '1.4',
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         'slide-in': {
