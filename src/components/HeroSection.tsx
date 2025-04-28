@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,20 +5,19 @@ export const HeroSection = () => {
   const navigate = useNavigate();
   
   const scrollToWaitlist = () => {
-    // Navigate to the waitlist section
     navigate('/#waitlist');
   };
 
   return (
     <section
-      className="relative py-32 bg-cover bg-center bg-no-repeat min-h-[70vh]"
+      className="relative h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="relative container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative container-custom h-full flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="text-left space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
               Assume o controlo da tua saúde.
