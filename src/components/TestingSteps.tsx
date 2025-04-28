@@ -22,7 +22,7 @@ export const TestingSteps = () => {
       step: "Passo 3",
       title: "Resultados poderosos",
       description: "Monitoriza sinais precoces de doença e descobre onde e como podes melhorar",
-      image: "/lovable-uploads/c4cb9b90-5f28-4fa7-9026-74dea217bb4e.png",
+      image: "/lovable-uploads/9d2228ee-ea4c-471a-8c82-d2957937a6b3.png",
       alt: "Resultados Poderosos"
     }
   ];
