@@ -13,11 +13,11 @@ export const WhyDifferent = () => {
   ];
 
   const actionItems = [
-    { icon: "📋", text: "Clinician Summary" },
-    { icon: "🍽️", text: "Foods to enjoy" },
-    { icon: "🚫", text: "Foods to limit" },
-    { icon: "❤️", text: "Self care" },
-    { icon: "💊", text: "Supplement list" }
+    { icon: "📋", text: "Resumo Clínico" },
+    { icon: "🍽️", text: "Alimentos a incluir" },
+    { icon: "🚫", text: "Alimentos a limitar" },
+    { icon: "❤️", text: "Cuidados pessoais" },
+    { icon: "💊", text: "Lista de suplementos" }
   ];
 
   const navigate = useNavigate();
