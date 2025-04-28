@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
@@ -15,8 +14,8 @@ export const ResultsOverTime = () => {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
-            Resultados claros. 
-            Ações concretas.
+            <span className="whitespace-nowrap">Resultados claros.</span>{' '}
+            <span className="whitespace-nowrap">Ações concretas.</span>
           </h2>
           <div className="space-y-4">
             <p className="text-xl text-muted-foreground">
