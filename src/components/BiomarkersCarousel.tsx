@@ -30,7 +30,7 @@ export const BiomarkersCarousel = () => {
     },
     {
       value: "115",
-      unit: "µg/dL",
+      unit: "ng/mL",
       name: "FERRITIN",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
@@ -41,7 +41,7 @@ export const BiomarkersCarousel = () => {
       unit: "mg/dL",
       name: "ApoB",
       description: "Transporte de lípidos na corrente sanguínea.",
-      dates: ["Sep 25", "Feb 26", "Sep 27"],
+      dates: ["Sep 23", "Mar 24", "Sep 24"],
       image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop"
     },
     {
