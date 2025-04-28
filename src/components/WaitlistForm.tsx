@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +15,7 @@ import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
 
+// Schema for form validation
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("Email inválido"),
@@ -26,7 +26,7 @@ export const WaitlistForm = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,69 +39,36 @@ export const WaitlistForm = () => {
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsLoading(true);
     setError(null);
-    
+
     try {
-      // Use an iframe approach which avoids CORS issues
-      const formData = new FormData();
-      formData.append('api_key', 'WAxXuj');
-      formData.append('email', data.email);
-      
-      // Add properties
-      const properties = {
-        "$first_name": data.name,
-        "phone_number": data.phone
-      };
-      formData.append('properties', JSON.stringify(properties));
-      
-      // Log what we're sending for debugging
-      console.log("Submitting to Klaviyo:", {
-        email: data.email,
-        name: data.name,
-        phone: data.phone
+      const response = await fetch('https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          api_key: 'WAxXuj',
+          profiles: [
+            {
+              email: data.email,
+              first_name: data.name,
+              phone_number: data.phone,
+            }
+          ]
+        }),
       });
-      
-      // Create a hidden iframe for submission
-      const iframeId = 'klaviyo-iframe';
-      let iframe = document.getElementById(iframeId) as HTMLIFrameElement;
-      
-      if (!iframe) {
-        iframe = document.createElement('iframe');
-        iframe.id = iframeId;
-        iframe.name = iframeId;
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
+
+      if (!response.ok) {
+        throw new Error('Falha na inscrição');
       }
-      
-      // Create a form to submit via the iframe
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = 'https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe';
-      form.target = iframeId;
-      
-      // Add form data as hidden fields
-      formData.forEach((value, key) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value.toString();
-        form.appendChild(input);
-      });
-      
-      // Append form, submit, then remove it
-      document.body.appendChild(form);
-      form.submit();
-      document.body.removeChild(form);
-      
-      // Assume success since we can't actually check the response due to CORS
-      setTimeout(() => {
-        setIsSuccess(true);
-        setIsLoading(false);
-        toast.success("Inscrição realizada com sucesso!");
-        form.reset();
-      }, 1500);
-      
+
+      setIsSuccess(true);
+      setIsLoading(false);
+      toast.success("Inscrição realizada com sucesso!");
+      form.reset();
+
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error('Erro na inscrição:', error);
       setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
       toast.error("Erro ao realizar inscrição. Tente novamente.");
       setIsLoading(false);
@@ -118,7 +85,7 @@ export const WaitlistForm = () => {
             </AlertDescription>
           </Alert>
         ) : null}
-        
+
         {error ? (
           <Alert className="mb-6 bg-red-50 border-red-200">
             <AlertDescription className="text-red-800">
@@ -126,7 +93,7 @@ export const WaitlistForm = () => {
             </AlertDescription>
           </Alert>
         ) : null}
-        
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
@@ -142,7 +109,7 @@ export const WaitlistForm = () => {
                 </FormItem>
               )}
             />
-            
+
             <FormField
               control={form.control}
               name="email"
