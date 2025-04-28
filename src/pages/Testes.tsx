@@ -72,7 +72,7 @@ const Testes = () => {
               <Button 
                 size="lg"
                 onClick={() => navigate('/#waitlist')}
-                className="mt-6"
+                className="mt-6 text-white"
               >
                 Quero ser avisado
               </Button>
