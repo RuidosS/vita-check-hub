@@ -73,9 +73,6 @@ const Testes = () => {
                 size="lg"
                 onClick={() => navigate('/#waitlist')}
                 className="mt-6 text-white"
-              >
-                Quero ser avisado
-              </Button>
             </div>
           </div>
         </section>
@@ -100,7 +97,7 @@ const Testes = () => {
                       className="text-white"
                       onClick={() => navigate("/teste/idade-biologica")}
                     >
-                      Saber mais
+                      Brevemente
                     </Button>
                   </div>
                 </div>
