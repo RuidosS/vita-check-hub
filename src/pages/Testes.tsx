@@ -11,34 +11,34 @@ const Testes = () => {
   const tests = [
     {
       name: "Idade Biológica",
-      subtitle: "Análise de sangue em laboratório",
+      subtitle: "Teste de saúde em casa",
       description: "Analisa o impacto que o estilo de vida, nutrição, doenças e genética têm no seu corpo e órgãos vitais como o fígado e rins.",
-      sampleType: "Análise de Sangue em Lab",
+      sampleType: "Sangue do dedo",
       path: "/teste/idade-biologica"
     },
     {
-      name: "Saúde Intestinal",
+      name: "Doenças Sexualmente Transmissíveis (DST's)",
       subtitle: "Teste de saúde em casa",
       description: "O teste do microbioma intestinal oferece uma análise profunda e um plano de bem-estar personalizado que visa o seu desconforto GI e otimiza o bem-estar.",
-      sampleType: "Amostra de Fezes"
+      sampleType: "Sangue do dedo e Urina"
     },
     {
-      name: "Sono",
+      name: "Teste Micronutrients",
       subtitle: "Teste de saúde em casa",
       description: "Descubra por que está tendo problemas para dormir testando os ritmos hormonais que regulam o ciclo sono-vigília.",
-      sampleType: "Saliva"
+      sampleType: "Sangue do dedo"
     },
     {
-      name: "Stress",
+      name: "Checkup Hormonal",
       subtitle: "Teste de saúde em casa",
       description: "Teste os níveis de hormonas do stress e receba um plano personalizado para poder redescobrir a sua calma.",
-      sampleType: "Saliva"
+      sampleType: "Sangue do dedo"
     },
     {
-      name: "Gestão de Peso",
+      name: "Testosterona",
       subtitle: "Teste de saúde em casa",
       description: "Descubra como atingir seus objetivos de peso medindo biomarcadores-chave associados ao gerenciamento de peso e metabolismo.",
-      sampleType: "Saliva e Sangue Capilar"
+      sampleType: "Sangue do dedo"
     }
   ];
 
