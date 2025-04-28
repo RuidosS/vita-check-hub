@@ -17,7 +17,7 @@ export const AboutUs = () => {
           Uma adesão anual para quem quer viver melhor e mais tempo.
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
-          Realiza 2 testagens laboratoriais presenciais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
+          Realiza 2 testagens laboratoriais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
         </p>
         <button 
           onClick={goToWaitlist} 
