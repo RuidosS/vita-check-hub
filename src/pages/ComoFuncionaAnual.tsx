@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Calendar, FileText, TrendingUp } from 'lucide-react';
+import { TestingSteps } from '../components/TestingSteps';
 
 const ComoFuncionaAnual = () => {
   return (
@@ -61,6 +63,9 @@ const ComoFuncionaAnual = () => {
             </div>
           </div>
         </section>
+        
+        {/* Testing Steps Section */}
+        <TestingSteps />
       </main>
       <Footer />
     </div>
