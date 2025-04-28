@@ -3,8 +3,6 @@ import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { Activity } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Testes = () => {
@@ -48,35 +46,42 @@ const Testes = () => {
       <Header />
       <main className="flex-grow pt-24">
         <section className="py-16 bg-white border-b">
-          <div className="container-custom max-w-4xl">
-            <div className="flex flex-col items-center text-center space-y-8">
-              <Badge 
-                variant="outline" 
-                className="bg-orange-100 text-orange-600 border-orange-200 mb-4 px-4 py-1.5 text-sm font-medium rounded-full"
-              >
-                Coming Soon
-              </Badge>
-              
-              <div className="flex items-center justify-center gap-3 text-4xl font-bold">
-                <Activity className="h-10 w-10 text-primary" />
-                <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
+          <div className="container-custom max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 text-orange-600 font-medium">
+                  Coming Soon
+                </div>
+                
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Em breve vais poder testar a tua saúde... a partir de casa 🚀
+                </h1>
+                
+                <h2 className="text-xl font-semibold">
+                  Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
+                </h2>
+                
+                <p className="text-gray-600">
+                  Lançamento prioritário para quem está na lista de espera.
+                  Junte-te hoje e subrima-nos a receder ao exclusivo.
+                </p>
+                
+                <Button 
+                  size="lg"
+                  onClick={() => navigate('/lista-de-espera')}
+                  className="mt-6 bg-orange-400 hover:bg-orange-500 text-white px-8 py-6 rounded-md text-lg h-auto"
+                >
+                  Junta-te à Lista de Espera
+                </Button>
               </div>
               
-              <p className="text-xl font-semibold text-gray-700">
-                Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
-              </p>
-              
-              <p className="text-gray-600 max-w-2xl">
-                Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
-              </p>
-              
-              <Button 
-                size="lg"
-                onClick={() => navigate('/lista-de-espera')}
-                className="mt-6 text-white"
-              >
-                Junta-te à Lista de Espera
-              </Button>
+              <div className="hidden md:block">
+                <img 
+                  src="/lovable-uploads/539bb1e4-0ae9-49ac-b81e-80eed0b5352f.png" 
+                  alt="Hands holding OUMA test box" 
+                  className="w-full h-auto"
+                />
+              </div>
             </div>
           </div>
         </section>
