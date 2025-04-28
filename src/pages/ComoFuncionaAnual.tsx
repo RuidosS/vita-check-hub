@@ -2,10 +2,8 @@ import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { TestingSteps } from '../components/TestingSteps';
-
 const ComoFuncionaAnual = () => {
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-16">
         {/* Hero Section */}
@@ -29,7 +27,7 @@ const ComoFuncionaAnual = () => {
               {/* Step 1 */}
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center">
                 <div className="mb-6 w-full h-64 overflow-hidden rounded-xl">
-                  <img src="/images/step1.png" alt="Agendar Análises" className="w-full h-full object-cover" />
+                  <img alt="Agendar Análises" className="w-full h-full object-cover" src="/lovable-uploads/7a6259f5-ac12-49e1-b747-151ca942693f.png" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center">1. Agenda a tua colheita de análises</h3>
                 <p className="text-muted-foreground text-center">
@@ -40,7 +38,7 @@ const ComoFuncionaAnual = () => {
               {/* Step 2 */}
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center">
                 <div className="mb-6 w-full h-64 overflow-hidden rounded-xl">
-                  <img src="/images/step2.png" alt="Receber Resultados" className="w-full h-full object-cover" />
+                  <img alt="Receber Resultados" className="w-full h-full object-cover" src="/lovable-uploads/baad4d9c-94b3-4597-84fe-298171442603.png" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center">2. Recebe o teu painel de saúde personalizado</h3>
                 <p className="text-muted-foreground text-center">
@@ -51,7 +49,7 @@ const ComoFuncionaAnual = () => {
               {/* Step 3 */}
               <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center">
                 <div className="mb-6 w-full h-64 overflow-hidden rounded-xl">
-                  <img src="/images/step3.png" alt="Evolução de Saúde" className="w-full h-full object-cover" />
+                  <img alt="Evolução de Saúde" className="w-full h-full object-cover" src="/lovable-uploads/c4cb9b90-5f28-4fa7-9026-74dea217bb4e.png" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-center">3. Acompanha a tua evolução ao longo do tempo</h3>
                 <p className="text-muted-foreground text-center">
@@ -66,9 +64,6 @@ const ComoFuncionaAnual = () => {
         <TestingSteps />
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default ComoFuncionaAnual;
-
