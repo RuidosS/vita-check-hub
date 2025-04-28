@@ -33,11 +33,11 @@ export const WaitlistForm = () => {
 
   const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
-      const response = await fetch('https://a.klaviyo.com/api/v2/list/YOUR_LIST_ID/subscribe', {
+      const response = await fetch('https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Klaviyo-API-Key YOUR_PUBLIC_API_KEY'
+          'Authorization': 'Klaviyo-API-Key WAxXuj'
         },
         body: JSON.stringify({
           profiles: [{
