@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -47,8 +46,18 @@ const Testes = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-24">
-        <section className="py-16 bg-white border-b">
-          <div className="container-custom">
+        {/* Secção atualizada com background completo */}
+        <section 
+          className="relative py-16 border-b"
+          style={{
+            backgroundImage: "url('/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "right center",
+            backgroundRepeat: "no-repeat",
+            backgroundColor: "#fffaf5", // branco + ligeiro toque de laranja
+          }}
+        >
+          <div className="container-custom relative z-10">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="flex flex-col items-start text-left space-y-6">
                 <Badge 
@@ -79,17 +88,16 @@ const Testes = () => {
                   Junta-te à Lista de Espera
                 </Button>
               </div>
-              <div className="flex justify-center md:justify-end">
-                <img 
-                  src="/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png" 
-                  alt="Kit de teste HealthLab" 
-                  className="w-full max-w-md"
-                />
-              </div>
+              {/* Retirado o <img> daqui porque a imagem agora é o fundo */}
+              <div className="hidden md:block" />
             </div>
           </div>
+
+          {/* Layer de overlay branco à esquerda */}
+          <div className="absolute inset-0 bg-white md:w-1/2"></div>
         </section>
 
+        {/* Secção de Testes */}
         <section className="py-12 bg-white">
           <div className="container-custom">
             <h1 className="text-4xl font-bold mb-12">Testes em casa</h1>
