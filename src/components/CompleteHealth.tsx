@@ -1,29 +1,33 @@
+
 import React from "react";
+import { Button } from "./ui/button";
+import { useNavigate } from 'react-router-dom';
 
 export const CompleteHealth = () => {
-  const features = [
-    "Mais de 60 análises laboratoriais.",
-    "Avaliação de milhares de potenciais doenças e desequilíbrios.",
-    "Interpretação médica especializada.",
-    "Relatórios claros e acionáveis."
-  ];
-
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate('/lista-de-espera');
+  };
+  
   return (
-    <section className="py-32 bg-muted">
+    <section className="py-24 bg-muted">
       <div className="container-custom">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-16 text-dark-purple tracking-tight">
-          A visão mais completa da sua saúde
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 
-                         transform hover:-translate-y-2 border border-purple-100"
-            >
-              <p className="text-xl font-semibold text-dark-purple">{feature}</p>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Serviço completo para a sua saúde
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8">
+            Nossa plataforma de saúde contínua monitoriza dezenas de 
+            biomarcadores que afetam sua saúde ao longo do tempo. 
+            Acesse dados e recomendações personalizadas para otimizar seu bem-estar.
+          </p>
+          <Button 
+            onClick={handleClick}
+            className="px-8 py-6 text-lg"
+          >
+            Começar Agora
+          </Button>
         </div>
       </div>
     </section>
