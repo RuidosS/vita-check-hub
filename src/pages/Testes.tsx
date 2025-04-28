@@ -48,35 +48,44 @@ const Testes = () => {
       <Header />
       <main className="flex-grow pt-24">
         <section className="py-16 bg-white border-b">
-          <div className="container-custom max-w-4xl">
-            <div className="flex flex-col items-center text-center space-y-8">
-              <Badge 
-                variant="outline" 
-                className="bg-orange-100 text-orange-600 border-orange-200 mb-4 px-4 py-1.5 text-sm font-medium rounded-full"
-              >
-                Coming Soon
-              </Badge>
-              
-              <div className="flex items-center justify-center gap-3 text-4xl font-bold">
-                <Activity className="h-10 w-10 text-primary" />
-                <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
+          <div className="container-custom">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="flex flex-col items-start text-left space-y-6">
+                <Badge 
+                  variant="outline" 
+                  className="bg-orange-100 text-orange-600 border-orange-200 px-4 py-1.5 text-sm font-medium rounded-full"
+                >
+                  Coming Soon
+                </Badge>
+                
+                <div className="flex items-center gap-3 text-4xl font-bold">
+                  <Activity className="h-10 w-10 text-primary" />
+                  <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
+                </div>
+                
+                <p className="text-xl font-semibold text-gray-700">
+                  Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
+                </p>
+                
+                <p className="text-gray-600 max-w-2xl">
+                  Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
+                </p>
+                
+                <Button 
+                  size="lg"
+                  onClick={() => navigate('/lista-de-espera')}
+                  className="mt-6 text-white"
+                >
+                  Junta-te à Lista de Espera
+                </Button>
               </div>
-              
-              <p className="text-xl font-semibold text-gray-700">
-                Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
-              </p>
-              
-              <p className="text-gray-600 max-w-2xl">
-                Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
-              </p>
-              
-              <Button 
-                size="lg"
-                onClick={() => navigate('/lista-de-espera')}
-                className="mt-6 text-white"
-              >
-                Junta-te à Lista de Espera
-              </Button>
+              <div className="flex justify-center md:justify-end">
+                <img 
+                  src="/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png" 
+                  alt="Kit de teste HealthLab" 
+                  className="w-full max-w-md"
+                />
+              </div>
             </div>
           </div>
         </section>
