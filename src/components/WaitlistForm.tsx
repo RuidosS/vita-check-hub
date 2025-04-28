@@ -15,6 +15,7 @@ import {
 import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
+import { Textarea } from "./ui/textarea";
 
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
@@ -41,29 +42,41 @@ export const WaitlistForm = () => {
     setError(null);
     
     try {
-      // Using a JSONP approach to bypass CORS
-      // Create a unique callback name
-      const callbackName = 'klaviyoCallback_' + Math.random().toString(36).substring(2, 15);
+      // Using a direct form submit approach
+      const klaviyoForm = document.createElement('form');
+      klaviyoForm.method = 'POST';
+      klaviyoForm.action = 'https://manage.klaviyo.com/api/v2/list/VxzSKi/subscribe';
+      klaviyoForm.target = '_blank'; // Open in new tab to avoid navigation
+      klaviyoForm.style.display = 'none'; // Hide the form
       
-      // Build the form data
-      const formData = new FormData();
-      formData.append('api_key', 'WAxXuj');
-      formData.append('email', data.email);
-      formData.append('properties', JSON.stringify({
+      // Add the fields
+      const addField = (name: string, value: string) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        klaviyoForm.appendChild(input);
+      };
+      
+      addField('api_key', 'WAxXuj');
+      addField('email', data.email);
+      addField('properties', JSON.stringify({
         '$first_name': data.name,
         'phone_number': data.phone
       }));
-      formData.append('list_id', 'VxzSKi');
       
-      // Use Klaviyo's subscribe endpoint that supports CORS
-      const response = await fetch('https://manage.klaviyo.com/api/v2/list/VxzSKi/subscribe?', {
-        method: 'POST',
-        mode: 'no-cors', // This prevents CORS errors but means we won't get a standard response
-        body: formData,
-      });
+      // Add the form to the body
+      document.body.appendChild(klaviyoForm);
       
-      // Since we used 'no-cors', we won't get a standard response
-      // We'll assume it's successful and show a success message
+      // Submit the form
+      klaviyoForm.submit();
+      
+      // Remove the form from the body
+      setTimeout(() => {
+        document.body.removeChild(klaviyoForm);
+      }, 1000);
+      
+      // Set success state
       setIsSuccess(true);
       form.reset();
       toast.success("Inscrição realizada com sucesso!");
