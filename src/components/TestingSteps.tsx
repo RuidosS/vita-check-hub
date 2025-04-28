@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from './ui/card';
 
@@ -14,7 +15,7 @@ export const TestingSteps = () => {
       step: "Passo 2",
       title: "Visitas rápidas de laboratório, com uma média de 15 minutos",
       description: "Incluímos o custo de duas visitas por ano, com análise de mais de 100 biomarcadores",
-      image: "/lovable-uploads/baad4d9c-94b3-4597-84fe-298171442603.png",
+      image: "/lovable-uploads/51e635fb-a674-46e1-9d02-3667b07b2b47.png",
       alt: "Visita Laboratório"
     },
     {
@@ -56,4 +57,3 @@ export const TestingSteps = () => {
     </section>
   );
 };
-
