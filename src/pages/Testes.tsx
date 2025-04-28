@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -71,8 +72,11 @@ const Testes = () => {
               
               <Button 
                 size="lg"
-                onClick={() => navigate('/#waitlist')}
+                onClick={() => navigate('/lista-de-espera')}
                 className="mt-6 text-white"
+              >
+                Junta-te à Lista de Espera
+              </Button>
             </div>
           </div>
         </section>
