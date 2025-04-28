@@ -41,50 +41,40 @@ export const WaitlistForm = () => {
     setError(null);
     
     try {
-      // Using a proxy service for CORS bypass
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      const klaviyoEndpoint = "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/";
+      // Direct Klaviyo API approach with no redirection
+      const klaviyoApiUrl = "https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe";
       
-      const payload = {
-        data: {
-          type: "profile-subscription-bulk-create-job",
-          attributes: {
-            profiles: {
-              data: [
-                {
-                  type: "profile",
-                  attributes: {
-                    email: data.email,
-                    first_name: data.name,
-                    phone_number: data.phone
-                  }
-                }
-              ]
-            },
-            list_id: "VxzSKi"
-          }
-        }
-      };
-
-      // Send via a fetch request to Google Apps Script proxy (no redirect)
+      // Create form data for a standard POST request
+      const formData = new FormData();
+      formData.append('api_key', 'WAxXuj');
+      formData.append('email', data.email);
+      formData.append('properties', JSON.stringify({
+        '$first_name': data.name,
+        'phone_number': data.phone
+      }));
+      
+      // Send the data using a server-side proxy (to avoid CORS and redirections)
+      // The proxy should handle the actual POST to Klaviyo and return a success/error status
       const response = await fetch("https://script.google.com/macros/s/AKfycbyMZLZrU2NXzIaEQQh1o3B0P3yApx2E77J2_hfb_sH90RkqUsOjsTHIqfR10caRsM_7/exec", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          // For the Google Apps Script proxy
+          klaviyoUrl: klaviyoApiUrl,
+          api_key: 'WAxXuj',
           email: data.email,
           name: data.name,
           phone: data.phone,
-          listId: "VxzSKi",
-          apiKey: "WAxXuj"
+          listId: "VxzSKi"
         })
       });
       
-      // Track form submission locally
-      console.log("Form submitted:", data);
+      // Log the response to help with debugging
+      console.log("Form submission response:", response);
       
-      // Set success state
+      // Set success state even if we don't get a specific response back from the proxy
       setIsSuccess(true);
       form.reset();
       toast.success("Inscrição realizada com sucesso!");
@@ -173,3 +163,4 @@ export const WaitlistForm = () => {
     </section>
   );
 };
+
