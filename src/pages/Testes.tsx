@@ -2,8 +2,6 @@ import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { Activity } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Testes = () => {
@@ -46,40 +44,6 @@ const Testes = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-24">
-        <section className="py-16 bg-white border-b">
-          <div className="container-custom max-w-4xl">
-            <div className="flex flex-col items-center text-center space-y-8">
-              <Badge 
-                variant="outline" 
-                className="bg-orange-100 text-orange-600 border-orange-200 mb-4 px-4 py-1.5 text-sm font-medium rounded-full"
-              >
-                Coming Soon
-              </Badge>
-              
-              <div className="flex items-center justify-center gap-3 text-4xl font-bold">
-                <Activity className="h-10 w-10 text-primary" />
-                <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
-              </div>
-              
-              <p className="text-xl font-semibold text-gray-700">
-                Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
-              </p>
-              
-              <p className="text-gray-600 max-w-2xl">
-                Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
-              </p>
-              
-              <Button 
-                size="lg"
-                onClick={() => navigate('/#waitlist')}
-                className="mt-6 text-white"
-              >
-                Quero ser avisado
-              </Button>
-            </div>
-          </div>
-        </section>
-
         <section className="py-12 bg-white">
           <div className="container-custom">
             <h1 className="text-4xl font-bold mb-12">Testes em casa</h1>
