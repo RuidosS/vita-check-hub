@@ -12,32 +12,32 @@ const Testes = () => {
     {
       name: "Idade Biológica",
       subtitle: "Teste de saúde em casa",
-      description: "Analisa o impacto que o estilo de vida, nutrição, doenças e genética têm no seu corpo e órgãos vitais como o fígado e rins.",
+      description: "Avalia a tua verdadeira idade interna, analisando como o teu estilo de vida e saúde impactam o envelhecimento biológico.",
       sampleType: "Sangue do dedo",
       path: "/teste/idade-biologica"
     },
     {
       name: "Doenças Sexualmente Transmissíveis (DST's)",
       subtitle: "Teste de saúde em casa",
-      description: "O teste do microbioma intestinal oferece uma análise profunda e um plano de bem-estar personalizado que visa o seu desconforto GI e otimiza o bem-estar.",
+      description: "Deteta infeções sexualmente transmissíveis de forma discreta e rápida, garantindo maior tranquilidade e proteção.",
       sampleType: "Sangue do dedo e Urina"
     },
     {
       name: "Teste Micronutrients",
       subtitle: "Teste de saúde em casa",
-      description: "Descubra por que está tendo problemas para dormir testando os ritmos hormonais que regulam o ciclo sono-vigília.",
+      description: "Avalie o teu nível de vitaminas e minerais essenciais e obtêm recomendações para otimizar a tua saúde.",
       sampleType: "Sangue do dedo"
     },
     {
       name: "Checkup Hormonal",
       subtitle: "Teste de saúde em casa",
-      description: "Teste os níveis de hormonas do stress e receba um plano personalizado para poder redescobrir a sua calma.",
+      description: "Analisa os teus principais níveis hormonais e descobre como eles podem estar a afetar o teu bem-estar diário.",
       sampleType: "Sangue do dedo"
     },
     {
       name: "Testosterona",
       subtitle: "Teste de saúde em casa",
-      description: "Descubra como atingir seus objetivos de peso medindo biomarcadores-chave associados ao gerenciamento de peso e metabolismo.",
+      description: "Avalia os teus níveis de testosterona e conhece o impacto que podem ter na tua energia, humor e performance.",
       sampleType: "Sangue do dedo"
     }
   ];
