@@ -46,7 +46,7 @@ const Testes = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-24">
-        {/* Secção atualizada com background completo */}
+        {/* Secção principal com imagem de fundo */}
         <section 
           className="relative py-16 border-b overflow-hidden"
           style={{
@@ -54,7 +54,7 @@ const Testes = () => {
             backgroundSize: "cover",
             backgroundPosition: "right center",
             backgroundRepeat: "no-repeat",
-            backgroundColor: "#FFE5CC", // Laranja claro igual à imagem
+            backgroundColor: "#FFF9F6", // NOVA COR CERTA
           }}
         >
           <div className="container-custom relative z-10">
@@ -92,11 +92,11 @@ const Testes = () => {
             </div>
           </div>
 
-          {/* Layer de overlay à esquerda */}
-          <div className="absolute inset-0 bg-[#FFE5CC] md:w-1/2"></div>
+          {/* Overlay da metade esquerda */}
+          <div className="absolute inset-0 bg-[#FFF9F6] md:w-1/2"></div> {/* NOVA COR CERTA */}
         </section>
 
-        {/* Secção de Testes */}
+        {/* Secção dos testes */}
         <section className="py-12 bg-white">
           <div className="container-custom">
             <h1 className="text-4xl font-bold mb-12">Testes em casa</h1>
@@ -136,3 +136,4 @@ const Testes = () => {
 };
 
 export default Testes;
+
