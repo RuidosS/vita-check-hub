@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from './ui/card';
+import { AspectRatio } from './ui/aspect-ratio';
 
 export const TestingSteps = () => {
   const steps = [
@@ -31,8 +32,20 @@ export const TestingSteps = () => {
           {steps.map((step, index) => (
             <Card key={index} className="border-none shadow-none bg-transparent">
               <CardContent className="p-0">
-                {/* Image placeholder - aspect ratio 16:9 */}
-                <div className="w-full aspect-[16/9] bg-muted rounded-lg mb-6"></div>
+                {/* Replace placeholder with actual image for Passo 1 */}
+                {index === 0 ? (
+                  <div className="w-full aspect-[16/9] rounded-lg mb-6">
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src="/lovable-uploads/86693b73-f68f-41bf-adcc-a0b600061df4.png" 
+                        alt="Agendar Teste" 
+                        className="w-full h-full object-cover rounded-lg"
+                      />
+                    </AspectRatio>
+                  </div>
+                ) : (
+                  <div className="w-full aspect-[16/9] bg-muted rounded-lg mb-6"></div>
+                )}
                 <div className="space-y-4">
                   <span className="text-primary font-semibold">
                     {step.step}
