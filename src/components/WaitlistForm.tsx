@@ -41,43 +41,57 @@ export const WaitlistForm = () => {
     setError(null);
     
     try {
-      // Direct Klaviyo API approach with no redirection
+      // Direct approach - using Klaviyo's list subscribe endpoint with form submit
       const klaviyoApiUrl = "https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe";
       
-      // Create form data for a standard POST request
-      const formData = new FormData();
-      formData.append('api_key', 'WAxXuj');
-      formData.append('email', data.email);
-      formData.append('properties', JSON.stringify({
+      // Create a hidden form element to submit directly to Klaviyo
+      const klaviyoForm = document.createElement('form');
+      klaviyoForm.method = 'POST';
+      klaviyoForm.action = klaviyoApiUrl;
+      klaviyoForm.target = '_blank'; // Opens in new tab to not disrupt the current page
+      
+      // Add the required fields for Klaviyo API
+      const addFormField = (name: string, value: string) => {
+        const field = document.createElement('input');
+        field.type = 'hidden';
+        field.name = name;
+        field.value = value;
+        klaviyoForm.appendChild(field);
+      };
+      
+      // Add all Klaviyo fields
+      addFormField('api_key', 'WAxXuj');
+      addFormField('email', data.email);
+      
+      // Add properties as a JSON string
+      const properties = {
         '$first_name': data.name,
         'phone_number': data.phone
-      }));
+      };
+      addFormField('properties', JSON.stringify(properties));
       
-      // Send the data using a server-side proxy (to avoid CORS and redirections)
-      // The proxy should handle the actual POST to Klaviyo and return a success/error status
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyMZLZrU2NXzIaEQQh1o3B0P3yApx2E77J2_hfb_sH90RkqUsOjsTHIqfR10caRsM_7/exec", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          // For the Google Apps Script proxy
-          klaviyoUrl: klaviyoApiUrl,
-          api_key: 'WAxXuj',
-          email: data.email,
-          name: data.name,
-          phone: data.phone,
-          listId: "VxzSKi"
-        })
+      // Append the form to body, submit it, and remove it
+      document.body.appendChild(klaviyoForm);
+      
+      console.log("Submitting form to Klaviyo:", {
+        email: data.email,
+        name: data.name,
+        phone: data.phone
       });
       
-      // Log the response to help with debugging
-      console.log("Form submission response:", response);
+      // Submit the form and handle success locally
+      klaviyoForm.submit();
       
-      // Set success state even if we don't get a specific response back from the proxy
+      // Set success state
       setIsSuccess(true);
       form.reset();
       toast.success("Inscrição realizada com sucesso!");
+      
+      // Clean up - remove the form after submission
+      setTimeout(() => {
+        document.body.removeChild(klaviyoForm);
+      }, 100);
+      
     } catch (error) {
       console.error('Subscription error:', error);
       setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
@@ -163,4 +177,3 @@ export const WaitlistForm = () => {
     </section>
   );
 };
-
