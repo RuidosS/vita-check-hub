@@ -21,13 +21,10 @@ export const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="text-left space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white">
-              Assume o controlo da tua saúde.
+              Conhece o teu corpo. Melhora a tua saúde
             </h1>
             <div className="space-y-4">
-              <p className="text-xl text-white">Testagens laboratoriais a cada 6 meses.</p>
-              <p className="text-xl text-white">+100 biomarcadores analisados.</p>
-              <p className="text-xl text-white">Resultados claros, validados por médicos.</p>
-              <p className="text-xl text-white">Planos de ação práticos e acionáveis.</p>
+              <p className="text-xl text-white">Análises profundas de +100 biomarcadores, validadas por médicos, com planos de ação práticos a cada 6 meses.</p>
             </div>
             <button 
               onClick={scrollToWaitlist} 
