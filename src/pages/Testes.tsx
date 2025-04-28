@@ -46,12 +46,10 @@ const Testes = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow">
-        {/* Hero section with split design */}
-        <section className="min-h-screen flex flex-col md:flex-row">
-          {/* Left side - Text content with light orange background */}
-          <div className="w-full md:w-1/2 bg-[#FFF7F1] py-16 md:py-0 flex items-center">
-            <div className="container-custom max-w-xl px-6 md:pl-8 lg:pl-12 xl:pl-20 py-12 md:py-0">
+      <main className="flex-grow pt-24">
+        <section className="py-16 bg-white border-b">
+          <div className="container-custom">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="flex flex-col items-start text-left space-y-6">
                 <Badge 
                   variant="outline" 
@@ -60,8 +58,8 @@ const Testes = () => {
                   Coming Soon
                 </Badge>
                 
-                <div className="flex items-center gap-3 text-3xl md:text-4xl font-bold">
-                  <Activity className="h-8 md:h-10 w-8 md:w-10 text-primary" />
+                <div className="flex items-center gap-3 text-4xl font-bold">
+                  <Activity className="h-10 w-10 text-primary" />
                   <h1>Em breve vais poder testar a tua saúde... a partir de casa 🚀</h1>
                 </div>
                 
@@ -69,28 +67,26 @@ const Testes = () => {
                   Estamos a preparar uma nova geração de testes laboratoriais para tua saúde.
                 </p>
                 
-                <p className="text-gray-600">
+                <p className="text-gray-600 max-w-2xl">
                   Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
                 </p>
                 
                 <Button 
                   size="lg"
                   onClick={() => navigate('/lista-de-espera')}
-                  className="mt-6 text-white font-medium"
+                  className="mt-6 text-white"
                 >
                   Junta-te à Lista de Espera
                 </Button>
               </div>
+              <div className="flex justify-center md:justify-end">
+                <img 
+                  src="/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png" 
+                  alt="Kit de teste HealthLab" 
+                  className="w-full max-w-md"
+                />
+              </div>
             </div>
-          </div>
-          
-          {/* Right side - Image with strong orange background */}
-          <div className="w-full md:w-1/2 bg-[#FE9A49] flex items-center justify-center min-h-[50vh] md:min-h-full">
-            <img 
-              src="/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png" 
-              alt="Kit de teste HealthLab" 
-              className="w-full h-full object-contain py-8 md:py-0 px-4 md:px-0"
-            />
           </div>
         </section>
 
