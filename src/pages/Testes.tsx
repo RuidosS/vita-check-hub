@@ -70,11 +70,6 @@ const Testes = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-12 text-center">
-              <Button variant="outline" size="lg" className="text-white">
-                Explorar Todos os Testes de Saúde
-              </Button>
-            </div>
           </div>
         </section>
       </main>
