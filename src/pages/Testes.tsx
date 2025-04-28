@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -122,11 +123,6 @@ const Testes = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-12 text-center">
-              <Button variant="outline" size="lg" className="text-white">
-                Explorar Todos os Testes de Saúde
-              </Button>
-            </div>
           </div>
         </section>
       </main>
@@ -136,4 +132,3 @@ const Testes = () => {
 };
 
 export default Testes;
-
