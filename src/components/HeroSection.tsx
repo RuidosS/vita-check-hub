@@ -11,7 +11,7 @@ export const HeroSection = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/22584d25-dbb7-4b89-a91e-e7f29f924bf3.png')" }}
+      style={{ backgroundImage: "url('/lovable-uploads/5611c2c5-4212-4466-97c7-aeff1db34e9e.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
