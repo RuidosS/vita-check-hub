@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -5,7 +6,7 @@ export const HeroSection = () => {
   const navigate = useNavigate();
   
   const scrollToWaitlist = () => {
-    navigate('/#waitlist');
+    navigate('/lista-de-espera');
   };
 
   return (
@@ -36,4 +37,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
