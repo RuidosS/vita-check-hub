@@ -48,13 +48,13 @@ const Testes = () => {
       <main className="flex-grow pt-24">
         {/* Secção atualizada com background completo */}
         <section 
-          className="relative py-16 border-b"
+          className="relative py-16 border-b overflow-hidden"
           style={{
             backgroundImage: "url('/lovable-uploads/33a37cbe-adc0-4b8a-bf33-1141c6923d5c.png')",
             backgroundSize: "cover",
             backgroundPosition: "right center",
             backgroundRepeat: "no-repeat",
-            backgroundColor: "#fffaf5", // branco + ligeiro toque de laranja
+            backgroundColor: "#FFE5CC", // Laranja claro igual à imagem
           }}
         >
           <div className="container-custom relative z-10">
@@ -88,13 +88,12 @@ const Testes = () => {
                   Junta-te à Lista de Espera
                 </Button>
               </div>
-              {/* Retirado o <img> daqui porque a imagem agora é o fundo */}
               <div className="hidden md:block" />
             </div>
           </div>
 
-          {/* Layer de overlay branco à esquerda */}
-          <div className="absolute inset-0 bg-white md:w-1/2"></div>
+          {/* Layer de overlay à esquerda */}
+          <div className="absolute inset-0 bg-[#FFE5CC] md:w-1/2"></div>
         </section>
 
         {/* Secção de Testes */}
