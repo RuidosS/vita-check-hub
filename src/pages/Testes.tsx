@@ -77,7 +77,7 @@ const Testes = () => {
                 </p>
                 
                 <p className="text-gray-600 max-w-2xl">
-                  Lançamento prioritário para quem está na lista de espera. Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
+                Junta-te hoje e sê dos primeiros a receber acesso exclusivo.
                 </p>
                 
                 <Button 
