@@ -11,12 +11,12 @@ export const AboutUs = () => {
   };
   
   return (
-    <section className="py-28 md:py-36 bg-white">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container-custom max-w-4xl mx-auto text-center px-4 sm:px-6">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-10 md:mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 md:mb-8">
           Uma adesão anual para viveres melhor e mais tempo.
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 mx-auto max-w-[70ch] leading-relaxed">
+        <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 mx-auto max-w-[70ch] leading-relaxed">
           Fazes duas análises clínicas por ano, separadas por 6 meses, com avaliação de mais de 100 biomarcadores essenciais: hormonas, vitaminas, metabolismo, inflamação e muito mais.
         </p>
         <button 
