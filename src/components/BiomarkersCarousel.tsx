@@ -18,7 +18,7 @@ export const BiomarkersCarousel = () => {
       name: "BIOLOGICAL AGE",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVsaGVyfGVufDB8fDB8fHww",
       testimonial: "Os resultados sugeriram uma idade biológica mais elevada. Com algumas mudanças no estilo de vida, senti melhorias reais."
     },
     {
@@ -27,7 +27,7 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbiUyMGZhY2V8ZW58MHx8MHx8fDA%3D",
       testimonial: "Senti alterações no meu bem-estar. Ao analisar os níveis hormonais, consegui compreender melhor o que se passava."
     },
     {
@@ -36,7 +36,7 @@ export const BiomarkersCarousel = () => {
       name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
-      image: "https://images.unsplash.com/photo-1598623335306-5d0040e41f4d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVsaGVyJTIwYXRsZXRhfGVufDB8fDB8fHww",
+      image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop",
       testimonial: "Sentia cansaço frequente. Os testes apontaram níveis de ferritina mais baixos, o que ajudou a ajustar a alimentação e os treinos."
     },
     {
