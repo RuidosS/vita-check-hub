@@ -11,20 +11,20 @@ export const AboutUs = () => {
   };
   
   return (
-    <section className="py-24 bg-white">
-      <div className="container-custom max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-6">
+    <section className="py-28 md:py-36 bg-white">
+      <div className="container-custom max-w-4xl mx-auto text-center px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10 md:mb-12">
           Uma adesão anual para viveres melhor e mais tempo.
         </h2>
-        <p className="text-xl text-muted-foreground mb-8">
+        <p className="text-lg md:text-xl text-muted-foreground mb-12 md:mb-16 mx-auto max-w-[70ch] leading-relaxed">
           Fazes duas análises clínicas por ano, separadas por 6 meses, com avaliação de mais de 100 biomarcadores essenciais: hormonas, vitaminas, metabolismo, inflamação e muito mais.
         </p>
         <button 
           onClick={goToWaitlist} 
-          className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+          className="inline-flex items-center gap-3 text-primary font-medium hover:underline text-lg py-2"
         >
           Reserva já o teu lugar
-          <ArrowRight className="h-4 w-4" />
+          <ArrowRight className="h-5 w-5" />
         </button>
       </div>
     </section>

@@ -52,11 +52,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4 text-foreground leading-tight;
+    @apply text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-foreground leading-tight;
   }
   
   .section-subtitle {
-    @apply text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed;
+    @apply text-lg text-muted-foreground mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed;
   }
 
   h1, h2, h3, h4, h5, h6 {
