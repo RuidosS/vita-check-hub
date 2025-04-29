@@ -72,7 +72,7 @@ export const SilentDiseases = () => {
     {
       title: "Deficiência de Vitamina D",
       icon: Sun,
-      imageUrl: "https://images.unsplash.com/photo-1486718448742-163732cd1544?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/b19caaa9-58a9-4ed5-9621-796ce640f1d3.png"
     },
     {
       title: "Doença da Tiroide",
