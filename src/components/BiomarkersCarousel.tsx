@@ -46,7 +46,7 @@ export const BiomarkersCarousel = () => {
       description: "Transporte de lípidos na corrente sanguínea.",
       dates: ["Sep 23", "Mar 24", "Sep 24"],
       image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop",
-      testimonial: "endo histórico familiar, quis investigar. Ver o ApoB ajudou-me a tomar decisões mais informadas sobre o meu futuro."
+      testimonial: "Tendo histórico familiar, quis investigar. Ver o ApoB ajudou-me a tomar decisões mais informadas sobre o meu futuro."
     },
     {
       value: "42",
@@ -54,7 +54,7 @@ export const BiomarkersCarousel = () => {
       name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "https://images.unsplash.com/photo-1561643241-9abf82d76a68?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG11bGhlcnxlbnwwfHwwfHx8MA%3D%3D",
+      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
       testimonial: "inha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
     }
   ];
