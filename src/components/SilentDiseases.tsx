@@ -26,9 +26,9 @@ const DiseaseCard = ({ title, icon: Icon, imageUrl }: DiseaseCardProps) => {
         <img 
           src={imageUrl} 
           alt={title} 
-          className="w-full h-full object-cover opacity-90 group-hover:opacity-80 transition-opacity duration-300"
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/50"></div>
       </div>
       
       {/* Content */}
@@ -47,52 +47,52 @@ export const SilentDiseases = () => {
     {
       title: "Doença Cardiovascular",
       icon: Heart,
-      imageUrl: "https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1559757175-569a19aefeff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Diabetes Tipo 2",
       icon: Activity,
-      imageUrl: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1576765608622-067acf0b5c08?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Cancro do Cólon",
       icon: CircleDot,
-      imageUrl: "https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Inflamação Crónica",
       icon: Flame,
-      imageUrl: "https://images.unsplash.com/photo-1576671414121-aa7c5d52e0c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1582560474991-d7c9d03ca378?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Síndrome do Ovário Poliquístico",
       icon: CircleDot,
-      imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Deficiência de Vitamina D",
       icon: Sun,
-      imageUrl: "https://images.unsplash.com/photo-1501696461415-6bd6660c6742?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Doença da Tiroide",
       icon: Droplet,
-      imageUrl: "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1579165466991-467135ad3875?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Envelhecimento Acelerado",
       icon: Clock,
-      imageUrl: "https://images.unsplash.com/photo-1512075135822-67cdd9dd7314?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1584555613483-85892b7a9db7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Ansiedade & Cortisol Elevado",
       icon: Brain,
-      imageUrl: "https://images.unsplash.com/photo-1490131784822-b4626a8ec96a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1559757148-7a890dc52247?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Intoxicação por Metais Pesados",
       icon: FlaskRound,
-      imageUrl: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1581093196277-9f6e9b62be04?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     },
   ];
 
