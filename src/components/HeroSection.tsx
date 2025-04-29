@@ -34,7 +34,7 @@ export const HeroSection = () => {
           
           {/* Description section with more space and highlighted terms */}
           <div className="space-y-6">
-            </p>
+            {/* Empty div, removed the closing </p> tag that had no opening tag */}
           </div>
           
           {/* Enhanced CTA section with icon and FOMO microcopy */}
