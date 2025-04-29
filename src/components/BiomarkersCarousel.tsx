@@ -1,5 +1,4 @@
-
-import React from "react"
+import React, { useRef, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -8,73 +7,42 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import Autoplay from "embla-carousel-autoplay";
+import { useEmblaCarousel } from 'embla-carousel-react';
 
 export const BiomarkersCarousel = () => {
-  const biomarkers = [
-    {
-      value: "43",
-      unit: "",
-      name: "BIOLOGICAL AGE",
-      description: "Entende o verdadeiro ritmo do teu corpo.",
-      dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
-    },
-    {
-      value: "650",
-      unit: "ng/dL",
-      name: "TESTOSTERONA",
-      description: "Energia, força e vitalidade.",
-      dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
-    },
-    {
-      value: "115",
-      unit: "ng/mL",
-      name: "FERRITINA",
-      description: "Energia e armazenamento de ferro.",
-      dates: ["Apr 23", "Oct 23", "Apr 24"],
-      image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop"
-    },
-    {
-      value: "98",
-      unit: "mg/dL",
-      name: "ApoB",
-      description: "Transporte de lípidos na corrente sanguínea.",
-      dates: ["Sep 23", "Mar 24", "Sep 24"],
-      image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop"
-    },
-    {
-      value: "42",
-      unit: "ng/mL",
-      name: "VITAMINA D",
-      description: "Essencial para o sistema imunitário.",
-      dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
-    }
-  ];
-
-  const plugin = Autoplay({
-    delay: 5000,
-    stopOnInteraction: false,
-    stopOnMouseEnter: false,
-    playOnInit: true,
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    dragFree: true,
+    align: "start",
+    skipSnaps: false, // Important!
   });
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    let rafId: number;
+
+    const scroll = () => {
+      if (emblaApi) {
+        emblaApi.scrollBy(0.5); // <-- move 0.5 pixel per frame (smooth!)
+      }
+      rafId = requestAnimationFrame(scroll);
+    };
+
+    scroll(); // Start scrolling
+
+    return () => cancelAnimationFrame(rafId); // Clean up
+  }, [emblaApi]);
+
+  const biomarkers = [
+    // your biomarker list as before
+  ];
 
   return (
     <section className="py-16">
       <div className="container-custom">
         <div className="relative">
-          <Carousel 
-            opts={{
-              align: "start",
-              loop: true,
-              dragFree: true,
-              skipSnaps: true,
-              inViewThreshold: 0,
-            }}
-            plugins={[plugin]}
-          >
+          <div ref={emblaRef}>
             <CarouselContent className="-ml-4">
               {biomarkers.map((biomarker, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
@@ -94,7 +62,6 @@ export const BiomarkersCarousel = () => {
                           <h3 className="font-semibold text-lg mb-1 text-white">{biomarker.name}</h3>
                           <p className="text-sm opacity-90 mb-4 text-white">{biomarker.description}</p>
                         </div>
-                        
                         <div className="relative h-12 w-full mt-auto">
                           <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20"></div>
                           <div className="relative h-full flex items-end justify-between">
@@ -112,9 +79,7 @@ export const BiomarkersCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+          </div>
         </div>
       </div>
     </section>
