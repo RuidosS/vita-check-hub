@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Sun } from 'lucide-react';
 
@@ -54,13 +55,14 @@ export const TestRepetitionExplanation = () => {
                     {chartData.map((item, index) => (
                       <div key={index} className="flex flex-col items-center flex-1">
                         <div
-                          className={`w-2.5 h-[${(item.value / 50) * 100}%] rounded-full ${
+                          style={{ height: `${(item.value / 50) * 100}%` }}
+                          className={`w-2.5 rounded-full ${
                             index === 0 ? 'bg-amber-300' :
                             index === 1 ? 'bg-amber-400' : 'bg-amber-500'
                           }`}
                         ></div>
                         <div className="mt-2 text-center">
-                          <div className="font-bold">{item.value}</div>
+                          <div className="font-bold">{item.value} ng/mL</div>
                           <div className="text-sm text-muted-foreground">{item.month}</div>
                         </div>
                       </div>

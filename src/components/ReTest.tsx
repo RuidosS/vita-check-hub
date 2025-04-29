@@ -34,9 +34,10 @@ export const ReTest = () => {
                     {/* May 24 */}
                     <div className="text-center">
                       <div className="flex justify-center">
-                        <div className="h-3 w-3 rounded-full bg-amber-500 ring-2 ring-amber-200"></div>
+                        <div className="h-3 w-3 rounded-full bg-yellow-500 ring-2 ring-yellow-200"></div>
                       </div>
                       <div className="mt-2">
+                        <div className="text-sm font-bold">28 ng/mL</div>
                         <div className="text-sm text-gray-500">Maio 24</div>
                       </div>
                     </div>
@@ -47,6 +48,7 @@ export const ReTest = () => {
                         <div className="h-3 w-3 rounded-full bg-amber-500 ring-2 ring-amber-200"></div>
                       </div>
                       <div className="mt-2">
+                        <div className="text-sm font-bold">35 ng/mL</div>
                         <div className="text-sm text-gray-500">Nov 24</div>
                       </div>
                     </div>
@@ -57,6 +59,7 @@ export const ReTest = () => {
                         <div className="h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                       </div>
                       <div className="mt-2">
+                        <div className="text-sm font-bold">42 ng/mL</div>
                         <div className="text-sm text-gray-500">Maio 25</div>
                       </div>
                     </div>
