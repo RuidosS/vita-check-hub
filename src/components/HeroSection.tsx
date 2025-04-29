@@ -20,10 +20,10 @@ export const HeroSection = () => {
       <div className="relative h-full flex items-center pl-8 md:pl-24"> {/* Increased padding-left */}
         <div className="max-w-2xl space-y-10">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
-            Conhece o teu corpo.<br />Melhora a tua saúde
+            Cuida da tua saúde com dados reais.
           </h1>
           <p className="text-lg md:text-xl text-white/90">
-            Análises profundas de +100 biomarcadores, validadas por médicos, com planos de ação práticos a cada 6 meses.
+            Faz análises clínicas presenciais a +100 biomarcadores, com relatório médico e plano personalizado. Repete ao fim de 6 meses para ver a tua evolução.
           </p>
           <button 
             onClick={scrollToWaitlist} 
