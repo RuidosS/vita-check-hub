@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowRight, Check, User, Brain, Utensils, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Membership = () => {
@@ -10,50 +10,31 @@ export const Membership = () => {
     navigate('/lista-de-espera', { state: { scrollToForm: true } });
   };
 
-  const features = [
-    {
-      icon: <Check className="w-6 h-6 text-green-500" />,
-      text: "+100 biomarcadores avaliados"
-    },
-    {
-      icon: <User className="w-6 h-6 text-amber-500" />,
-      text: "2 análises clínicas presenciais/ano"
-    },
-    {
-      icon: <Brain className="w-6 h-6 text-pink-400" />,
-      text: "Relatório clínico interpretado por médicos"
-    },
-    {
-      icon: <Utensils className="w-6 h-6 text-gray-500" />,
-      text: "Sugestões alimentares e suplementação"
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-blue-500" />,
-      text: "Reavaliação após 6 meses"
-    }
-  ];
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-24 bg-muted">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            O que inclui a tua adesão anual:
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Cuida da tua saúde como quem cuida do seu maior ativo.
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div 
-                key={index} 
-                className="bg-white rounded-xl p-6 flex items-center gap-4 shadow-sm border border-gray-100"
-              >
-                <div className="flex-shrink-0">
-                  {feature.icon}
-                </div>
-                <span className="font-medium">{feature.text}</span>
-              </div>
-            ))}
+          <div className="mb-8 space-y-6">
+            <p className="text-xl">Junta-te à HealthLab Adesão:</p>
+            <ul className="space-y-2 text-lg">
+              <li>- Testes laboratoriais</li>
+              <li>- Planos personalizados</li>
+              <li>- Acompanhamento contínuo</li>
+            </ul>
+            <p className="text-lg font-medium">
+              Sem complicações. Sem surpresas. Sem bullshit.
+            </p>
           </div>
+          <button 
+            onClick={goToWaitlist}
+            className="btn-primary inline-flex items-center gap-2 text-white"
+          >
+            Junta-te à Lista de Espera
+            <ArrowRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>
