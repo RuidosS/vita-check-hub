@@ -137,9 +137,9 @@ export const BiomarkersCategories = () => {
     <section className="py-16 bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Avaliamos o que realmente importa para a tua saúde.</h2>
+          <h2 className="text-4xl font-bold mb-4">Avaliamos o que realmente conta para a tua saúde.</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mais de 100 biomarcadores agrupados em 9 áreas essenciais para uma visão completa da tua saúde física, mental e metabólica.
+            Mais de 100 biomarcadores organizados em 9 áreas essenciais, para uma visão completa da tua saúde física, mental e metabólica.
           </p>
         </div>
         

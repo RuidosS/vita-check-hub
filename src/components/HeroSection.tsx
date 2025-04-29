@@ -17,7 +17,7 @@ export const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="relative h-full flex items-center pl-8 md:pl-24"> {/* Increased padding-left */}
+      <div className="relative h-full flex items-center pl-8 md:pl-24">
         <div className="max-w-2xl space-y-10">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
             Cuida da tua saúde com dados reais.

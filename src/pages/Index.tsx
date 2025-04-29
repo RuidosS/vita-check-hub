@@ -11,6 +11,7 @@ import { ResultsOverTime } from '../components/ResultsOverTime';
 import { HealthEvolution } from '../components/HealthEvolution';
 import { ServiceSteps } from '../components/ServiceSteps';
 import { WhyDifferent } from '../components/WhyDifferent';
+import { MembershipFeatures } from '../components/MembershipFeatures';
 
 const Index = () => {
   return (
@@ -22,8 +23,9 @@ const Index = () => {
         <BiomarkersIntro />
         <BiomarkersCarousel />
         <ResultsOverTime />
-        <HealthEvolution />
+        <MembershipFeatures />
         <ServiceSteps />
+        <HealthEvolution />
         <BiomarkersCategories />
         <WhyDifferent />
       </main>

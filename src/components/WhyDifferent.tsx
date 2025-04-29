@@ -5,11 +5,11 @@ import { useNavigate } from 'react-router-dom';
 
 export const WhyDifferent = () => {
   const features = [
-    "Testagens clínicas presenciais certificadas.",
-    "+100 biomarcadores analisados.",
-    "Sem consultas obrigatórias.",
-    "Resultados claros e sem medicalês.",
-    "Planos de ação personalizados."
+    "Análises clínicas presenciais em laboratórios certificados",
+    "Resultados médicos validados",
+    "Relatórios simples e personalizados",
+    "+100 biomarcadores que impactam a tua saúde",
+    "Recomendações reais, baseadas em dados — não palpites"
   ];
 
   const actionItems = [

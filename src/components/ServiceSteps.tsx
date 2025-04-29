@@ -6,15 +6,15 @@ export const ServiceSteps = () => {
   const steps = [
     {
       title: "Marca a tua colheita num laboratório parceiro",
-      description: "Escolhe a data e o local mais conveniente para ti"
+      description: "Escolhe a data e o local mais conveniente para ti."
     },
     {
       title: "Recebe o teu relatório personalizado",
-      description: "Com insights claros e recomendações práticas"
+      description: "Com insights claros, alimentos recomendados e plano de ação."
     },
     {
       title: "Testa novamente após 6 meses",
-      description: "Para acompanhar a evolução e ajustar o teu plano"
+      description: "Compara os dados e ajusta o teu plano com base na evolução."
     }
   ];
 

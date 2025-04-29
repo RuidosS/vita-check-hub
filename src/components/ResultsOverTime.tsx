@@ -1,3 +1,4 @@
+
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +20,9 @@ export const ResultsOverTime = () => {
           </h2>
           <div className="space-y-4">
             <p className="text-xl text-muted-foreground">
-              Compara os teus dados ao longo do tempo. Entende exatamente onde estás e o que podes melhorar.
+              Compara os teus dados ao longo do tempo.
+              <br />
+              Vê exatamente onde estás e o que está a melhorar.
             </p>
           </div>
           <button 
