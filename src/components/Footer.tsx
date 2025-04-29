@@ -51,7 +51,7 @@ export const Footer = () => {
         
         <div className="mt-8 pt-8 border-t border-gray-200">
           <p className="text-sm text-center text-gray-600">
-            © {new Date().getFullYear()} HealthLab. Todos os direitos reservados.
+            © {new Date().getFullYear()} Ōuma Health. Todos os direitos reservados.
           </p>
         </div>
       </div>
