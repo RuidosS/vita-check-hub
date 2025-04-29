@@ -86,7 +86,7 @@ const Testes = () => {
                   onClick={() => navigate('/lista-de-espera')}
                   className="mt-6 text-white"
                 >
-                  Junta-te à Lista de Espera
+                  Reserva já o teu lugar
                 </Button>
               </div>
               <div className="hidden md:block" />
