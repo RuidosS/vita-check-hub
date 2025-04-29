@@ -7,7 +7,7 @@ export const TestRepetitionExplanation = () => {
   const chartData = [
     { month: "Maio 24", value: 28, color: "#FFA07A" },
     { month: "Nov 24", value: 35, color: "#FF8C61" },
-    { month: "Mai 25", value: 42, color: "#FA5F55" }
+    { month: "Maio 25", value: 42, color: "#FA5F55" }
   ];
 
   return (
