@@ -1,11 +1,12 @@
+
 import React from 'react';
 import { Sun } from 'lucide-react';
 
 export const TestRepetitionExplanation = () => {
   const chartData = [
-    { month: "Maio 24", value: 28 },
-    { month: "Nov 24", value: 35 },
-    { month: "Maio 25", value: 42 },
+    { month: "Maio 24", color: "#FFA07A" },
+    { month: "Nov 24", color: "#FF8C61" },
+    { month: "Maio 25", color: "#FA5F55" }
   ];
 
   return (
@@ -54,13 +55,13 @@ export const TestRepetitionExplanation = () => {
                     {chartData.map((item, index) => (
                       <div key={index} className="flex flex-col items-center flex-1">
                         <div
-                          className={`w-2.5 h-[${(item.value / 50) * 100}%] rounded-full ${
+                          className={`w-2.5 h-24 rounded-full ${
                             index === 0 ? 'bg-amber-300' :
                             index === 1 ? 'bg-amber-400' : 'bg-amber-500'
                           }`}
+                          style={{ height: `${(index + 1) * 30}px` }}
                         ></div>
                         <div className="mt-2 text-center">
-                          <div className="font-bold">{item.value}</div>
                           <div className="text-sm text-muted-foreground">{item.month}</div>
                         </div>
                       </div>
@@ -78,19 +79,17 @@ export const TestRepetitionExplanation = () => {
                     />
                   </svg>
 
-                  {/* Dots for ideal range */}
-                  <div className="absolute top-[40%] left-[10%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
+                  {/* Dots for timeline */}
+                  <div className="absolute top-[40%] left-[10%] h-3 w-3 rounded-full bg-yellow-500 ring-2 ring-yellow-200"></div>
                   <div className="absolute top-[25%] left-[50%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                   <div className="absolute top-[10%] left-[88%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                 </div>
 
-                <div className="mt-4 flex items-center">
-                  <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                  <span className="text-sm text-gray-700">Dentro da faixa ideal (30-100 ng/mL)</span>
+                <div className="mt-4 flex justify-center items-center">
+                  <span className="text-sm text-gray-700">Maio 24 - Nov 24 - Maio 25</span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
