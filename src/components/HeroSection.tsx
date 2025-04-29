@@ -28,16 +28,12 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider italic drop-shadow-md">
-              Com <span className="font-medium text-orange-200">dados clínicos</span>, 
-              <span className="font-medium text-orange-200"> planos reais</span> e 
-              <span className="font-medium text-orange-200"> evolução</span> a cada 6 meses.
+              Testes, resultados e acompanhamento num só plano.
             </p>
           </div>
           
           {/* Description section with more space and highlighted terms */}
           <div className="space-y-6">
-            <p className="text-lg md:text-xl text-white/90">
-              Testes, resultados e acompanhamento num só plano.
             </p>
           </div>
           
