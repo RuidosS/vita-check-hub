@@ -5,9 +5,9 @@ import { Calendar, TrendingUp, Sun } from 'lucide-react';
 export const TestRepetitionExplanation = () => {
   // Sample data for the chart
   const chartData = [
-    { month: "Mês 0", value: 28, color: "#FFA07A" },
-    { month: "Mês 6", value: 35, color: "#FF8C61" },
-    { month: "Mês 12", value: 42, color: "#FA5F55" }
+    { month: "Maio 24", value: 28, color: "#FFA07A" },
+    { month: "Nov 24", value: 35, color: "#FF8C61" },
+    { month: "Mai 25", value: 42, color: "#FA5F55" }
   ];
 
   return (

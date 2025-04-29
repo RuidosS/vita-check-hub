@@ -31,36 +31,36 @@ export const ReTest = () => {
                   <div className="absolute top-0 left-4 right-4 h-px bg-gray-200"></div>
                   
                   <div className="flex justify-between">
-                    {/* June 22 */}
+                    {/* May 24 */}
                     <div className="text-center">
                       <div className="flex justify-center">
                         <div className="h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                       </div>
                       <div className="mt-2">
                         <div className="font-bold text-2xl">28</div>
-                        <div className="text-sm text-gray-500">Jun 22</div>
+                        <div className="text-sm text-gray-500">Maio 24</div>
                       </div>
                     </div>
                     
-                    {/* Dec 23 */}
+                    {/* Nov 24 */}
                     <div className="text-center">
                       <div className="flex justify-center">
                         <div className="h-3 w-3 rounded-full bg-amber-500 ring-2 ring-amber-200"></div>
                       </div>
                       <div className="mt-2">
                         <div className="font-bold text-2xl">35</div>
-                        <div className="text-sm text-gray-500">Dez 23</div>
+                        <div className="text-sm text-gray-500">Nov 24</div>
                       </div>
                     </div>
                     
-                    {/* June 24 */}
+                    {/* May 25 */}
                     <div className="text-center">
                       <div className="flex justify-center">
                         <div className="h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                       </div>
                       <div className="mt-2">
                         <div className="font-bold text-2xl">42</div>
-                        <div className="text-sm text-gray-500">Jun 24</div>
+                        <div className="text-sm text-gray-500">Mai 25</div>
                       </div>
                     </div>
                   </div>
