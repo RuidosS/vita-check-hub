@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
-import { Line, LineChart, ResponsiveContainer } from "recharts";
 
 export const BiomarkersCarousel = () => {
   const biomarkers = [
@@ -19,11 +18,6 @@ export const BiomarkersCarousel = () => {
       name: "BIOLOGICAL AGE",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      chartData: [
-        { date: "Jun 22", value: 46 },
-        { date: "Dec 23", value: 41 },
-        { date: "Jun 24", value: 43 }
-      ],
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop"
     },
     {
@@ -32,11 +26,6 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      chartData: [
-        { date: "Jan 23", value: 620 },
-        { date: "Jul 23", value: 680 },
-        { date: "Jan 24", value: 650 }
-      ],
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop"
     },
     {
@@ -45,11 +34,6 @@ export const BiomarkersCarousel = () => {
       name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
-      chartData: [
-        { date: "Apr 23", value: 90 },
-        { date: "Oct 23", value: 130 },
-        { date: "Apr 24", value: 115 }
-      ],
       image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop"
     },
     {
@@ -58,11 +42,6 @@ export const BiomarkersCarousel = () => {
       name: "ApoB",
       description: "Transporte de lípidos na corrente sanguínea.",
       dates: ["Sep 23", "Mar 24", "Sep 24"],
-      chartData: [
-        { date: "Sep 23", value: 120 },
-        { date: "Mar 24", value: 105 },
-        { date: "Sep 24", value: 98 }
-      ],
       image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop"
     },
     {
@@ -71,11 +50,6 @@ export const BiomarkersCarousel = () => {
       name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
-      chartData: [
-        { date: "Mar 23", value: 30 },
-        { date: "Sep 23", value: 38 },
-        { date: "Mar 24", value: 42 }
-      ],
       image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop"
     }
   ];
@@ -121,29 +95,9 @@ export const BiomarkersCarousel = () => {
                           <p className="text-sm opacity-90 mb-4 text-white">{biomarker.description}</p>
                         </div>
                         
-                        <div className="relative h-24 w-full mt-auto">
-                          {/* Chart container */}
-                          <div className="absolute bottom-12 left-0 right-0 h-12">
-                            <ResponsiveContainer width="100%" height="100%">
-                              <LineChart data={biomarker.chartData} margin={{ top: 0, right: 0, bottom: 0, left: 0 }}>
-                                <Line 
-                                  type="monotone" 
-                                  dataKey="value" 
-                                  stroke="#FFFFFF" 
-                                  strokeWidth={2}
-                                  dot={false}
-                                  activeDot={false}
-                                  isAnimationActive={true}
-                                  animationDuration={1500}
-                                  tension={0.4}
-                                />
-                              </LineChart>
-                            </ResponsiveContainer>
-                          </div>
-                          
-                          {/* Date markers */}
-                          <div className="absolute bottom-0 left-0 right-0 h-px bg-transparent"></div>
-                          <div className="relative h-12 flex items-end justify-between">
+                        <div className="relative h-12 w-full mt-auto">
+                          <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20"></div>
+                          <div className="relative h-full flex items-end justify-between">
                             {biomarker.dates.map((date, i) => (
                               <div key={i} className="flex flex-col items-center">
                                 <div className="h-2 w-2 rounded-full bg-white mb-1"></div>
