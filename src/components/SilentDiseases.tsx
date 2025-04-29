@@ -62,7 +62,7 @@ export const SilentDiseases = () => {
     {
       title: "Inflamação Crónica",
       icon: Flame,
-      imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/63e953de-1911-48f2-86b5-c455c7a751ec.png"
     },
     {
       title: "Síndrome do Ovário Poliquístico",
