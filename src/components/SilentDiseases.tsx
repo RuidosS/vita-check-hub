@@ -57,7 +57,7 @@ export const SilentDiseases = () => {
     {
       title: "Cancro do Cólon",
       icon: CircleDot,
-      imageUrl: "https://images.unsplash.com/photo-1557234195-bdcf5e4b0725?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/f9be680b-92a7-42f9-bc03-522e96bfc594.png"
     },
     {
       title: "Inflamação Crónica",
