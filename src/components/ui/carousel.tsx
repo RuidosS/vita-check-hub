@@ -1,13 +1,13 @@
-
 import * as React from "react"
-import { EmblaCarouselType, EmblaOptionsType, EmblaPluginType } from "embla-carousel"
-import useEmblaCarousel from "embla-carousel-react"
+import useEmblaCarousel, {
+  type UseEmblaCarouselType,
+} from "embla-carousel-react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
-type CarouselApi = EmblaCarouselType
+type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
@@ -17,7 +17,6 @@ type CarouselProps = {
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
   setApi?: (api: CarouselApi) => void
-  onEmblaInit?: (api: CarouselApi) => void
 }
 
 type CarouselContextProps = {
@@ -53,7 +52,6 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
-      onEmblaInit,
       ...props
     },
     ref
@@ -115,14 +113,10 @@ const Carousel = React.forwardRef<
       api.on("reInit", onSelect)
       api.on("select", onSelect)
 
-      if (onEmblaInit) {
-        onEmblaInit(api)
-      }
-
       return () => {
-        api.off("select", onSelect)
+        api?.off("select", onSelect)
       }
-    }, [api, onSelect, onEmblaInit])
+    }, [api, onSelect])
 
     return (
       <CarouselContext.Provider
