@@ -36,7 +36,7 @@ export const BiomarkersCarousel = () => {
       name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
-      image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop",
+      image: "/public/lovable-uploads/c06cf3d5-1f76-4b27-8bae-c887bd196a97.png",
       testimonial: "Sentia cansaço frequente. Os testes apontaram níveis de ferritina mais baixos, o que ajudou a ajustar a alimentação e os treinos."
     },
     {
