@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowRight, Check, UserStanding, Brain } from "lucide-react";
+import { ArrowRight, Check, User, Brain, Utensils, Globe } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 export const Membership = () => {
@@ -16,7 +16,7 @@ export const Membership = () => {
       text: "+100 biomarcadores avaliados"
     },
     {
-      icon: <UserStanding className="w-6 h-6 text-amber-500" />,
+      icon: <User className="w-6 h-6 text-amber-500" />,
       text: "2 análises clínicas presenciais/ano"
     },
     {
@@ -24,11 +24,11 @@ export const Membership = () => {
       text: "Relatório clínico interpretado por médicos"
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-gray-500"><circle cx="12" cy="5" r="1"/><path d="M16 16a4 4 0 0 1-8 0"/><path d="M12 12V9"/><path d="m9 9 1 7"/><path d="m15 9-1 7"/></svg>,
+      icon: <Utensils className="w-6 h-6 text-gray-500" />,
       text: "Sugestões alimentares e suplementação"
     },
     {
-      icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-blue-500"><path d="M21 12a9 9 0 0 0-9-9 9 9 0 0 0-9 9 9 9 0 0 0 9 9 9 9 0 0 0 9-9Z"/><path d="m21 12-9 9-9-9"/><circle cx="12" cy="12" r="1"/></svg>,
+      icon: <Globe className="w-6 h-6 text-blue-500" />,
       text: "Reavaliação após 6 meses"
     }
   ];
