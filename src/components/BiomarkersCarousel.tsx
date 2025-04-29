@@ -55,7 +55,7 @@ export const BiomarkersCarousel = () => {
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
       image: "/public/lovable-uploads/16d9e705-82be-40c0-abde-4308b771a573.png",
-      testimonial: "inha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
+      testimonial: "Tinha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
     }
   ];
 
