@@ -82,7 +82,7 @@ export const SilentDiseases = () => {
     {
       title: "Envelhecimento Acelerado",
       icon: Clock,
-      imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/75031c33-b967-466f-985b-f5c5aa8a16af.png"
     },
     {
       title: "Ansiedade & Cortisol Elevado",
