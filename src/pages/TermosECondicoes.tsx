@@ -118,7 +118,7 @@ const TermosECondicoes = () => {
               <p>
                 HealthLabs
                 <br />
-                Email: <a href="mailto:suporte@healthlab.pt" className="text-primary hover:underline">suporte@healthlab.pt</a>
+                Email: <a href="mailto:geral.ouma.health@gmail.com" className="text-primary hover:underline">geral.ouma.health@gmail.com</a>
               </p>
             </section>
           </div>

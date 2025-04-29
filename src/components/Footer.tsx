@@ -42,8 +42,8 @@ export const Footer = () => {
             <p className="text-sm text-gray-600 leading-relaxed">
               Para dúvidas ou suporte:
               <br />
-              <a href="mailto:suporte@oumahealth.pt" className="text-primary hover:text-secondary mt-2 inline-block">
-                suporte@oumahealth.pt
+              <a href="mailto:geral.ouma.health@gmail.com" className="text-primary hover:text-secondary mt-2 inline-block">
+                geral.ouma.health@gmail.com
               </a>
             </p>
           </div>
