@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Droplet, Activity, HeartPulse, Sun, Zap, Flame, CircleDot, Dna, Heart } from "lucide-react";
+import { Droplet, HeartPulse, Flask, Sun, Gauge, Flame, CircleDot, Dna, Heart } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 interface BiomarkerCategory {
@@ -42,7 +42,7 @@ export const BiomarkersCategories = () => {
       ]
     },
     {
-      icon: Activity,
+      icon: Flask,
       name: "Saúde do Fígado",
       count: 8,
       benefit: "Ajuda a filtrar toxinas e processar nutrientes.",
@@ -70,7 +70,7 @@ export const BiomarkersCategories = () => {
       ]
     },
     {
-      icon: Zap,
+      icon: Gauge,
       name: "Saúde Metabólica",
       count: 5,
       benefit: "Controla energia, peso e risco de diabetes.",
