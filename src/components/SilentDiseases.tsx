@@ -100,7 +100,7 @@ export const SilentDiseases = () => {
     <section className="py-16 bg-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap">
             Doenças silenciosas. Dados que falam.
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -123,3 +123,4 @@ export const SilentDiseases = () => {
     </section>
   );
 };
+
