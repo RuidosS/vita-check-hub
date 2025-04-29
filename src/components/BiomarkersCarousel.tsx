@@ -45,7 +45,7 @@ export const BiomarkersCarousel = () => {
       name: "ApoB",
       description: "Transporte de lípidos na corrente sanguínea.",
       dates: ["Sep 23", "Mar 24", "Sep 24"],
-      image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop",
+      image: "/public/lovable-uploads/da611cc7-eeb5-4ed3-8372-08b3f911fb67.png",
       testimonial: "Tendo histórico familiar, quis investigar. Ver o ApoB ajudou-me a tomar decisões mais informadas sobre o meu futuro."
     },
     {
