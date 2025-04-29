@@ -52,7 +52,7 @@ export const SilentDiseases = () => {
     {
       title: "Diabetes Tipo 2",
       icon: Activity,
-      imageUrl: "https://images.unsplash.com/photo-1576086599659-7b2c86d8e19e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/7f80cac3-ff5e-475e-8f7b-05a071181ce1.png"
     },
     {
       title: "Cancro do Cólon",
@@ -123,4 +123,3 @@ export const SilentDiseases = () => {
     </section>
   );
 };
-
