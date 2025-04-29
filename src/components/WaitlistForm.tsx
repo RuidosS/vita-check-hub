@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,7 +16,7 @@ import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
 import { useLocation } from "react-router-dom";
 
-// Schema for form validation
+// Esquema de validação do formulário
 const formSchema = z.object({
   name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
   email: z.string().email("Email inválido"),
@@ -29,7 +28,7 @@ export const WaitlistForm = () => {
   const [isLoading, setIsLoading] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const location = useLocation();
-  
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -38,8 +37,8 @@ export const WaitlistForm = () => {
       phone: "",
     },
   });
-  
-  // Effect to scroll to the form when navigated from other pages
+
+  // Efeito para rolar até ao formulário quando navegado a partir de outras páginas
   useEffect(() => {
     if (location.state && location.state.scrollToForm) {
       const formElement = document.getElementById('waitlist-form');
@@ -56,20 +55,22 @@ export const WaitlistForm = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://a.klaviyo.com/api/v2/list/VxzSKi/subscribe', {
+      const response = await fetch('https://a.klaviyo.com/api/lists/VxzSKi/relationships/subscribers/', {
         method: 'POST',
         headers: {
+          'Authorization': 'Klaviyo-API-Key pk_ce347f746bfcd81f6850e9aa89686d2aae',
           'Content-Type': 'application/json',
+          'Accept': 'application/json',
         },
         body: JSON.stringify({
-          api_key: 'WAxXuj',
-          profiles: [
-            {
+          data: {
+            type: 'profile',
+            attributes: {
               email: data.email,
               first_name: data.name,
               phone_number: data.phone,
             }
-          ]
+          }
         }),
       });
 
@@ -91,7 +92,7 @@ export const WaitlistForm = () => {
   };
 
   return (
-    <section className="py-24 bg-white" id="waitlist">
+    <section className="py-24 bg-white" id="waitlist-form">
       <div className="container-custom max-w-lg">
         {isSuccess ? (
           <Alert className="mb-6 bg-green-50 border-green-200">
@@ -153,8 +154,8 @@ export const WaitlistForm = () => {
               )}
             />
 
-            <Button 
-              type="submit" 
+            <Button
+              type="submit"
               className="w-full text-white"
               disabled={isLoading}
             >
@@ -166,3 +167,4 @@ export const WaitlistForm = () => {
     </section>
   );
 };
+
