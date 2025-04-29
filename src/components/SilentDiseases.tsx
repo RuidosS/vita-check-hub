@@ -92,7 +92,7 @@ export const SilentDiseases = () => {
     {
       title: "Intoxicação por Metais Pesados",
       icon: FlaskRound,
-      imageUrl: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/6c56d874-4162-469a-a4e2-aa81342f4ee2.png"
     },
   ];
 
