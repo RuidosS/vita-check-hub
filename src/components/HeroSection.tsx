@@ -24,7 +24,7 @@ export const HeroSection = () => {
           {/* Main headline with glow effect */}
           <div className="space-y-12">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white drop-shadow-lg">
-              Toma controlo da tua saúde.
+              Assume o controlo da tua saúde.
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider italic drop-shadow-md">
