@@ -79,7 +79,7 @@ export const TestRepetitionExplanation = () => {
                   </svg>
 
                   {/* Dots for ideal range */}
-                  <div className="absolute top-[40%] left-[10%] h-3 w-3 rounded-full bg-red-500 ring-2 ring-green-200"></div>
+                  <div className="absolute top-[40%] left-[10%] h-3 w-3 rounded-full bg-red-500 ring-2 ring-red-200"></div>
                   <div className="absolute top-[25%] left-[50%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                   <div className="absolute top-[10%] left-[88%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                 </div>
