@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Check } from "lucide-react";
+import { Check, Clock } from "lucide-react";
 
 export const MembershipFeatures = () => {
   const features = [
@@ -23,6 +23,10 @@ export const MembershipFeatures = () => {
     {
       icon: "🔁",
       text: "Reavaliação após 6 meses"
+    },
+    {
+      icon: <Clock className="h-6 w-6 text-primary" />,
+      text: "Idade Biológica"
     }
   ];
 
@@ -40,7 +44,9 @@ export const MembershipFeatures = () => {
                 key={index} 
                 className="bg-white rounded-xl p-6 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
               >
-                <span className="text-2xl">{feature.icon}</span>
+                <span className="text-2xl">
+                  {typeof feature.icon === 'string' ? feature.icon : feature.icon}
+                </span>
                 <span className="font-medium">{feature.text}</span>
               </div>
             ))}
