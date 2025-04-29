@@ -14,7 +14,7 @@ export const HeroSection = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('https://i.ibb.co/wNCLwLfw/Chat-GPT-Image-Apr-28-2025-09-47-28-PM.png')" }}
+      style={{ backgroundImage: "url('https://i.ibb.co/Gf9Q8zZz/Chat-GPT-Image-Apr-13-2025-07-58-09-PM.png')" }}
     >
       {/* Overlay with gradient for better readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/20"></div>
