@@ -50,7 +50,7 @@ export const TestRepetitionExplanation = () => {
                     <div className="absolute w-24 h-24 bg-yellow-300 rounded-full blur-2xl opacity-50"></div>
                   </div>
 
-                  {/* Chart bars */}
+                  {/* Chart bars - REMOVED */}
                   <div className="relative h-3/4 flex items-end justify-between gap-8 pt-6 z-10">
                     {chartData.map((item, index) => (
                       <div key={index} className="flex flex-col items-center flex-1">
