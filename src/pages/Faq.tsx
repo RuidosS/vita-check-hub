@@ -28,7 +28,7 @@ const Faq = () => {
     },
     {
       question: "Com que frequência devo fazer os testes?",
-      answer: "A Membership inclui duas testagens laboratoriais por ano, com um intervalo de 6 meses entre elas, para acompanhar a evolução da tua saúde."
+      answer: "A adesão inclui duas testagens laboratoriais por ano, com um intervalo de 6 meses entre elas, para acompanhar a evolução da tua saúde."
     },
     {
       question: "Os testes são comparticipados pelo seguro de saúde?",
