@@ -18,7 +18,7 @@ export const BiomarkersCarousel = () => {
       name: "BIOLOGICAL AGE",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
+      image: "https://i.ibb.co/VKfFQLb/marie-michele-bouchard-3-U9-BCWHMh-Uw-unsplash-1.jpg",
       testimonial: "Os resultados sugeriram uma idade biológica mais elevada. Com algumas mudanças no estilo de vida, senti melhorias reais."
     },
     {
@@ -27,7 +27,7 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
+      image: "https://i.ibb.co/6RKCy3Fz/jakob-owens-lk-MJc-GDZLVs-unsplash.jpg",
       testimonial: "Senti alterações no meu bem-estar. Ao analisar os níveis hormonais, consegui compreender melhor o que se passava."
     },
     {
@@ -36,7 +36,7 @@ export const BiomarkersCarousel = () => {
       name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
-      image: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?q=80&w=1890&auto=format&fit=crop",
+      image: "https://i.ibb.co/LdCYvBf2/dushawn-jovic-B3fg-Trrgsi-I-unsplash.jpg",
       testimonial: "Sentia cansaço frequente. Os testes apontaram níveis de ferritina mais baixos, o que ajudou a ajustar a alimentação e os treinos."
     },
     {
@@ -45,7 +45,7 @@ export const BiomarkersCarousel = () => {
       name: "ApoB",
       description: "Transporte de lípidos na corrente sanguínea.",
       dates: ["Sep 23", "Mar 24", "Sep 24"],
-      image: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?q=80&w=1887&auto=format&fit=crop",
+      image: "https://i.ibb.co/VcMPyXfg/mpho-maponyane-gopk-Pp-Sy-CYE-unsplash.jpg",
       testimonial: "Tendo histórico familiar, quis investigar. Ver o ApoB ajudou-me a tomar decisões mais informadas sobre o meu futuro."
     },
     {
@@ -54,7 +54,7 @@ export const BiomarkersCarousel = () => {
       name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
+      image: "https://i.ibb.co/TD8SSBQs/elijah-hiett-umfp-Fo-Kx-IVg-unsplash.jpg",
       testimonial: "inha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
     }
   ];
