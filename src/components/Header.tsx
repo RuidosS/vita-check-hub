@@ -60,7 +60,7 @@ export const Header = () => {
               onClick={scrollToWaitlist}
               className="btn-primary"
             >
-              Junta-te à Lista de Espera
+              Reserva já o teu lugar
             </button>
           </nav>
         </div>

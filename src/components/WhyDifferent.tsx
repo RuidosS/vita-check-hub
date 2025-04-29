@@ -45,7 +45,7 @@ export const WhyDifferent = () => {
               onClick={goToWaitlist}
               className="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
             >
-              Junta-te à Lista de Espera
+              Reserva já o teu lugar
             </button>
           </div>
         </div>

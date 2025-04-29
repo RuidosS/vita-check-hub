@@ -12,7 +12,7 @@ const WaitlistPage = () => {
         <section className="py-4 bg-gradient-to-b from-muted to-white">
           <div className="container-custom max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Junta-te à Lista de Espera
+              Reserva já o teu lugar
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional. Serás dos primeiros a experimentar o HealthLab.
