@@ -14,10 +14,20 @@ export const AboutUs = () => {
     <section className="py-24 bg-white">
       <div className="container-custom max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">
-          Uma adesão anual para quem quer viver melhor e mais tempo.
+          Uma adesão anual para viveres melhor e mais tempo.
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
-          Realiza 2 testagens laboratoriais por ano, separadas por 6 meses, com análise de mais de 100 biomarcadores críticos. Acompanha a tua evolução. Previne problemas. Otimiza a tua performance. Tudo baseado nos teus dados, não em achismos.
+          Fazes duas análises clínicas por ano, separadas por 6 meses, com avaliação de mais de 100 biomarcadores essenciais: hormonas, vitaminas, metabolismo, inflamação e muito mais.
+          Com base nos teus resultados, recebes:
+
+          
+          📄 Relatório clínico simples e claro
+
+          🍎 Sugestões de alimentos a incluir
+
+          💊 Lista de suplementos e cuidados a considerar
+
+          🧭 Um plano de ação para viveres com mais energia, foco e longevidade
         </p>
         <button 
           onClick={goToWaitlist} 
