@@ -19,21 +19,23 @@ export const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="relative h-full flex items-center pl-8 md:pl-24">
-        <div className="max-w-2xl space-y-8">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
-              Toma controlo da tua saúde.
-            </h1>
-            <p className="text-3xl md:text-4xl text-white/90 font-light leading-snug">
-              Com dados clínicos, planos reais e evolução a cada 6 meses.
-            </p>
-          </div>
-          <div className="space-y-3">
-            <p className="text-lg md:text-xl text-white/90">
-              Testes laboratoriais + Relatório médico + Acompanhamento
-              <br />
-              Um plano anual para prevenir, melhorar e otimizar a tua saúde.
-            </p>
+        <div className="max-w-2xl flex flex-col space-y-12">
+          <div className="space-y-4">
+            <div className="space-y-2">
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+                Toma controlo da tua saúde.
+              </h1>
+              <p className="text-3xl md:text-4xl text-white/90 font-light leading-snug">
+                Com dados clínicos, planos reais e evolução a cada 6 meses.
+              </p>
+            </div>
+            <div className="pt-2 space-y-3">
+              <p className="text-lg md:text-xl text-white/90">
+                Testes laboratoriais + Relatório médico + Acompanhamento
+                <br />
+                Um plano anual para prevenir, melhorar e otimizar a tua saúde.
+              </p>
+            </div>
           </div>
           <button 
             onClick={scrollToWaitlist} 
