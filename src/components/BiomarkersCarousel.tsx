@@ -38,8 +38,8 @@ export const BiomarkersCarousel = () => {
       dates: ["Jan 23", "Jul 23", "Jan 24"],
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
       data: [
-        { date: "Jan 23", value: 620 },
-        { date: "Jul 23", value: 680 },
+        { date: "Jan 23", value: 300 },
+        { date: "Jul 23", value: 820 },
         { date: "Jan 24", value: 650 }
       ]
     },
