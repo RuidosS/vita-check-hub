@@ -6,6 +6,7 @@ import { HeroSection } from '../components/HeroSection';
 import { AboutUs } from '../components/AboutUs';
 import { BiomarkersIntro } from '../components/BiomarkersIntro';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
+import { SilentDiseases } from '../components/SilentDiseases';
 import { BiomarkersCategories } from '../components/BiomarkersCategories';
 import { ResultsOverTime } from '../components/ResultsOverTime';
 import { HealthEvolution } from '../components/HealthEvolution';
@@ -22,6 +23,7 @@ const Index = () => {
         <AboutUs />
         <MembershipFeatures />
         <BiomarkersIntro />
+        <SilentDiseases />
         <BiomarkersCarousel />
         <ResultsOverTime />
         <ServiceSteps />
