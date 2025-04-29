@@ -67,7 +67,7 @@ export const SilentDiseases = () => {
     {
       title: "Síndrome do Ovário Poliquístico",
       icon: CircleDot,
-      imageUrl: "https://images.unsplash.com/photo-1527576539890-dfa815648363?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/e23d74f6-9a79-435f-b81c-fde9e9c458f5.png"
     },
     {
       title: "Deficiência de Vitamina D",
