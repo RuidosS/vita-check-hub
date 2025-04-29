@@ -84,7 +84,7 @@ export const TestRepetitionExplanation = () => {
                   </div>
                   
                   {/* Status indicators */}
-                  <div className="absolute top-[25%] left-[12%] h-3 w-3 rounded-full bg-yellow-400 ring-2 ring-yellow-200"></div> {/* Changed to yellow */}
+                  <div className="absolute top-[25%] left-[12%] h-3 w-3 rounded-full bg-red-500 ring-2 ring-red-200"></div>
                   <div className="absolute top-[15%] left-[50%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                   <div className="absolute top-[5%] left-[88%] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-200"></div>
                 </div>
