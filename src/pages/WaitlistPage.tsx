@@ -1,15 +1,29 @@
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { WaitlistForm } from "../components/WaitlistForm";
+import { useLocation } from "react-router-dom";
 
 const WaitlistPage = () => {
+  const location = useLocation();
+  const reservaRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (location.state && location.state.scrollToForm) {
+      setTimeout(() => {
+        if (reservaRef.current) {
+          reservaRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location.state]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-20">
-        <section className="py-4 bg-gradient-to-b from-muted to-white">
+        <section id="reserva" ref={reservaRef} className="py-4 bg-gradient-to-b from-muted to-white scroll-mt-24">
           <div className="container-custom max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Reserva já o teu lugar
@@ -19,7 +33,7 @@ const WaitlistPage = () => {
             </p>
           </div>
         </section>
-        <div id="waitlist-form">
+        <div>
           <WaitlistForm />
         </div>
       </main>
