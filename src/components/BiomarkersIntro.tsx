@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { BiomarkersCarousel } from './BiomarkersCarousel';
 
 export const BiomarkersIntro = () => {
   return (
@@ -19,8 +20,9 @@ export const BiomarkersIntro = () => {
 
         <div className="mt-16">
           <h3 className="text-2xl font-semibold text-center mb-10">
+            Exemplos do que podemos medir:
           </h3>
-          {/* The BiomarkersCarousel component will render here */}
+          <BiomarkersCarousel />
         </div>
       </div>
     </section>
