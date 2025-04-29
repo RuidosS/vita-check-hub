@@ -20,10 +20,10 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <AboutUs />
+        <MembershipFeatures />
         <BiomarkersIntro />
         <BiomarkersCarousel />
         <ResultsOverTime />
-        <MembershipFeatures />
         <ServiceSteps />
         <HealthEvolution />
         <BiomarkersCategories />
