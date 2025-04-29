@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Check } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
@@ -10,14 +9,6 @@ export const WhyDifferent = () => {
     "Relatórios simples e personalizados",
     "+100 biomarcadores que impactam a tua saúde",
     "Recomendações reais, baseadas em dados — não palpites"
-  ];
-
-  const actionItems = [
-    { icon: "📝", text: "Resumo Clínico" },
-    { icon: "🍽️", text: "Alimentos a incluir" },
-    { icon: "⛔", text: "Alimentos a limitar" },
-    { icon: "❤️", text: "Cuidados pessoais" },
-    { icon: "💊", text: "Lista de suplementos" }
   ];
 
   const navigate = useNavigate();
@@ -35,8 +26,8 @@ export const WhyDifferent = () => {
             Sem complicações.
           </h2>
           
-          <div className="grid md:grid-cols-2 gap-10 items-start">
-            {/* Left column with checkmarks */}
+          <div className="max-w-xl mx-auto">
+            {/* Only keeping the left column with checkmarks */}
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-4">
@@ -46,20 +37,6 @@ export const WhyDifferent = () => {
                   <p className="text-lg">{feature}</p>
                 </div>
               ))}
-            </div>
-            
-            {/* Right column - single card with all items */}
-            <div>
-              <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
-                <ul className="space-y-3">
-                  {actionItems.map((item, index) => (
-                    <li key={index} className="flex items-center gap-3">
-                      <span className="text-xl w-8 flex justify-center">{item.icon}</span>
-                      <span className="text-lg font-medium">{item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
           
