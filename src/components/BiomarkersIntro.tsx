@@ -3,7 +3,7 @@ import React from 'react';
 
 export const BiomarkersIntro = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-16 bg-gray-50">
       <div className="container-custom max-w-5xl mx-auto">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -17,8 +17,8 @@ export const BiomarkersIntro = () => {
           </p>
         </div>
 
-        <div className="mt-16">
-          <h3 className="text-2xl font-semibold text-center mb-10">
+        <div className="mt-8">
+          <h3 className="text-2xl font-semibold text-center mb-4">
           </h3>
           {/* The BiomarkersCarousel component will render here */}
         </div>

@@ -62,7 +62,7 @@ export const BiomarkersCarousel = () => {
   });
 
   return (
-    <section className="py-16">
+    <section className="py-8">
       <div className="container-custom">
         <div className="relative">
           <Carousel 
