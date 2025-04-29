@@ -16,7 +16,7 @@ const TermosECondicoes = () => {
         <div className="container-custom py-16">
           <h1 className="text-3xl md:text-4xl font-bold mb-8">Termos e Condições</h1>
           <p className="text-gray-600 mb-8">Data de Entrada em Vigor: 29 de Janeiro de 2025</p>
-          <p className="font-medium mb-8">Bem-vindo à HealthLabs!</p>
+          <p className="font-medium mb-8">Bem-vindo à Ōuma Health!</p>
 
           <p className="mb-8">
             Estes Termos e Condições ("Termos") regulam o acesso e a utilização do website e dos serviços da HealthLabs. 
@@ -27,7 +27,7 @@ const TermosECondicoes = () => {
             <section>
               <h2 className="text-xl font-bold mb-4">1. Quem Somos</h2>
               <p className="mb-4">
-                A HealthLabs ("nós", "nosso" ou "connosco") é uma plataforma digital com sede em Portugal, 
+                A Ōuma Health ("nós", "nosso" ou "connosco") é uma plataforma digital com sede em Portugal, 
                 que fornece informação geral sobre saúde e facilita o acesso a serviços de análises sanguíneas 
                 realizados por laboratórios acreditados.
               </p>

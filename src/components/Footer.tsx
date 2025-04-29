@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="text-xl font-bold text-primary">
-              HealthLab
+              Ōuma Health
             </Link>
             <p className="mt-4 text-sm text-gray-600">
               Monitoriza, proteje e optimiza a tua saúde com testes laboratoriais.

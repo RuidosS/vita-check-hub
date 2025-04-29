@@ -32,19 +32,19 @@ const Faq = () => {
     },
     {
       question: "Os testes são comparticipados pelo seguro de saúde?",
-      answer: "Atualmente, os testes HealthLab não são comparticipados, mas estamos a trabalhar ativamente para que sejam no futuro."
+      answer: "Atualmente, os testes Ōuma Health não são comparticipados, mas estamos a trabalhar ativamente para que sejam no futuro."
     },
     {
-      question: "Qual é a diferença entre o HealthLab e exames médicos tradicionais?",
-      answer: "O HealthLab não é focado apenas em diagnosticar doenças. Analisamos mais de 100 biomarcadores para te oferecer uma visão completa da tua saúde, orientada para a longevidade, performance e otimização contínua."
+      question: "Qual é a diferença entre a Ōuma Health e exames médicos tradicionais?",
+      answer: "A Ōuma Health não é focado apenas em diagnosticar doenças. Analisamos mais de 100 biomarcadores para te oferecer uma visão completa da tua saúde, orientada para a longevidade, performance e otimização contínua."
     },
     {
       question: "Preciso de receita médica para fazer os testes?",
-      answer: "Não. Ao aderires ao HealthLab, tens acesso direto às testagens laboratoriais, sem necessidade de receita médica."
+      answer: "Não. Ao aderires à Ōuma Health, tens acesso direto às testagens laboratoriais, sem necessidade de receita médica."
     },
     {
-      question: "O HealthLab substitui o meu médico?",
-      answer: "Não. O HealthLab não substitui o acompanhamento médico tradicional. O nosso objetivo é complementar a tua jornada de saúde, oferecendo dados mais profundos, planos personalizados e monitorização contínua, sempre que quiseres agir de forma preventiva."
+      question: "A Ōuma Health substitui o meu médico?",
+      answer: "Não. A Ōuma Health não substitui o acompanhamento médico tradicional. O nosso objetivo é complementar a tua jornada de saúde, oferecendo dados mais profundos, planos personalizados e monitorização contínua, sempre que quiseres agir de forma preventiva."
     }
   ];
 
