@@ -37,11 +37,7 @@ export const HeroSection = () => {
           {/* Description section with more space and highlighted terms */}
           <div className="space-y-6">
             <p className="text-lg md:text-xl text-white/90">
-              Testes laboratoriais + Relatório médico + Acompanhamento
-              <br />
-              Um plano anual para <span className="font-medium text-orange-200">prevenir</span>, 
-              <span className="font-medium text-orange-200"> melhorar</span> e 
-              <span className="font-medium text-orange-200"> otimizar</span> a tua saúde.
+              Testes, resultados e acompanhamento num só plano.
             </p>
           </div>
           
