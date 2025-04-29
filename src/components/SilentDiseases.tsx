@@ -77,7 +77,7 @@ export const SilentDiseases = () => {
     {
       title: "Doença da Tiroide",
       icon: Droplet,
-      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/e9c4ac93-d9e6-45e7-a22f-d083625bc2e1.png"
     },
     {
       title: "Envelhecimento Acelerado",
