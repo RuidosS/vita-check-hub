@@ -87,7 +87,7 @@ export const SilentDiseases = () => {
     {
       title: "Ansiedade & Cortisol Elevado",
       icon: Brain,
-      imageUrl: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/bb28bc46-c3c2-4d8a-b150-ed7c46e0622d.png"
     },
     {
       title: "Intoxicação por Metais Pesados",
