@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -7,42 +7,41 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import { useEmblaCarousel } from 'embla-carousel-react';
 
 export const BiomarkersCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    loop: true,
-    dragFree: true,
-    align: "start",
-    skipSnaps: false, // Important!
-  });
+  const scrollRef = useRef<number>();
 
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    let rafId: number;
-
+  const handleEmblaInit = (emblaApi: any) => {
     const scroll = () => {
       if (emblaApi) {
-        emblaApi.scrollBy(0.5); // <-- move 0.5 pixel per frame (smooth!)
+        emblaApi.scrollBy(0.5); // move 0.5 pixel per frame
       }
-      rafId = requestAnimationFrame(scroll);
+      scrollRef.current = requestAnimationFrame(scroll);
     };
 
     scroll(); // Start scrolling
 
-    return () => cancelAnimationFrame(rafId); // Clean up
-  }, [emblaApi]);
+    // Cleanup when component unmounts
+    return () => cancelAnimationFrame(scrollRef.current!);
+  };
 
   const biomarkers = [
-    // your biomarker list as before
+    // your biomarker list here...
   ];
 
   return (
     <section className="py-16">
       <div className="container-custom">
         <div className="relative">
-          <div ref={emblaRef}>
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+              skipSnaps: false,
+            }}
+            onEmblaInit={handleEmblaInit}
+          >
             <CarouselContent className="-ml-4">
               {biomarkers.map((biomarker, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
@@ -79,7 +78,9 @@ export const BiomarkersCarousel = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-          </div>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>
