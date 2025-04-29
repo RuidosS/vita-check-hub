@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { HeroSection } from '../components/HeroSection';
 import { AboutUs } from '../components/AboutUs';
+import { Membership } from '../components/Membership';
 import { BiomarkersIntro } from '../components/BiomarkersIntro';
 import { BiomarkersCarousel } from '../components/BiomarkersCarousel';
 import { BiomarkersCategories } from '../components/BiomarkersCategories';
@@ -20,6 +21,7 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         <AboutUs />
+        <Membership />
         <BiomarkersIntro />
         <BiomarkersCarousel />
         <ResultsOverTime />
