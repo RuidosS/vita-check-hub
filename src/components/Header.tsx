@@ -106,7 +106,7 @@ export const Header = () => {
                 }}
                 className="btn-primary w-full text-center"
               >
-                Junta-te à Lista de Espera
+                Reserva já o teu lugar
               </button>
             </div>
           </nav>

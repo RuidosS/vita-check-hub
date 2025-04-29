@@ -39,7 +39,7 @@ export const HeroSection = () => {
             onClick={scrollToWaitlist} 
             className="relative bg-white text-black font-semibold py-3 px-8 rounded-lg inline-flex items-center gap-2 shadow-lg hover:bg-gray-100 transition w-fit overflow-hidden"
           >
-            <span className="relative z-10">Junta-te à Lista de Espera</span>
+            <span className="relative z-10">Reserva já o teu lugar</span>
             <span className="absolute inset-0 rounded-lg bg-white opacity-30 blur-lg"></span> {/* glow effect */}
           </button>
         </div>

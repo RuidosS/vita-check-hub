@@ -29,7 +29,7 @@ export const ResultsOverTime = () => {
             onClick={goToWaitlist}
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
-            Junta-te à Lista de Espera
+            Reserva já o teu lugar
             <ArrowRight className="h-4 w-4" />
           </button>
         </div>
