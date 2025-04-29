@@ -23,8 +23,8 @@ const Index = () => {
         <AboutUs />
         <MembershipFeatures />
         <BiomarkersIntro />
-        <SilentDiseases />
         <BiomarkersCarousel />
+        <SilentDiseases />
         <ResultsOverTime />
         <ServiceSteps />
         <HealthEvolution />
