@@ -47,7 +47,7 @@ export const SilentDiseases = () => {
     {
       title: "Doença Cardiovascular",
       icon: Heart,
-      imageUrl: "https://images.unsplash.com/photo-1559757175-5700dde675bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      imageUrl: "/lovable-uploads/b2a96be8-1c97-4c40-bf71-cb2d1a9b028c.png"
     },
     {
       title: "Diabetes Tipo 2",
