@@ -15,10 +15,10 @@ export const BiomarkersCarousel = () => {
     {
       value: "43",
       unit: "",
-      name: "BIOLOGICAL AGE",
+      name: "IDADE BIOLÓGICA",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
+      image: "public/lovable-uploads/79b71c3b-feb1-407d-b19f-b98bf45c6559.png",
       testimonial: "Os resultados sugeriram uma idade biológica mais elevada. Com algumas mudanças no estilo de vida, senti melhorias reais."
     },
     {
