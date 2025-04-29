@@ -18,16 +18,6 @@ export const AboutUs = () => {
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
           Fazes duas análises clínicas por ano, separadas por 6 meses, com avaliação de mais de 100 biomarcadores essenciais: hormonas, vitaminas, metabolismo, inflamação e muito mais.
-          <br /><br />
-          Com base nos teus resultados, recebes:
-          <br /><br />
-          📄 Relatório clínico simples e claro
-          <br />
-          🍎 Sugestões de alimentos a incluir
-          <br />
-          💊 Lista de suplementos e cuidados a considerar
-          <br />
-          🧭 Um plano de ação para viveres com mais energia, foco e longevidade
         </p>
         <button 
           onClick={goToWaitlist} 
