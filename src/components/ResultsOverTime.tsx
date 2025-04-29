@@ -11,7 +11,7 @@ export const ResultsOverTime = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">

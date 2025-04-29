@@ -19,7 +19,7 @@ export const ServiceSteps = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-8 pb-24 bg-white">
       <div className="container-custom">
         <h2 className="text-4xl font-bold text-center mb-16">
           Como funciona
