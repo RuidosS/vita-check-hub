@@ -13,6 +13,8 @@ import { HealthEvolution } from '../components/HealthEvolution';
 import { ServiceSteps } from '../components/ServiceSteps';
 import { WhyDifferent } from '../components/WhyDifferent';
 import { MembershipFeatures } from '../components/MembershipFeatures';
+import { BiomarkersExplanation } from '../components/BiomarkersExplanation';
+import { TestRepetitionExplanation } from '../components/TestRepetitionExplanation';
 
 const Index = () => {
   return (
@@ -22,10 +24,12 @@ const Index = () => {
         <HeroSection />
         <AboutUs />
         <MembershipFeatures />
+        <BiomarkersExplanation />
         <BiomarkersIntro />
         <BiomarkersCarousel />
         <SilentDiseases />
         <ResultsOverTime />
+        <TestRepetitionExplanation />
         <ServiceSteps />
         <HealthEvolution />
         <BiomarkersCategories />

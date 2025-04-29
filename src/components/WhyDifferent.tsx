@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Check } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
@@ -21,10 +22,14 @@ export const WhyDifferent = () => {
     <section className="py-20 bg-[#FFF9F6]">
       <div className="container-custom">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center leading-tight">
             Saúde de verdade<br />
             Sem complicações.
           </h2>
+          
+          <p className="text-center text-lg mb-12 max-w-2xl mx-auto">
+            Com dados reais, tens clareza. Com acompanhamento, tens direção. Com tudo isso, tens o controlo da tua saúde.
+          </p>
           
           <div className="max-w-xl mx-auto">
             {/* Only keeping the left column with checkmarks */}

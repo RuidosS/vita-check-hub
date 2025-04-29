@@ -8,6 +8,7 @@ interface BiomarkerCategory {
   name: string;
   markers: string[];
   count: number;
+  benefit: string;
 }
 
 export const BiomarkersCategories = () => {
@@ -16,6 +17,7 @@ export const BiomarkersCategories = () => {
       icon: Droplet,
       name: "Saúde do Sangue",
       count: 5,
+      benefit: "Essencial para oxigenação, sistema imunitário e energia.",
       markers: [
         "Hemoglobina",
         "Hematócrito",
@@ -28,6 +30,7 @@ export const BiomarkersCategories = () => {
       icon: HeartPulse,
       name: "Saúde dos Rins",
       count: 7,
+      benefit: "Filtram toxinas e equilibram eletrólitos no corpo.",
       markers: [
         "Creatinina",
         "Ureia",
@@ -42,6 +45,7 @@ export const BiomarkersCategories = () => {
       icon: Activity,
       name: "Saúde do Fígado",
       count: 8,
+      benefit: "Ajuda a filtrar toxinas e processar nutrientes.",
       markers: [
         "ALT (TGP)",
         "AST (TGO)",
@@ -57,6 +61,7 @@ export const BiomarkersCategories = () => {
       icon: Sun,
       name: "Vitaminas e Minerais",
       count: 4,
+      benefit: "Essenciais para imunidade, foco, metabolismo.",
       markers: [
         "Vitamina D",
         "Vitamina B12",
@@ -68,6 +73,7 @@ export const BiomarkersCategories = () => {
       icon: Zap,
       name: "Saúde Metabólica",
       count: 5,
+      benefit: "Controla energia, peso e risco de diabetes.",
       markers: [
         "Glicemia",
         "Hemoglobina A1C",
@@ -80,6 +86,7 @@ export const BiomarkersCategories = () => {
       icon: Flame,
       name: "Inflamação",
       count: 7,
+      benefit: "Ajuda a detetar inflamação crónica antes de sentires dor.",
       markers: [
         "Proteína C-reativa (PCR)",
         "Ferritina",
@@ -94,6 +101,7 @@ export const BiomarkersCategories = () => {
       icon: CircleDot,
       name: "Saúde da Tiroide",
       count: 4,
+      benefit: "Regula o peso, energia e temperatura corporal.",
       markers: [
         "TSH",
         "T3 livre",
@@ -105,6 +113,7 @@ export const BiomarkersCategories = () => {
       icon: Dna,
       name: "Saúde Hormonal",
       count: 8,
+      benefit: "Controla humor, libido, sono e energia.",
       markers: [
         "Testosterona total",
         "Testosterona livre",
@@ -120,6 +129,7 @@ export const BiomarkersCategories = () => {
       icon: Heart,
       name: "Saúde Cardiovascular",
       count: 8,
+      benefit: "Protege o coração e reduz risco de enfartes.",
       markers: [
         "ApoB",
         "Lipoproteína (a)",
@@ -150,13 +160,18 @@ export const BiomarkersCategories = () => {
             return (
               <Card key={index} className="overflow-hidden">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-4 mb-6">
+                  <div className="flex items-center gap-4 mb-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-xl">{category.name} <span className="text-sm text-muted-foreground">({category.count})</span></h3>
                     </div>
+                  </div>
+                  
+                  {/* Benefit line */}
+                  <div className="mb-4 bg-primary/5 p-2 rounded-md">
+                    <p className="text-sm">{category.benefit}</p>
                   </div>
                   
                   <ul className="space-y-2 text-sm">
