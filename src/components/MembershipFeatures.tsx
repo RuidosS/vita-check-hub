@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Check } from "lucide-react";
+import { BiologicalAgeCard } from "./BiologicalAgeCard";
 
 export const MembershipFeatures = () => {
   const features = [
@@ -44,6 +45,13 @@ export const MembershipFeatures = () => {
                 <span className="font-medium">{feature.text}</span>
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 max-w-md mx-auto">
+            <h3 className="text-xl font-semibold text-center mb-6">
+              Descobre a tua verdadeira idade biológica
+            </h3>
+            <BiologicalAgeCard />
           </div>
         </div>
       </div>
