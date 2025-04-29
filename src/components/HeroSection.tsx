@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <section
       className="relative h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/ChatGPT Image Apr 28, 2025, 09_47_28 PM.png')" }}
+      style={{ backgroundImage: "url('https://assets.lovable.dev/projects/TEU_PROJETO/ChatGPT%20Image%20Apr%2028%2C%202025%2C%2009_47_28%20PM.png')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
