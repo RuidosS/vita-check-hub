@@ -3,9 +3,9 @@ import { Sun } from 'lucide-react';
 
 export const TestRepetitionExplanation = () => {
   const chartData = [
-    { month: "Maio 24", value: 28 },
-    { month: "Nov 24", value: 35 },
-    { month: "Maio 25", value: 42 },
+    { month: "Maio 24", value: 28 ng/mL },
+    { month: "Nov 24", value: 35 ng/mL },
+    { month: "Maio 25", value: 42 ng/mL },
   ];
 
   return (
