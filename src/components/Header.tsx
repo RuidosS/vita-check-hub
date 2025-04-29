@@ -26,7 +26,7 @@ export const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-xl font-bold text-primary">
-            HealthLab
+            Ōuma Health
           </Link>
 
           <button
