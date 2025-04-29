@@ -18,7 +18,7 @@ export const BiomarkersCarousel = () => {
       name: "BIOLOGICAL AGE",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVsaGVyfGVufDB8fDB8fHww",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
       testimonial: "Os resultados sugeriram uma idade biológica mais elevada. Com algumas mudanças no estilo de vida, senti melhorias reais."
     },
     {
@@ -27,7 +27,7 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "https://images.unsplash.com/photo-1492288991661-058aa541ff43?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbiUyMGZhY2V8ZW58MHx8MHx8fDA%3D",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
       testimonial: "Senti alterações no meu bem-estar. Ao analisar os níveis hormonais, consegui compreender melhor o que se passava."
     },
     {
@@ -54,7 +54,7 @@ export const BiomarkersCarousel = () => {
       name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1561643241-9abf82d76a68?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG11bGhlcnxlbnwwfHwwfHx8MA%3D%3D",
       testimonial: "inha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
     }
   ];
