@@ -19,7 +19,7 @@ const TermosECondicoes = () => {
           <p className="font-medium mb-8">Bem-vindo à Ōuma Health!</p>
 
           <p className="mb-8">
-            Estes Termos e Condições ("Termos") regulam o acesso e a utilização do website e dos serviços da HealthLabs. 
+            Estes Termos e Condições ("Termos") regulam o acesso e a utilização do website e dos serviços da Ōuma Health. 
             Ao aceder ou utilizar o nosso website, aceita estes Termos.
           </p>
 
@@ -39,7 +39,7 @@ const TermosECondicoes = () => {
 
             <section>
               <h2 className="text-xl font-bold mb-4">2. Os Nossos Serviços</h2>
-              <p className="mb-4">Através da HealthLabs, poderá:</p>
+              <p className="mb-4">Através da Ōuma Health, poderá:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Aceder a informação educativa sobre saúde e bem-estar;</li>
                 <li>Solicitar acesso a serviços de análises sanguíneas realizados por laboratórios certificados;</li>
@@ -53,7 +53,7 @@ const TermosECondicoes = () => {
             <section>
               <h2 className="text-xl font-bold mb-4">3. Aviso de Responsabilidade Médica</h2>
               <ul className="list-disc pl-5 space-y-2">
-                <li>A HealthLabs não presta aconselhamento médico, diagnóstico ou tratamento.</li>
+                <li>A Ōuma Health não presta aconselhamento médico, diagnóstico ou tratamento.</li>
                 <li>Toda a informação disponibilizada destina-se exclusivamente a fins informativos e educativos.</li>
                 <li>Deve sempre procurar o aconselhamento de um profissional de saúde qualificado para quaisquer preocupações médicas.</li>
                 <li>Em caso de emergência médica, contacte imediatamente os serviços de emergência (112 em Portugal).</li>
@@ -62,7 +62,7 @@ const TermosECondicoes = () => {
 
             <section>
               <h2 className="text-xl font-bold mb-4">4. Obrigações dos Utilizadores</h2>
-              <p className="mb-4">Ao utilizar a HealthLabs, compromete-se a:</p>
+              <p className="mb-4">Ao utilizar a Ōuma Health, compromete-se a:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Fornecer informações verdadeiras, atualizadas e completas sempre que solicitado;</li>
                 <li>Utilizar a plataforma apenas para fins lícitos e pessoais;</li>
@@ -88,7 +88,7 @@ const TermosECondicoes = () => {
               <h2 className="text-xl font-bold mb-4">6. Limitação de Responsabilidade</h2>
               <p className="mb-4">Na máxima extensão permitida por lei:</p>
               <ul className="list-disc pl-5 space-y-2">
-                <li>A HealthLabs não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes da utilização dos nossos serviços;</li>
+                <li>A Ōuma Health não será responsável por quaisquer danos diretos, indiretos, incidentais ou consequenciais resultantes da utilização dos nossos serviços;</li>
                 <li>A utilização das informações e dos serviços é feita por sua conta e risco;</li>
                 <li>Não garantimos a completude, exatidão ou utilidade da informação fornecida.</li>
               </ul>
@@ -116,7 +116,7 @@ const TermosECondicoes = () => {
               <h2 className="text-xl font-bold mb-4">9. Contactos</h2>
               <p className="mb-4">Se tiver alguma dúvida sobre estes Termos, pode contactar-nos através de:</p>
               <p>
-                HealthLabs
+                Ōuma Health
                 <br />
                 Email: <a href="mailto:geral.ouma.health@gmail.com" className="text-primary hover:underline">geral.ouma.health@gmail.com</a>
               </p>
