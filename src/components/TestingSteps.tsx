@@ -15,7 +15,7 @@ export const TestingSteps = () => {
       step: "Passo 2",
       title: "Visitas rápidas de laboratório, com uma média de 15 minutos",
       description: "Incluímos o custo de duas visitas por ano, com análise de mais de 100 biomarcadores",
-      image: "/lovable-uploads/51e635fb-a674-46e1-9d02-3667b07b2b47.png",
+      image: "/lovable-uploads/98ba2ed2-c307-4424-b375-2245be3f0767.png",
       alt: "Visita Laboratório"
     },
     {
