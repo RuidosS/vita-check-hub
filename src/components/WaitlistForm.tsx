@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -92,77 +93,98 @@ export const WaitlistForm = () => {
   };
 
   return (
-    <section className="py-24 bg-white" id="waitlist-form">
-      <div className="container-custom max-w-lg">
-        {isSuccess ? (
-          <Alert className="mb-6 bg-green-50 border-green-200">
-            <AlertDescription className="text-green-800">
-              Obrigado pela sua inscrição! Entraremos em contacto em breve.
-            </AlertDescription>
-          </Alert>
-        ) : null}
+    <section className="py-16" id="waitlist-form">
+      <div className="container-custom max-w-lg relative z-10">
+        <div className="bg-white/10 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-white/20">
+          {isSuccess ? (
+            <Alert className="mb-6 bg-green-50/90 backdrop-blur-sm border-green-200">
+              <AlertDescription className="text-green-800">
+                Obrigado pela sua inscrição! Entraremos em contacto em breve.
+              </AlertDescription>
+            </Alert>
+          ) : null}
 
-        {error ? (
-          <Alert className="mb-6 bg-red-50 border-red-200">
-            <AlertDescription className="text-red-800">
-              {error}
-            </AlertDescription>
-          </Alert>
-        ) : null}
+          {error ? (
+            <Alert className="mb-6 bg-red-50/90 backdrop-blur-sm border-red-200">
+              <AlertDescription className="text-red-800">
+                {error}
+              </AlertDescription>
+            </Alert>
+          ) : null}
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="name"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nome</FormLabel>
-                  <FormControl>
-                    <Input placeholder="O teu nome" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Junta-te à lista de espera</h2>
+            <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
+          </div>
 
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input placeholder="O teu email" type="email" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Nome</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="O teu nome" 
+                        {...field} 
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="phone"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Telemóvel</FormLabel>
-                  <FormControl>
-                    <Input placeholder="O teu número de telemóvel" type="tel" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Email</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="O teu email" 
+                        type="email" 
+                        {...field} 
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )}
+              />
 
-            <Button
-              type="submit"
-              className="w-full text-white"
-              disabled={isLoading}
-            >
-              {isLoading ? "A processar..." : "Juntar à Lista de Espera"}
-            </Button>
-          </form>
-        </Form>
+              <FormField
+                control={form.control}
+                name="phone"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-white">Telemóvel</FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="O teu número de telemóvel" 
+                        type="tel" 
+                        {...field} 
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-300" />
+                  </FormItem>
+                )}
+              />
+
+              <Button
+                type="submit"
+                className="w-full bg-secondary hover:bg-secondary/80 text-white font-medium text-lg py-6"
+                disabled={isLoading}
+              >
+                {isLoading ? "A processar..." : "Juntar à Lista de Espera"}
+              </Button>
+            </form>
+          </Form>
+        </div>
       </div>
     </section>
   );
