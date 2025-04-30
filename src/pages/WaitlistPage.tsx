@@ -20,35 +20,45 @@ const WaitlistPage = () => {
   }, [location.state]);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div 
+      className="min-h-screen flex flex-col"
+      style={{
+        backgroundImage: "url('/lovable-uploads/caf0e1fb-dacd-4049-a3b7-748bc56d5705.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center right",
+      }}
+    >
       <Header />
       <main className="flex-grow">
         <section 
           id="reserva" 
           ref={reservaRef} 
-          className="relative py-16 md:py-24 min-h-[50vh] flex items-center bg-gradient-to-br from-[#000000] via-[#1A1A1A] to-[#FF6B00]/90 text-white scroll-mt-24 overflow-hidden"
+          className="relative py-12 md:py-16 min-h-[55vh] flex items-center text-white scroll-mt-24 overflow-hidden backdrop-blur-sm"
         >
-          {/* Background elements */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-10 right-20 w-40 h-40 rounded-full bg-[#FF6B00] blur-3xl"></div>
-            <div className="absolute bottom-10 left-20 w-72 h-72 rounded-full bg-[#FF6B00]/40 blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/4 w-60 h-60 rounded-full bg-[#FF6B00]/20 blur-3xl"></div>
-          </div>
+          {/* Background overlay with gradient */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-transparent z-0"></div>
           
           {/* Content */}
-          <div className="container-custom relative z-10 max-w-4xl mx-auto text-center">
+          <div className="container-custom relative z-10 max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Reserva já o teu lugar
+              <span className="text-primary relative">Assume o controlo</span>
+              <br /> 
+              da tua saúde.
             </h1>
-            <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed">
-              Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional. 
-              Serás dos primeiros a experimentar o Ōuma Health.
+            <p className="text-xl md:text-2xl text-white/90 mb-6 max-w-3xl italic leading-relaxed">
+              Testes, resultados e acompanhamento num só plano.
+            </p>
+            <p className="text-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
+              Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional.
+              <br/>
+              <span className="font-semibold text-primary">Serás dos primeiros a experimentar o Ōuma Health.</span>
             </p>
           </div>
         </section>
         
-        {/* Form section with slightly different background */}
-        <section className="py-8 bg-gradient-to-b from-[#1A1A1A] to-[#000000]">
+        {/* Form section with transparent overlay */}
+        <section className="pb-16 pt-0 relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/95 z-0"></div>
           <WaitlistForm />
         </section>
       </main>

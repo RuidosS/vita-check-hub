@@ -16,6 +16,7 @@ import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
 import { useLocation } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 // Esquema de validação do formulário
 const formSchema = z.object({
@@ -93,9 +94,9 @@ export const WaitlistForm = () => {
   };
 
   return (
-    <section className="py-8" id="waitlist-form">
+    <section className="py-4" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
-        <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
+        <div className="bg-black/60 backdrop-blur-xl p-8 md:p-10 rounded-2xl shadow-2xl border border-primary/30 border-t-primary/40 border-l-primary/40">
           {isSuccess ? (
             <Alert className="mb-6 bg-green-50/90 backdrop-blur-sm border-green-200">
               <AlertDescription className="text-green-800">
@@ -113,23 +114,24 @@ export const WaitlistForm = () => {
           ) : null}
 
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Junta-te à lista de espera</h2>
+            <h2 className="text-2xl font-bold text-white mb-3">Junta-te à lista de espera</h2>
+            <div className="w-20 h-1 bg-primary mx-auto mb-4 rounded-full"></div>
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
 
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-white">Nome</FormLabel>
+                    <FormLabel className="text-white font-medium">Nome</FormLabel>
                     <FormControl>
                       <Input 
                         placeholder="O teu nome" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-primary/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -142,13 +144,13 @@ export const WaitlistForm = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-white">Email</FormLabel>
+                    <FormLabel className="text-white font-medium">Email</FormLabel>
                     <FormControl>
                       <Input 
                         placeholder="O teu email" 
                         type="email" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-primary/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -161,13 +163,13 @@ export const WaitlistForm = () => {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-white">Telemóvel</FormLabel>
+                    <FormLabel className="text-white font-medium">Telemóvel</FormLabel>
                     <FormControl>
                       <Input 
                         placeholder="O teu número de telemóvel" 
                         type="tel" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-primary focus:ring-primary/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -177,11 +179,20 @@ export const WaitlistForm = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/80 text-white font-medium text-lg py-6"
+                className="w-full bg-primary hover:bg-primary/80 text-white font-semibold text-lg py-6 mt-4 relative overflow-hidden group"
                 disabled={isLoading}
               >
-                {isLoading ? "A processar..." : "Juntar à Lista de Espera"}
+                <span className="flex items-center justify-center gap-2 relative z-10">
+                  {isLoading ? "A processar..." : "Reserva já o teu lugar"}
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+                <span className="absolute inset-0 bg-gradient-to-r from-primary to-[#FF9B70] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </Button>
+              
+              <div className="flex items-center justify-center gap-2 pt-3">
+                <span className="inline-block w-4 h-4 text-primary/70">⏳</span>
+                <p className="text-sm text-white/70">Vagas limitadas nesta fase inicial</p>
+              </div>
             </form>
           </Form>
         </div>
