@@ -18,7 +18,7 @@ export const BiomarkersCarousel = () => {
       name: "IDADE BIOLÓGICA",
       description: "Entende o verdadeiro ritmo do teu corpo.",
       dates: ["Jun 22", "Dec 23", "Jun 24"],
-      image: "public/lovable-uploads/79b71c3b-feb1-407d-b19f-b98bf45c6559.png",
+      image: "/lovable-uploads/79b71c3b-feb1-407d-b19f-b98bf45c6559.png",
       testimonial: "Os resultados sugeriram uma idade biológica mais elevada. Com algumas mudanças no estilo de vida, senti melhorias reais."
     },
     {
@@ -27,7 +27,7 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "https://i.ibb.co/kVfRzkBx/gabin-vallet-XUn7y-MZH2yg-unsplash.jpg",
+      image: "/lovable-uploads/bb28bc46-c3c2-4d8a-b150-ed7c46e0622d.png",
       testimonial: "Senti alterações no meu bem-estar. Ao analisar os níveis hormonais, consegui compreender melhor o que se passava."
     },
     {
@@ -36,7 +36,7 @@ export const BiomarkersCarousel = () => {
       name: "FERRITINA",
       description: "Energia e armazenamento de ferro.",
       dates: ["Apr 23", "Oct 23", "Apr 24"],
-      image: "/public/lovable-uploads/c06cf3d5-1f76-4b27-8bae-c887bd196a97.png",
+      image: "/lovable-uploads/c06cf3d5-1f76-4b27-8bae-c887bd196a97.png",
       testimonial: "Sentia cansaço frequente. Os testes apontaram níveis de ferritina mais baixos, o que ajudou a ajustar a alimentação e os meus treinos."
     },
     {
@@ -45,7 +45,7 @@ export const BiomarkersCarousel = () => {
       name: "ApoB",
       description: "Transporte de lípidos na corrente sanguínea.",
       dates: ["Sep 23", "Mar 24", "Sep 24"],
-      image: "/public/lovable-uploads/da611cc7-eeb5-4ed3-8372-08b3f911fb67.png",
+      image: "/lovable-uploads/da611cc7-eeb5-4ed3-8372-08b3f911fb67.png",
       testimonial: "Tendo histórico familiar, quis investigar. Ver o ApoB ajudou-me a tomar decisões mais informadas sobre o meu futuro."
     },
     {
@@ -54,7 +54,7 @@ export const BiomarkersCarousel = () => {
       name: "VITAMINA D",
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
-      image: "/public/lovable-uploads/16d9e705-82be-40c0-abde-4308b771a573.png",
+      image: "/lovable-uploads/16d9e705-82be-40c0-abde-4308b771a573.png",
       testimonial: "Tinha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
     }
   ];
