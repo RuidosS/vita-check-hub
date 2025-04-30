@@ -11,6 +11,7 @@ import Faq from "./pages/Faq";
 import Testes from "./pages/Testes";
 import IdadeBiologica from "./pages/IdadeBiologica";
 import WaitlistPage from "./pages/WaitlistPage";
+import WaitlistInvitedPage from "./pages/WaitlistInvitedPage";
 import Adesao from "./pages/Adesao";
 import NotFound from "./pages/NotFound";
 import TermosECondicoes from "./pages/TermosECondicoes";
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/testes" element={<Testes />} />
           <Route path="/teste/idade-biologica" element={<IdadeBiologica />} />
           <Route path="/lista-de-espera" element={<WaitlistPage />} />
+          <Route path="/lista-de-espera/convidado" element={<WaitlistInvitedPage />} />
           <Route path="/adesao" element={<Adesao />} />
           <Route path="/login" element={<Index />} />
           <Route path="/termos-e-condicoes" element={<TermosECondicoes />} />
