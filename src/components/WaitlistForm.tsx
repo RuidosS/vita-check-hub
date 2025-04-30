@@ -93,9 +93,9 @@ export const WaitlistForm = () => {
   };
 
   return (
-    <section className="py-16" id="waitlist-form">
+    <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
-        <div className="bg-white/10 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-white/20">
+        <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
           {isSuccess ? (
             <Alert className="mb-6 bg-green-50/90 backdrop-blur-sm border-green-200">
               <AlertDescription className="text-green-800">
@@ -129,7 +129,7 @@ export const WaitlistForm = () => {
                       <Input 
                         placeholder="O teu nome" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -148,7 +148,7 @@ export const WaitlistForm = () => {
                         placeholder="O teu email" 
                         type="email" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -167,7 +167,7 @@ export const WaitlistForm = () => {
                         placeholder="O teu número de telemóvel" 
                         type="tel" 
                         {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-secondary focus:ring-secondary/50"
+                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
                       />
                     </FormControl>
                     <FormMessage className="text-red-300" />
@@ -177,7 +177,7 @@ export const WaitlistForm = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-secondary hover:bg-secondary/80 text-white font-medium text-lg py-6"
+                className="w-full bg-primary hover:bg-primary/80 text-white font-medium text-lg py-6"
                 disabled={isLoading}
               >
                 {isLoading ? "A processar..." : "Juntar à Lista de Espera"}
