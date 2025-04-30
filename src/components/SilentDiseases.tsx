@@ -26,17 +26,17 @@ const DiseaseCard = ({ title, icon: Icon, imageUrl }: DiseaseCardProps) => {
         <img 
           src={imageUrl} 
           alt={title} 
-          className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-opacity duration-300"
+          className="w-full h-full object-cover opacity-70 group-hover:opacity-60 transition-opacity duration-300"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80 group-hover:from-black/40 group-hover:to-black/90 transition-all duration-300"></div>
       </div>
       
       {/* Content */}
       <div className="relative h-56 p-6 flex flex-col justify-end items-center text-center">
-        <div className="mb-3 p-2 bg-black/50 rounded-full">
+        <div className="mb-3 p-2.5 bg-primary/10 backdrop-blur-sm rounded-full transform group-hover:scale-110 transition-transform duration-300">
           <Icon className="h-6 w-6 text-primary" />
         </div>
-        <h3 className="font-bold text-white text-lg">{title}</h3>
+        <h3 className="font-bold text-white text-lg group-hover:text-primary transition-colors duration-300">{title}</h3>
       </div>
     </div>
   );
@@ -101,7 +101,7 @@ export const SilentDiseases = () => {
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 whitespace-nowrap">
-            Doenças silenciosas. Dados que falam.
+            Doenças silenciosas. <span className="text-primary">Dados que falam</span>.
           </h2>
           <p className="text-xl text-muted-foreground">
             Descobre o que o teu corpo pode estar a esconder. Estes são alguns dos problemas de saúde que podem ser 
