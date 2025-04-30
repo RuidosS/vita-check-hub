@@ -37,6 +37,7 @@ export default {
       },
       fontFamily: {
         sans: ["Manrope", "sans-serif"],
+        serif: ["Playfair Display", "serif"],
       },
       lineHeight: {
         'relaxed': '1.4',
@@ -54,6 +55,9 @@ export default {
       },
       animation: {
         'slide-in': 'slide-in 0.3s ease-out'
+      },
+      boxShadow: {
+        'premium': '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)',
       }
     }
   },
