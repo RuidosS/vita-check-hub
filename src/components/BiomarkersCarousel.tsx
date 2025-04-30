@@ -27,7 +27,7 @@ export const BiomarkersCarousel = () => {
       name: "TESTOSTERONA",
       description: "Energia, força e vitalidade.",
       dates: ["Jan 23", "Jul 23", "Jan 24"],
-      image: "/lovable-uploads/bb28bc46-c3c2-4d8a-b150-ed7c46e0622d.png",
+      image: "/lovable-uploads/035381dd-efec-4830-a8d2-b6af8939b383.png",
       testimonial: "Senti alterações no meu bem-estar. Ao analisar os níveis hormonais, consegui compreender melhor o que se passava."
     },
     {
