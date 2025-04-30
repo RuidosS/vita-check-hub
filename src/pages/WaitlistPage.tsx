@@ -42,7 +42,7 @@ const WaitlistPage = () => {
             </h1>
             <p className="text-xl text-white/90 mb-6 max-w-2xl mx-auto leading-relaxed">
               Recebe acesso prioritário à primeira versão da nossa plataforma de saúde funcional. 
-              Serás dos primeiros a experimentar o HealthLab.
+              Serás dos primeiros a experimentar o Ōuma Health.
             </p>
           </div>
         </section>
