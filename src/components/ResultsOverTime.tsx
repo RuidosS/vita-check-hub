@@ -11,26 +11,26 @@ export const ResultsOverTime = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 bg-white">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight leading-tight">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
             <span className="whitespace-nowrap">Resultados claros.</span>{' '}
-            <span className="whitespace-nowrap text-primary">Ações concretas.</span>
+            <span className="whitespace-nowrap">Ações concretas.</span>
           </h2>
-          <div className="space-y-6 bg-gray-50 p-8 rounded-xl shadow-sm">
+          <div className="space-y-4">
             <p className="text-xl text-muted-foreground">
               Compara os teus dados ao longo do tempo.
               <br />
-              <span className="font-semibold text-foreground">Vê exatamente onde estás e o que está a melhorar.</span>
+              Vê exatamente onde estás e o que está a melhorar.
             </p>
           </div>
           <button 
             onClick={goToWaitlist}
-            className="inline-flex items-center gap-2 text-white font-medium bg-primary px-6 py-3 rounded-lg hover:bg-primary/90 transition-all group"
+            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             Reserva já o teu lugar
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="h-4 w-4" />
           </button>
         </div>
       </div>
