@@ -12,7 +12,7 @@ export const Footer = () => {
               Ōuma Health
             </Link>
             <p className="mt-6 text-sm text-gray-600 max-w-[70ch] leading-relaxed">
-              Monitoriza, proteje e optimiza a tua saúde com testes laboratoriais.
+              Monitoriza, protege e optimiza a tua saúde com testes laboratoriais.
             </p>
           </div>
           
