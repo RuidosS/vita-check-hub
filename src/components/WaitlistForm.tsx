@@ -180,7 +180,7 @@ export const WaitlistForm = () => {
                 className="w-full bg-primary hover:bg-primary/80 text-white font-medium text-lg py-6"
                 disabled={isLoading}
               >
-                {isLoading ? "A processar..." : "Juntar à Lista de Espera"}
+                {isLoading ? "A processar..." : "Submeter"}
               </Button>
             </form>
           </Form>
