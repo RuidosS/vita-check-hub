@@ -34,11 +34,6 @@ export const WaitlistForm = () => {
     <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Junta-te à lista de espera</h2>
-            <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
-          </div>
-          
           {/* Tally.so Embed */}
           <iframe
             data-tally-src="https://tally.so/r/3xgWJd"
