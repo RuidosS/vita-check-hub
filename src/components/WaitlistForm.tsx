@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 export const WaitlistForm = () => {
   const location = useLocation();
 
-  // Efeito para rolar até ao formulário quando navegado a partir de outras páginas
   useEffect(() => {
     if (location.state && location.state.scrollToForm) {
       const formElement = document.getElementById('waitlist-form');
@@ -16,7 +15,6 @@ export const WaitlistForm = () => {
     }
   }, [location.state]);
 
-  // Adiciona o script do Tally ao carregar o componente
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
@@ -24,19 +22,18 @@ export const WaitlistForm = () => {
     document.body.appendChild(script);
 
     return () => {
-      // Remove o script ao desmontar o componente
       document.body.removeChild(script);
     };
   }, []);
 
   return (
-    <section className="py-8" id="waitlist-form">
+    <section className="py-8" id="waitlist-form" style={{ overflowX: "hidden" }}>
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
           <div className="text-center mb-2">
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
-          
+
           {/* Tally.so Embed */}
           <iframe
             data-tally-src="https://tally.so/r/3xgWJd"
@@ -48,7 +45,10 @@ export const WaitlistForm = () => {
             title="Inscrição Ōuma Health"
             style={{
               borderRadius: "8px",
-              background: "transparent"
+              background: "transparent",
+              width: "100%",
+              maxWidth: "100%",
+              overflow: "hidden"
             }}
           ></iframe>
         </div>
