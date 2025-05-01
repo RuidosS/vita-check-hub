@@ -1,43 +1,9 @@
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Button } from "./ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
-import { toast } from "sonner";
-import { Alert, AlertDescription } from "./ui/alert";
-import { useLocation } from "react-router-dom";
-import { saveLeadToGoogleSheet } from "../utils/googleSheetsService";
 
-// Esquema de validação do formulário
-const formSchema = z.object({
-  name: z.string().min(2, "Nome deve ter pelo menos 2 caracteres"),
-  email: z.string().email("Email inválido"),
-  phone: z.string().optional(),
-});
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export const WaitlistForm = () => {
-  const [isSuccess, setIsSuccess] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
   const location = useLocation();
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      phone: "",
-    },
-  });
 
   // Efeito para rolar até ao formulário quando navegado a partir de outras páginas
   useEffect(() => {
@@ -51,127 +17,42 @@ export const WaitlistForm = () => {
     }
   }, [location.state]);
 
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
-    setIsLoading(true);
-    setError(null);
+  // Add Tally script to the document when component mounts
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://tally.so/widgets/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-    try {
-      // Save lead to Google Sheets (via our wrapper service)
-      const success = await saveLeadToGoogleSheet({
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-      });
-
-      if (success) {
-        // Handle successful submission
-        setIsSuccess(true);
-        setIsLoading(false);
-        toast.success("Inscrição realizada com sucesso!");
-        form.reset();
-      } else {
-        throw new Error("Falha ao salvar os dados.");
-      }
-    } catch (error) {
-      console.error('Erro na inscrição:', error);
-      setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
-      toast.error("Erro ao realizar inscrição. Tente novamente.");
-      setIsLoading(false);
-    }
-  };
+    return () => {
+      // Cleanup script when component unmounts
+      document.body.removeChild(script);
+    };
+  }, []);
 
   return (
     <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
-          {isSuccess ? (
-            <Alert className="mb-6 bg-green-50/90 backdrop-blur-sm border-green-200">
-              <AlertDescription className="text-green-800">
-                Obrigado pela sua inscrição! Entraremos em contacto em breve.
-              </AlertDescription>
-            </Alert>
-          ) : null}
-
-          {error ? (
-            <Alert className="mb-6 bg-red-50/90 backdrop-blur-sm border-red-200">
-              <AlertDescription className="text-red-800">
-                {error}
-              </AlertDescription>
-            </Alert>
-          ) : null}
-
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-4">Junta-te à lista de espera</h2>
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
-
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Nome</FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="O teu nome" 
-                        {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
-                      />
-                    </FormControl>
-                    <FormMessage className="text-red-300" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Email</FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="O teu email" 
-                        type="email" 
-                        {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
-                      />
-                    </FormControl>
-                    <FormMessage className="text-red-300" />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="phone"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-white">Telemóvel (opcional)</FormLabel>
-                    <FormControl>
-                      <Input 
-                        placeholder="O teu número de telemóvel" 
-                        type="tel" 
-                        {...field} 
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/50 focus:border-[#FF6B00] focus:ring-[#FF6B00]/50"
-                      />
-                    </FormControl>
-                    <FormMessage className="text-red-300" />
-                  </FormItem>
-                )}
-              />
-
-              <Button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/80 text-white font-medium text-lg py-6"
-                disabled={isLoading}
-              >
-                {isLoading ? "A processar..." : "Submeter"}
-              </Button>
-            </form>
-          </Form>
+          
+          {/* Tally.so Embed */}
+          <iframe
+            data-tally-src="https://tally.so/r/3xgWJd"
+            width="100%"
+            height="500"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+            title="Inscrição Ōuma Health"
+            style={{
+              borderRadius: "8px",
+              background: "transparent"
+            }}
+          ></iframe>
         </div>
       </div>
     </section>
