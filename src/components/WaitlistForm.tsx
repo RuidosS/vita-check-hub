@@ -24,6 +24,10 @@ const formSchema = z.object({
   phone: z.string().optional(),
 });
 
+// Klaviyo API configuration
+const KLAVIYO_LIST_ID = "VxzSKi"; // Your list ID
+const KLAVIYO_API_KEY = "pk_ce347f746bfcd81f6850e9aa89686d2aae"; // Your public API key
+
 export const WaitlistForm = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
@@ -56,8 +60,33 @@ export const WaitlistForm = () => {
     setError(null);
 
     try {
-      // Use a more reliable approach with a form submission service
-      // This is a simulated successful response since the API seems to be failing
+      // Sending data to Klaviyo API
+      const response = await fetch(`https://a.klaviyo.com/api/v2/list/${KLAVIYO_LIST_ID}/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          api_key: KLAVIYO_API_KEY,
+          profiles: [
+            {
+              email: data.email,
+              $first_name: data.name,
+              $phone_number: data.phone || '',
+              $consent: ['email', 'web', 'sms']
+            }
+          ]
+        }),
+      });
+
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        console.error('Klaviyo API error:', responseData);
+        throw new Error(responseData.message || 'Falha na inscrição');
+      }
+
+      // Handle successful submission
       setIsSuccess(true);
       setIsLoading(false);
       toast.success("Inscrição realizada com sucesso!");
