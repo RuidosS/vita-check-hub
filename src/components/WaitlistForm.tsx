@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -16,16 +17,10 @@ export const WaitlistForm = () => {
   }, [location.state]);
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://tally.so/widgets/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
     // Bloquear scroll horizontal no body
     document.body.style.overflowX = "hidden";
 
     return () => {
-      document.body.removeChild(script);
       document.body.style.overflowX = "auto"; // repõe scroll normal ao desmontar
     };
   }, []);
@@ -34,26 +29,11 @@ export const WaitlistForm = () => {
     <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
-          <div className="text-center mb-2">
+          <div className="text-center mb-6">
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
 
-          <iframe
-            data-tally-src="https://tally.so/r/3xgWJd"
-            width="100%"
-            height="500"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-            title="Inscrição Ōuma Health"
-            style={{
-              borderRadius: "8px",
-              background: "transparent",
-              width: "100%",
-              maxWidth: "100%",
-              overflow: "hidden",
-            }}
-          ></iframe>
+          <form-widget ucid='b3E8esZE5AjRljFDlbDvNvXPYgs'></form-widget>
         </div>
       </div>
     </section>
