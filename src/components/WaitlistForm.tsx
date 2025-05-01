@@ -16,7 +16,7 @@ export const WaitlistForm = () => {
     }
   }, [location.state]);
 
-  // Add Tally script to the document when component mounts
+  // Adiciona o script do Tally ao carregar o componente
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://tally.so/widgets/embed.js';
@@ -24,7 +24,7 @@ export const WaitlistForm = () => {
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup script when component unmounts
+      // Remove o script ao desmontar o componente
       document.body.removeChild(script);
     };
   }, []);
@@ -33,8 +33,7 @@ export const WaitlistForm = () => {
     <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
-          <div className="text-center mb-8">
-            {/* Removido o <h2> */}
+          <div className="text-center mb-2">
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
           
