@@ -15,6 +15,17 @@ export const Footer = () => {
             <p className="mt-6 text-sm text-gray-600 max-w-[70ch] leading-relaxed">
               Monitoriza, protege e optimiza a tua saúde com testes laboratoriais.
             </p>
+            <div className="mt-6 flex space-x-4">
+              <a 
+                href="https://www.instagram.com/ouma.health" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} />
+              </a>
+            </div>
           </div>
           
           <div>
@@ -47,17 +58,6 @@ export const Footer = () => {
                 geral.ouma.health@gmail.com
               </a>
             </p>
-            <div className="mt-4 flex">
-              <a 
-                href="https://www.instagram.com/ouma.health" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={24} />
-              </a>
-            </div>
           </div>
         </div>
         
