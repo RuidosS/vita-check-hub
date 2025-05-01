@@ -5,36 +5,39 @@ export const WaitlistForm = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state && location.state.scrollToForm) {
-      const formElement = document.getElementById('waitlist-form');
+    if (location.state?.scrollToForm) {
+      const formElement = document.getElementById("waitlist-form");
       if (formElement) {
         setTimeout(() => {
-          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          formElement.scrollIntoView({ behavior: "smooth", block: "start" });
         }, 100);
       }
     }
   }, [location.state]);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://tally.so/widgets/embed.js';
+    const script = document.createElement("script");
+    script.src = "https://tally.so/widgets/embed.js";
     script.async = true;
     document.body.appendChild(script);
 
+    // Bloquear scroll horizontal no body
+    document.body.style.overflowX = "hidden";
+
     return () => {
       document.body.removeChild(script);
+      document.body.style.overflowX = "auto"; // repõe scroll normal ao desmontar
     };
   }, []);
 
   return (
-    <section className="py-8" id="waitlist-form" style={{ overflowX: "hidden" }}>
+    <section className="py-8" id="waitlist-form">
       <div className="container-custom max-w-lg relative z-10">
         <div className="bg-black/60 backdrop-blur-lg p-8 md:p-10 rounded-2xl shadow-xl border border-[#FF6B00]/20">
           <div className="text-center mb-2">
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
 
-          {/* Tally.so Embed */}
           <iframe
             data-tally-src="https://tally.so/r/3xgWJd"
             width="100%"
@@ -48,7 +51,7 @@ export const WaitlistForm = () => {
               background: "transparent",
               width: "100%",
               maxWidth: "100%",
-              overflow: "hidden"
+              overflow: "hidden",
             }}
           ></iframe>
         </div>
