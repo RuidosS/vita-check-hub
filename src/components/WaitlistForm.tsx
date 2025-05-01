@@ -33,7 +33,7 @@ export const WaitlistForm = () => {
             <p className="text-white/80">Preenche os dados abaixo para garantir o teu lugar</p>
           </div>
 
-          <form-widget ucid='b3E8esZE5AjRljFDlbDvNvXPYgs'></form-widget>
+          <div dangerouslySetInnerHTML={{ __html: '<form-widget ucid="b3E8esZE5AjRljFDlbDvNvXPYgs"></form-widget>' }} />
         </div>
       </div>
     </section>
