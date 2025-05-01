@@ -16,6 +16,7 @@ import Adesao from "./pages/Adesao";
 import NotFound from "./pages/NotFound";
 import TermosECondicoes from "./pages/TermosECondicoes";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import AdminPage from "./pages/AdminPage";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
           <Route path="/termos-e-condicoes" element={<TermosECondicoes />} />
           <Route path="/termos" element={<TermosECondicoes />} />
           <Route path="/privacidade" element={<PoliticaPrivacidade />} />
+          <Route path="/admin/leads" element={<AdminPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

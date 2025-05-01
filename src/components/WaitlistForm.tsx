@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -16,6 +15,7 @@ import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
 import { useLocation } from "react-router-dom";
+import { addLead } from "../utils/leadsDatabase";
 
 // Esquema de validação do formulário
 const formSchema = z.object({
@@ -60,52 +60,23 @@ export const WaitlistForm = () => {
     setError(null);
 
     try {
-      // CORS-friendly approach using a JSONP-like method with a form submission
-      const formData = new FormData();
-      formData.append('api_key', KLAVIYO_API_KEY);
-      formData.append('email', data.email);
-      formData.append('properties', JSON.stringify({
-        $first_name: data.name,
-        $phone_number: data.phone || '',
-        $consent: ['email', 'web', 'sms']
-      }));
-
-      // Using the alternative identify endpoint which is more CORS-friendly
-      const response = await fetch(`https://a.klaviyo.com/api/identify`, {
-        method: 'POST',
-        body: formData,
+      // Add the lead to our database
+      addLead({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
       });
 
-      // Also add to the list specifically
-      const listFormData = new FormData();
-      listFormData.append('api_key', KLAVIYO_API_KEY);
-      listFormData.append('email', data.email);
-      
-      await fetch(`https://a.klaviyo.com/api/v2/list/${KLAVIYO_LIST_ID}/subscribe`, {
-        method: 'POST',
-        body: listFormData,
-      });
-
-      // For testing environments, we'll assume success if we get this far
       // Handle successful submission
       setIsSuccess(true);
       setIsLoading(false);
       toast.success("Inscrição realizada com sucesso!");
       form.reset();
-
     } catch (error) {
       console.error('Erro na inscrição:', error);
-      
-      // Even if there's an error, we'll show success in the testing environment
-      // This is because CORS issues in the preview environment are expected
-      // In production with proper CORS setup or using a backend proxy this will work correctly
-      setIsSuccess(true);
+      setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
+      toast.error("Erro ao realizar inscrição. Tente novamente.");
       setIsLoading(false);
-      toast.success("Inscrição realizada com sucesso!");
-      form.reset();
-      
-      // For debugging purposes, we'll log the error
-      console.log('Note: Form submission handled gracefully despite network error in test environment');
     }
   };
 
