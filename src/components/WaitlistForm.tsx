@@ -15,7 +15,7 @@ import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { Alert, AlertDescription } from "./ui/alert";
 import { useLocation } from "react-router-dom";
-import { addLead } from "../utils/leadsDatabase";
+import { saveLeadToGoogleSheet } from "../utils/googleSheetsService";
 
 // Esquema de validação do formulário
 const formSchema = z.object({
@@ -23,10 +23,6 @@ const formSchema = z.object({
   email: z.string().email("Email inválido"),
   phone: z.string().optional(),
 });
-
-// Klaviyo API configuration
-const KLAVIYO_LIST_ID = "VxzSKi"; // Your list ID
-const KLAVIYO_API_KEY = "pk_ce347f746bfcd81f6850e9aa89686d2aae"; // Your public API key
 
 export const WaitlistForm = () => {
   const [isSuccess, setIsSuccess] = React.useState(false);
@@ -60,18 +56,22 @@ export const WaitlistForm = () => {
     setError(null);
 
     try {
-      // Add the lead to our database
-      addLead({
+      // Save lead to Google Sheets (via our wrapper service)
+      const success = await saveLeadToGoogleSheet({
         name: data.name,
         email: data.email,
         phone: data.phone,
       });
 
-      // Handle successful submission
-      setIsSuccess(true);
-      setIsLoading(false);
-      toast.success("Inscrição realizada com sucesso!");
-      form.reset();
+      if (success) {
+        // Handle successful submission
+        setIsSuccess(true);
+        setIsLoading(false);
+        toast.success("Inscrição realizada com sucesso!");
+        form.reset();
+      } else {
+        throw new Error("Falha ao salvar os dados.");
+      }
     } catch (error) {
       console.error('Erro na inscrição:', error);
       setError("Ocorreu um erro ao processar a sua inscrição. Por favor tente novamente.");
