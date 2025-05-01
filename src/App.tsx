@@ -35,6 +35,7 @@ const App = () => (
           <Route path="/teste/idade-biologica" element={<IdadeBiologica />} />
           <Route path="/lista-de-espera" element={<WaitlistPage />} />
           <Route path="/lista-de-espera/convidado" element={<WaitlistInvitedPage />} />
+          <Route path="/waitlist-invited" element={<WaitlistInvitedPage />} />
           <Route path="/adesao" element={<Adesao />} />
           <Route path="/login" element={<Index />} />
           <Route path="/termos-e-condicoes" element={<TermosECondicoes />} />
