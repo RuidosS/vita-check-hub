@@ -14,7 +14,7 @@ export const ResultsOverTime = () => {
     <section className="py-12 bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-dark-purple tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-purple tracking-tight leading-tight">
             <span className="whitespace-nowrap">Resultados claros.</span>{' '}
             <span className="whitespace-nowrap">Ações concretas.</span>
           </h2>
