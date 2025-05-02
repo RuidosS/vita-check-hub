@@ -28,7 +28,7 @@ export const HeroSection = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 font-light tracking-wider italic drop-shadow-md leading-relaxed max-w-[35ch] font-serif">
-              Testes, resultados e acompanhamento num só plano.
+              Mais de 100 análises laboratoriais e um plano para agires com confiança.
             </p>
           </div>
           
