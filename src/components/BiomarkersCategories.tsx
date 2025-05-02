@@ -86,7 +86,7 @@ export const BiomarkersCategories = () => {
       icon: Flame,
       name: "Inflamação",
       count: 7,
-      benefit: "Ajuda a detetar inflamação crónica antes de sentires dor.",
+      benefit: "Avalia marcadores associados a processos inflamatórios.",
       markers: [
         "Proteína C-reativa (PCR)",
         "Ferritina",
