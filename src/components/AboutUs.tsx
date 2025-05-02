@@ -17,7 +17,7 @@ export const AboutUs = () => {
           Uma adesão anual para viveres melhor e mais tempo.
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-10 mx-auto max-w-[70ch] leading-relaxed">
-          Fazes duas análises clínicas por ano, separadas por 6 meses, com avaliação de mais de 100 biomarcadores essenciais: hormonas, vitaminas, metabolismo, inflamação e muito mais.
+         Faz check-ups laboratoriais completos a cada poucos meses. Mais de 100 biomarcadores analisados — hormonas, vitaminas, metabolismo, inflamação e muito mais — para acompanhar a tua saúde com precisão.
         </p>
         <button 
           onClick={goToWaitlist} 
