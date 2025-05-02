@@ -15,7 +15,7 @@ export const BiomarkersExplanation = () => {
             <div>
               <h2 className="text-3xl font-bold mb-6">O que são biomarcadores?</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed max-w-[70ch]">
-                Biomarcadores são dados do teu sangue que dizem como está a tua saúde — desde os níveis de vitaminas, 
+                Biomarcadores são indicadores biológicos no teu sangue que ajudam a perceber como o teu corpo está a funcionar — desde os níveis de vitaminas 
                 hormonas e inflamação até sinais silenciosos de doenças como diabetes, problemas da tiroide ou 
                 desequilíbrios hormonais.
               </p>

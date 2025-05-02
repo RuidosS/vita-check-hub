@@ -52,7 +52,7 @@ export const BiomarkersCarousel = () => {
       description: "Essencial para o sistema imunitário.",
       dates: ["Mar 23", "Sep 23", "Mar 24"],
       image: "/lovable-uploads/16d9e705-82be-40c0-abde-4308b771a573.png",
-      testimonial: "Tinha sintomas inespecíficos. A análise mostrou níveis baixos de vitamina D — uma peça do puzzle que fez sentido para mim."
+      testimonial: "Algo não estava bem — fadiga, falta de foco, um mal-estar constante. As análises revelaram uma deficiência de vitamina D. Finalmente, percebi o que o meu corpo estava a tentar dizer-me."
     }
   ];
 

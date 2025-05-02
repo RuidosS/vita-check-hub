@@ -105,8 +105,7 @@ export const SilentDiseases = () => {
             <span className="block">Dados que falam.</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Descobre o que o teu corpo pode estar a esconder. Estes são alguns dos problemas de saúde que podem ser 
-            detetados e prevenidos com os nossos testes laboratoriais.
+            Descobre o que o teu corpo pode estar a esconder. Previne e monitoriza milhares de condições.
           </p>
         </div>
 
