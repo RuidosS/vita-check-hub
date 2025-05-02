@@ -23,12 +23,12 @@ export const WhyDifferent = () => {
       <div className="container-custom px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 md:mb-12 text-center leading-tight">
-            Saúde de verdade<br />
-            Sem complicações.
+            Entende o teu corpo.<br />
+            Mais do que análises.
           </h2>
           
           <p className="text-center text-lg md:text-xl mb-16 md:mb-20 max-w-[70ch] mx-auto leading-relaxed">
-            Com dados reais, tens clareza. Com acompanhamento, tens direção. Com tudo isso, tens o controlo da tua saúde.
+            Percebe o que está a acontecer no teu corpo, sabe o que fazer a seguir e volta a sentir que tens o controlo da tua saúde.
           </p>
           
           <div className="max-w-xl mx-auto">
