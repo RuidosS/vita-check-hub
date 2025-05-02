@@ -12,7 +12,7 @@ export const HealthEvolution = () => {
             Vê como as tuas escolhas transformam a tua saúde.
           </h2>
           <p className="text-xl text-muted-foreground">
-            Pequenas mudanças hoje. Grandes transformações ao longo do tempo. Acompanha a tua evolução em ciclos de 6 meses.
+            Pequenas mudanças hoje. Grandes transformações ao longo do tempo. Acompanha a tua evolução.
           </p>
         </div>
 
