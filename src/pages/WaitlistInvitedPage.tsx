@@ -64,7 +64,7 @@ const WaitlistInvitedPage = () => {
             {/* Right Side - Health Report Card */}
             <div className="w-full max-w-md">
               <div className="bg-white rounded-3xl shadow-2xl p-6 text-black">
-                <h3 className="text-xl font-bold mb-6">Health Optimization Report</h3>
+                <h3 className="text-xl font-bold mb-6">Relatório de Otimização de Saúde</h3>
                 
                 <div className="flex items-center mb-8">
                   <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
@@ -73,7 +73,7 @@ const WaitlistInvitedPage = () => {
                     </svg>
                   </div>
                   <div className="ml-4">
-                    <p className="text-lg font-bold">OVERALL</p>
+                    <p className="text-lg font-bold">Estado Geral</p>
                     <p className="text-lg">Normal</p>
                   </div>
                 </div>
