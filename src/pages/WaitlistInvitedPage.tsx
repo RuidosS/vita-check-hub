@@ -45,6 +45,10 @@ const WaitlistInvitedPage = () => {
                 Descobre o que o teu sangue te está a dizer.
               </h1>
               
+              <p className="text-xl font-medium text-white/90 mb-5">
+                Recebe 25€ de desconto na tua primeira subscrição — e quem te convidou também.
+              </p>
+              
               <p className="text-xl text-white/90 mb-12 max-w-lg">
                 Junta-te à Ōuma e recebe uma análise funcional da tua saúde para melhorares energia, foco e longevidade
               </p>
